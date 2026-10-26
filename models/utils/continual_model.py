@@ -47,7 +47,7 @@ class ContinualModel(nn.Module):
         self.opt = SGD(self.net.parameters(), lr=self.args.lr)
         self.scheduler = torch.optim.lr_scheduler.StepLR(self.opt, step_size=args.lr_decay_epoch, gamma=args.lr_decay_rate, last_epoch=-1)
         self.current_task = 0
-
+        self.WHS = False
         self.device = get_device(args.GPU_ids)
 
     def forward(self, x: torch.Tensor, task_index = None) -> torch.Tensor:
@@ -59,6 +59,25 @@ class ContinualModel(nn.Module):
         """
         if task_index is None:
             task_index = self.current_task
+        if self.WHS and self.args.multihead and task_index == 3:
+            out_0 = self.net(x, 0)
+            out_1 = self.net(x, 1)
+            out_2 = self.net(x, 2)
+            out_2_argmax = torch.argmax(out_2, dim=1)
+            out_1_argmax = torch.argmax(out_1, dim=1)
+            out_0_argmax = torch.argmax(out_0, dim=1)
+            background_mask_0 = (out_0_argmax == 0)*(out_1_argmax == 0)*(out_2_argmax == 0)
+            background_mask_1 = (out_1_argmax == 0)*(out_2_argmax == 0)
+            background_mask_2 = (out_2_argmax == 0)
+            background_mask_0 = background_mask_0.unsqueeze(1)
+            background_mask_1 = background_mask_1.unsqueeze(1)
+            background_mask_2 = background_mask_2.unsqueeze(1)
+
+            return torch.cat([background_mask_0*out_2[:,0,:,:],
+                              background_mask_1*out_0[:,1:4,:,:],
+                              background_mask_2*out_1[:,4:6,:,:],
+                              out_2[:,6:8,:,:]], dim = 1)
+
         return self.net(x, task_index)
 
     def observe(self, inputs: torch.Tensor, labels: torch.Tensor,
@@ -100,12 +119,12 @@ class ContinualModel(nn.Module):
         '''
         mask_background = (targets==0)
         probs = torch.softmax(outputs_old, dim=1)
-        if self.args.pseudo_label == 'naive':
+        if self.args.pseudo_label:
             targets[mask_background] = outputs_old.argmax(dim=1)[mask_background]
-        elif self.args.pseudo_label == "entropy":
-            probs = torch.softmax(outputs_old, dim=1)
-            max_probs, pseudo_labels = probs.max(dim=1)
-            mask_valid_pseudo = (entropy(probs)/self.max_entropy) < self.thresholds[pseudo_labels]
+        #elif self.args.pseudo_label == "entropy":
+        #    probs = torch.softmax(outputs_old, dim=1)
+        #    max_probs, pseudo_labels = probs.max(dim=1)
+        #    mask_valid_pseudo = (entropy(probs)/self.max_entropy) < self.thresholds[pseudo_labels]
 
         return targets
     

@@ -7,14 +7,17 @@ import os
 import importlib
 
 def get_all_models():
-    return [model.split('.')[0] for model in os.listdir('models')
-            if not model.find('__') > -1 and 'py' in model and not 'ipynb_checkpoints' in model]
+    # Discover without importing every optional method (e.g. GEM's quadprog).
+    return sorted(model[:-3] for model in os.listdir(os.path.dirname(__file__))
+                  if model.endswith('.py') and not model.startswith('_'))
 
 names = {}
-for model in get_all_models():
-    mod = importlib.import_module('models.' + model)
-    class_name = {x.lower():x for x in mod.__dir__()}[model.replace('_', '')]
-    names[model] = getattr(mod, class_name)
 
 def get_model(args, backbone, loss, transform):
+    if args.model not in get_all_models():
+        raise ValueError('Unknown model: ' + args.model)
+    if args.model not in names:
+        mod = importlib.import_module('models.' + args.model)
+        class_name = {x.lower(): x for x in dir(mod)}[args.model.replace('_', '')]
+        names[args.model] = getattr(mod, class_name)
     return names[args.model](backbone, loss, args, transform)

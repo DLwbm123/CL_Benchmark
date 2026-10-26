@@ -1,0 +1,56 @@
+{
+  "id": "s3r_s1",
+  "protocol_id": "s3r-source-optimizer-v2",
+  "reviewed_at": 1793049584.5477145,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T4_latest.pth",
+      "current_task": 5,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T5_latest.pth",
+      "current_task": 6,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_metrics": {
+    "mean_dice": 0.49578925901759313,
+    "mean_asd": 0.0166657894820172,
+    "mean_precision": 0.9916671052590379,
+    "mean_recall": 0.5000000001764233,
+    "backward_transfer": 0.0,
+    "restricted_model_ability": null
+  },
+  "interpretation": "Identical task matrix rows and representative train prediction may indicate background collapse. Macro metrics include background; mean recall .5 is not foreground recall. Not proof for every test pixel. No tuning or rerun.",
+  "all_five_seeds_complete": false,
+  "original_elapsed_hours": 6.28583959447013,
+  "previous_attempt_count": 2,
+  "representative_train_prediction": "All background on one representative train slice; no raw sample released."
+}

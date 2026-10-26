@@ -16,6 +16,8 @@ def add_experiment_args(parser: ArgumentParser) -> None:
     parser.add_argument('--dataset', type=str, default="seq-mmwhs",
                         choices=DATASET_NAMES,
                         help='Which dataset to perform experiments on.')
+    parser.add_argument('--order', nargs='+', default=None, #list
+                        help='Which order to perform experiments on.')
     parser.add_argument('--model', type=str, default="sgd",
                         help='Model name.', choices=get_all_models())
     parser.add_argument('--baseline_size', type=str, default="mid",
@@ -24,7 +26,7 @@ def add_experiment_args(parser: ArgumentParser) -> None:
                         help='experiment name.')
     parser.add_argument('--multihead', action='store_true',
                         help='Enable multihead for each task')
-    parser.add_argument('--pseudo_label', default=None,
+    parser.add_argument('--pseudo_label', action='store_true',
                         help='Enable pseudo labels for class-il seg')
     parser.add_argument('--mib', action='store_true',
                         help='Enable MiB strategy for class-il seg')
@@ -67,6 +69,7 @@ def add_management_args(parser: ArgumentParser) -> None:
                         help='Save the trained model for each task after xx epochs')
     parser.add_argument('--input_folder', type=str, default=None)
     parser.add_argument('--label_folder', type=str, default=None)
+    parser.add_argument('--output_folder', type=str, default=None)
 
 
 def add_rehearsal_args(parser: ArgumentParser) -> None:

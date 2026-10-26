@@ -1,0 +1,26 @@
+{
+  "model": "ldka_organ",
+  "ldka_organ_grad_clip": 1.0,
+  "dataset": "seq-taskincre",
+  "baseline_size": "mid",
+  "seed": 0,
+  "GPU_ids": "0",
+  "lr": 0.001,
+  "ldka_incremental_lr": 0.0001,
+  "n_epochs": 150,
+  "batch_size": 8,
+  "save_freq": 0,
+  "ldka_progress_epsilon": 0.001,
+  "ldka_pseudo_threshold": 0.0,
+  "ldka_dss_weight": 1.0,
+  "ldka_perturb_weight": 1.0,
+  "ldka_mad_weight": 1.0,
+  "multihead": true,
+  "organ_tasks": 4,
+  "organ_task_names": [
+    "left_atrium",
+    "prostate",
+    "liver",
+    "brain_tumor"
+  ]
+}

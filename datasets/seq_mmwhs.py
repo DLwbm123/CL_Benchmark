@@ -16,7 +16,8 @@ class MMWHSCL_Dataset(Dataset):
     def __init__(self, task_name, mode, patch_size):
         self.shift = 0
         self.task = task_name
-        root_heart = "/home/zhouhangqi/zhq/data/MMWHS/"
+        #root_heart = "/home/zhouhangqi/zhq/data/MMWHS/"
+        root_heart = os.path.join(os.environ.get('CL_DATA_ROOT', '/data4/zhouhangqi/CL_Benchmark_data'), 'MMWHS')
         self.mode = mode
         if task_name == "1":
             task_h5 = os.path.join(root_heart, "myo_lv_la" + ".h5")  # BIDMC
@@ -45,7 +46,7 @@ class MMWHSCL_Dataset(Dataset):
             self.labels_all = data_file["test_labels"]
             self.patient_info = list(data_file["patient_info_test"])
         self.patch_size = patch_size
-        
+
     def label_shift(self, labels):
         return (labels>0)*self.shift + labels
 
@@ -96,21 +97,23 @@ class SequentialMMWHS(ContinualDataset):
     N_TASKS = 3
 
     def get_data_loaders(self, t):
-        train_splits, test_splits = MMWHS_Gen(["1", "2", "3"], dataset=MMWHSCL_Dataset)
+        train_splits, test_splits = MMWHS_Gen(["1", "2", "3"], dataset=MMWHSCL_Dataset,
+                                             test=self.args.test_only)
         train_dataset = train_splits[str(t +1)]
         test_dataset = test_splits[str(t +1)]
         if t < 2:
             next_test_dataset = test_splits[str( t +2)]
             self.next_test_loaders = DataLoader(next_test_dataset,
-                                                batch_size=1, shuffle=False)
+                                                batch_size=1, shuffle=False, num_workers=8)
         else:
             next_test_dataset = None
             self.next_test_loaders = None
         train_loader = DataLoader(train_dataset,
-                                  batch_size=self.args.batch_size, shuffle=True)
+                                  batch_size=self.args.batch_size, shuffle=True, num_workers=8)
         test_loader = DataLoader(test_dataset,
                                  batch_size=1, shuffle=False)
         self.train_dataset = train_dataset
+        self.test_dataset = test_dataset
         self.test_loaders.append(test_loader)
         self.train_loader = train_loader
         self.test_loader = test_loader
@@ -121,11 +124,11 @@ class SequentialMMWHS(ContinualDataset):
     def not_aug_dataloader(self, batch_size):
 
         # return self.train_loader
-        return DataLoader(self.train_dataset, batch_size=batch_size, shuffle=True)
-    
+        return DataLoader(self.train_dataset, batch_size=batch_size, shuffle=True, num_workers=8)
+
     def get_whole_testloader(self):
         test_dataset = MMWHSCL_Dataset(task_name = "whole_heart", mode = 'test', patch_size = 256)
-        test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False)
+        test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=8)
         #self.test_loaders.append(test_loader)
         self.test_loader = test_loader
         return test_loader
@@ -139,6 +142,8 @@ class SequentialMMWHS(ContinualDataset):
             model = resunet32(size = args.baseline_size)
 
         lastn = model.last.in_channels
+        model.last = nn.Conv2d(lastn, 8, 1, 1, bias=False)
+
         if args.multihead:
             N_TASKS = 3
             N_CLASSES_PER_TASK = [3,2,2]
@@ -151,9 +156,8 @@ class SequentialMMWHS(ContinualDataset):
                 return self.last[str(k)](x)
             model.logits = MethodType(new_logits, model)
 
-            
-        model.last = nn.Conv2d(lastn, 8, 1, 1, bias=False)
-        
+
+
         return model
 
     @staticmethod

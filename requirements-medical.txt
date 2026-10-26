@@ -1,0 +1,14 @@
+# Additional integration uses the existing framework dependencies.
+# Verified together on Python 3.12.9, torch 2.6.0, torchvision 0.21.0 (CPU).
+torch>=2.0
+torchvision>=0.15
+numpy
+scipy
+h5py
+opencv-python-headless
+matplotlib
+MedPy
+pytest
+# tensorboardX is optional; loaded only if its visualization class is used.
+# No MONAI/CLIP package, pretrained-weight download, or quadprog is needed
+# to import/test the added adapters. Real CLIP embeddings are supplied locally.

@@ -1,0 +1,17 @@
+{
+  "model": "nest",
+  "dataset": "seq-mmwhs",
+  "baseline_size": "mid",
+  "seed": 0,
+  "GPU_ids": "0",
+  "lr": 0.008,
+  "n_epochs": 150,
+  "batch_size": 8,
+  "save_freq": 0,
+  "nest_kd_weight": 10.0,
+  "nest_teacher_scale": 1.0,
+  "nest_pre_epochs": 5,
+  "nest_pre_lr_scale": 1.0,
+  "nest_pre_weight_decay": 0.0001,
+  "nest_selection_size": 128
+}

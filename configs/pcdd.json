@@ -1,0 +1,18 @@
+{
+  "model": "pcdd",
+  "dataset": "seq-mmwhs",
+  "baseline_size": "mid",
+  "seed": 0,
+  "GPU_ids": "0",
+  "lr": 0.01,
+  "lr_decay_rate": 1.0,
+  "n_epochs": 150,
+  "batch_size": 8,
+  "save_freq": 0,
+  "pcdd_entropy_threshold": 0.7,
+  "pcdd_orcd_weight": 1.0,
+  "pcdd_crcd_weight": 0.5,
+  "pcdd_local_weight": 0.5,
+  "pcdd_global_weight": 0.1,
+  "pcdd_grad_clip": 1.0
+}

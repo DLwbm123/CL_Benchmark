@@ -19,7 +19,8 @@ class ProstateCL_Dataset(Dataset):
     def __init__(self, task_name, mode, patch_size):
         self.task = task_name
         self.mode = mode
-        root_pro = "/home/zhouhangqi/zhq/data/Domain_Prostate/"
+        #root_pro = "/home/zhouhangqi/zhq/data/Domain_Prostate/"
+        root_pro = os.path.join(os.environ.get('CL_DATA_ROOT', '/data4/zhouhangqi/CL_Benchmark_data'), 'Domain_Prostate')
         if task_name == "3":
             task_h5 = os.path.join(root_pro, "ISBI" + ".h5") #BIDMC
         elif task_name == "5":
@@ -94,7 +95,9 @@ class SequentialProstate(ContinualDataset):
     N_TASKS = 6
 
     def get_data_loaders(self, t):
-        train_splits, test_splits = Prostate_Gen(["1", "2", "3", "4", "5", "6"], dataset=ProstateCL_Dataset, test = self.args.test_only)
+        task_names = ["1", "2", "3", "4", "5", "6"] if self.args.order is None else self.args.order #usual order
+        #print(task_names)
+        train_splits, test_splits = Prostate_Gen(task_names, dataset=ProstateCL_Dataset, test = self.args.test_only)
         train_dataset = train_splits[str(t+1)]
         test_dataset = test_splits[str(t+1)]
         if t < 5:
@@ -106,6 +109,7 @@ class SequentialProstate(ContinualDataset):
         train_loader = DataLoader(train_dataset,batch_size=self.args.batch_size, shuffle=True)
         test_loader = DataLoader(test_dataset,batch_size=1, shuffle=False)
         self.train_dataset = train_dataset
+        self.test_dataset = test_dataset
         self.test_loaders.append(test_loader)
         self.train_loader = train_loader
         self.test_loader = test_loader

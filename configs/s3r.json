@@ -1,0 +1,19 @@
+{
+  "model": "s3r",
+  "dataset": "seq-prostate",
+  "baseline_size": "mid",
+  "seed": 0,
+  "GPU_ids": "0",
+  "lr": 0.0005,
+  "lr_decay_rate": 1.0,
+  "s3r_optimizer": "Adam",
+  "s3r_weight_decay": 0.0001,
+  "s3r_epoch_gamma": 0.98,
+  "n_epochs": 150,
+  "batch_size": 8,
+  "save_freq": 0,
+  "s3r_lambda": 10000.0,
+  "s3r_mc_samples": 8,
+  "s3r_shape_checkpoint": null,
+  "s3r_shape_epochs": 0
+}

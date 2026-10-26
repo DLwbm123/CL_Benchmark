@@ -10,8 +10,8 @@ def backward_transfer(results):
     n_tasks = len(results)
     li = list()
     for i in range(n_tasks - 1):
-        li.append(results[-1][i] - results[i][i])
-
+        li.append((results[-1][i] - results[i][i])/results[i][i])
+        
     return np.mean(li)
 
 
@@ -43,12 +43,22 @@ def forward_transfer_class(whole_results, whole_random_results):
     return np.mean(li)
 
 
+
 def restricted_modelability(results):
     n_tasks = len(results)
     li = list()
     for i in range(1, n_tasks):
         #print("task", i)
         li.append(results[i][i])
+
+    return np.mean(li)
+
+def restricted_modelability_corrected(results1, results2):
+    n_tasks = len(results1)
+    li = list()
+    for i in range(1, n_tasks):
+        #print("task", i)
+        li.append(results1[i][i]/results2[i][i])
 
     return np.mean(li)
 
@@ -60,3 +70,24 @@ def task_difficulty(results):
         for j in range(i+1, n_tasks):
             li.append(results[0][0] - results[i][j])
     return np.mean(li)
+
+
+############################New Metrics###########################
+def model_size_efficiency(results, eps = 1e-8):
+    #return max(1,np.mean(np.array(results)/results[0]))
+    n_tasks = len(results)
+    li = list()
+    for i in range(1, n_tasks):
+        #print("task", i)
+        li.append((results[i]-results[i-1])/results[0])
+    return np.mean(li)
+
+def samples_storage_size_efficiency(results, ALL_DATA_SIZE):
+    return 1-min(1,np.mean(np.array(results)/ALL_DATA_SIZE))
+
+
+def computational_efficiency(results_onepass, results_wholesets):
+    return min(1,np.mean(results_onepass/results_wholesets))
+
+
+

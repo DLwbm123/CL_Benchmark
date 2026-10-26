@@ -1,0 +1,13 @@
+{
+  "model": "clip_cis",
+  "dataset": "seq-mmwhs",
+  "baseline_size": "mid",
+  "seed": 0,
+  "GPU_ids": "0",
+  "lr": 0.008,
+  "n_epochs": 150,
+  "batch_size": 8,
+  "save_freq": 0,
+  "clip_embeddings": "REPLACE_WITH_LOCAL_CLIP_EMBEDDINGS.pt",
+  "clip_pseudo_threshold": 0.5
+}

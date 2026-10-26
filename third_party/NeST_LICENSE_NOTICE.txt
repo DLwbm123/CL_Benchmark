@@ -1,0 +1,2 @@
+Original README statement, commit f96185be8a46f7f1812d750e00fe2fd86b7fd2b8:
+This code is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) for non-commercial use only.

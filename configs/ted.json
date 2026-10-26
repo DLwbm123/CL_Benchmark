@@ -1,0 +1,14 @@
+{
+  "model": "ted",
+  "dataset": "seq-prostate",
+  "baseline_size": "mid",
+  "seed": 0,
+  "GPU_ids": "0",
+  "lr": 0.008,
+  "n_epochs": 150,
+  "batch_size": 8,
+  "save_freq": 0,
+  "ted_lambda": 0.001,
+  "ted_gugf": true,
+  "ted_supervised": "dice_bce"
+}

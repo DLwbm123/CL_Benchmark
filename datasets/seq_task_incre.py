@@ -16,7 +16,8 @@ from datasets.utils.continual_dataset import ContinualDataset, store_masked_load
 class TaskIncre_Dataset(Dataset):
     def __init__(self, task_name, mode, patch_size):
         self.task = task_name
-        root_pro = "/home/zhouhangqi/zhq/data/Task_incre"
+        #root_pro = "/home/zhouhangqi/zhq/data/Task_incre"
+        root_pro = os.path.join(os.environ.get('CL_DATA_ROOT', '/data4/zhouhangqi/CL_Benchmark_data'), 'Task_incre')
         if task_name == "1":
             task_h5 = os.path.join(root_pro, "UtahI" + ".h5")  # BIDMC
         elif task_name == "2":
@@ -86,6 +87,7 @@ class SequentialTaskIncre(ContinualDataset):
     SETTING = 'task-il'
     N_CLASSES_PER_TASK = 2
     N_TASKS = 4
+    TASK_NAMES = ['left_atrium', 'prostate', 'liver', 'brain_tumor']
 
     def get_data_loaders(self, t):
         train_splits, test_splits = TaskIncre_Gen(["1", "2", "3", "4"], dataset=TaskIncre_Dataset, test = self.args.test_only)
@@ -103,6 +105,7 @@ class SequentialTaskIncre(ContinualDataset):
         test_loader = DataLoader(test_dataset,
                                  batch_size=1, shuffle=False)
         self.train_dataset = train_dataset
+        self.test_dataset = test_dataset
         self.test_loaders.append(test_loader)
         self.train_loader = train_loader
         self.test_loader = test_loader
@@ -116,16 +119,20 @@ class SequentialTaskIncre(ContinualDataset):
 
     @staticmethod
     def get_backbone(args):
-        if 'gpm' in args.model:
+        organ_adapter = args.model in ('ewf_organ', 'ldka_organ', 'cit_organ', 'clip_cis_organ')
+        if organ_adapter:
+            model = resunet32(args.baseline_size)
+        elif 'gpm' in args.model:
             model = resunet32_withdict(args.inputsize)
         else:
             model = resunet32()
 
         if args.multihead:
             N_TASKS = 4
+            width = model.last.in_channels
             model.last = nn.ModuleDict()
             for task in range(N_TASKS):
-                model.last[str(task)] = nn.Conv2d(32, 2, 1, 1, bias=False)
+                model.last[str(task)] = nn.Conv2d(width, 2, 1, 1, bias=False)
 
             def new_logits(self, x, k):
                 return self.last[str(k)](x)

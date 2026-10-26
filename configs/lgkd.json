@@ -1,0 +1,14 @@
+{
+  "model": "lgkd",
+  "dataset": "seq-mmwhs",
+  "baseline_size": "mid",
+  "seed": 0,
+  "GPU_ids": "0",
+  "lr": 0.008,
+  "n_epochs": 150,
+  "batch_size": 8,
+  "save_freq": 0,
+  "lgkd_previous_weight": 5.0,
+  "lgkd_novel_weight": 1.0,
+  "lgkd_teacher_scale": 1.0
+}

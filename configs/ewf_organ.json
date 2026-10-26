@@ -1,0 +1,22 @@
+{
+  "model": "ewf_organ",
+  "dataset": "seq-taskincre",
+  "baseline_size": "mid",
+  "seed": 0,
+  "GPU_ids": "0",
+  "lr": 0.008,
+  "n_epochs": 150,
+  "batch_size": 8,
+  "save_freq": 0,
+  "ewf_kd_weight": 10.0,
+  "ewf_teacher_scale": 1.0,
+  "ewf_freeze_old": true,
+  "multihead": true,
+  "organ_tasks": 4,
+  "organ_task_names": [
+    "left_atrium",
+    "prostate",
+    "liver",
+    "brain_tumor"
+  ]
+}
