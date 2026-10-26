@@ -1,0 +1,56 @@
+{
+  "id": "ted_s1",
+  "protocol_id": "ted-frozen-benchmark-v1",
+  "reviewed_at": 1793053161.0668478,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T4_latest.pth",
+      "current_task": 5,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T5_latest.pth",
+      "current_task": 6,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_metrics": {
+    "mean_dice": 0.49578925901759313,
+    "mean_asd": 0.0166657894820172,
+    "mean_precision": 0.9916671052590379,
+    "mean_recall": 0.5000000001764233,
+    "backward_transfer": 0.0,
+    "restricted_model_ability": null
+  },
+  "representative_train_prediction": "All background on one representative train slice",
+  "interpretation": "Six identical stage rows indicate degeneration; background-inclusive macro metrics cannot establish foreground accuracy or retention. One train slice does not prove all test predictions. Negative result retained without tuning/retry.",
+  "original_elapsed_hours": 7.6534642671876485,
+  "previous_attempt_count": 1,
+  "all_five_seeds_complete": false
+}

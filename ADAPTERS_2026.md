@@ -1,6 +1,6 @@
 # Continual medical segmentation adapters and ongoing five-seed study
 
-This branch adds research adapters to the existing public benchmark. It is an ongoing campaign: only S3R seed1 has completed review; this is a negative result, not evidence that all methods/settings/seeds finished. See results/20261026/S3R_SEED1_RESULT_ZH.md. No five-seed mean or standard deviation is available yet.
+This branch adds research adapters to the existing public benchmark. It is an ongoing campaign: S3R seed1 and TED seed1 have completed review (2/70 runs); both are negative results, not evidence that all methods/settings/seeds finished. See results/20261026/S3R_SEED1_RESULT_ZH.md and results/20261026/TED_SEED1_RESULT_ZH.md. No five-seed mean or standard deviation is available yet.
 
 Paper-derived 2D adapters and Organ-CL extensions are explicitly distinct from native author implementations. See README_natural_ciss.md, README_medical_methods.md and THIRD_PARTY_NOTICES.md. Numerical safeguards and optimizer-alignment changes are disclosed individually in results/20261026. The additions do not grant rights beyond applicable upstream licenses.
 
