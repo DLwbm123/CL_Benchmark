@@ -11,7 +11,7 @@ def backward_transfer(results):
     li = list()
     for i in range(n_tasks - 1):
         li.append((results[-1][i] - results[i][i])/results[i][i])
-        
+
     return np.mean(li)
 
 
@@ -88,6 +88,3 @@ def samples_storage_size_efficiency(results, ALL_DATA_SIZE):
 
 def computational_efficiency(results_onepass, results_wholesets):
     return min(1,np.mean(results_onepass/results_wholesets))
-
-
-
