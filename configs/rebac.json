@@ -14,5 +14,6 @@
   "rebac_background_weight": 5.0,
   "rebac_feature_weight": 4.0,
   "rebac_group_weight": 1.0,
-  "rebac_adaptation_weight": 1.0
+  "rebac_adaptation_weight": 1.0,
+  "rebac_grad_clip": 1.0
 }

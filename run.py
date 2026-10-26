@@ -30,6 +30,7 @@ def read_configuration(path):
                 'ldka_organ': {'ldka_organ_grad_clip'},
                 'ldka': {'ldka_grad_clip'},
                 'pcdd': {'pcdd_grad_clip'},
+                'rebac': {'rebac_grad_clip'},
                 'cit': {'lr','cit_optimizer','cit_weight_decay','cit_head_lr_mult'},
                 'cit_organ': {'lr','cit_optimizer','cit_weight_decay','cit_head_lr_mult'},
             }

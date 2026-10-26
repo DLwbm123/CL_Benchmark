@@ -1,6 +1,6 @@
 # Continual medical segmentation adapters and ongoing five-seed study
 
-This branch adds research adapters to the existing public benchmark. It is an ongoing campaign: S3R seed1 and TED seed1 have completed review (2/70 runs); both are negative results, not evidence that all methods/settings/seeds finished. See results/20261026/S3R_SEED1_RESULT_ZH.md and results/20261026/TED_SEED1_RESULT_ZH.md. No five-seed mean or standard deviation is available yet.
+This branch adds research adapters to the existing public benchmark. It is an ongoing campaign: Six seed1 runs have completed review (6/70): S3R, TED, Class-CLIP-CIS, Organ-CLIP-CIS, LGKD and NeST. S3R/TED show degeneration; Organ-CLIP-CIS shows substantial forgetting, not evidence that all methods/settings/seeds finished. See results/20261026/SEED1_FOUR_METHODS_RESULT_ZH.md and the separate S3R/TED negative-result reports. No five-seed mean or standard deviation is available yet.
 
 Paper-derived 2D adapters and Organ-CL extensions are explicitly distinct from native author implementations. See README_natural_ciss.md, README_medical_methods.md and THIRD_PARTY_NOTICES.md. Numerical safeguards and optimizer-alignment changes are disclosed individually in results/20261026. The additions do not grant rights beyond applicable upstream licenses.
 
@@ -9,3 +9,5 @@ Training uses 150 epochs per task, batch8 and seeds1..5. Current results preserv
 The test/validation distinction, background-inclusive metrics, legacy ASD handling, task-masked versus whole-heart metrics and unavailable normalized RMA must be considered when interpreting results. A background-only predictor can appear near0.5 macro Dice; the completed S3R seed1 should not be described as successful continual segmentation.
 
 Publication-package validation covered154 synthetic tests. The initial package had140 passes and14 integration failures caused by omitted matching logger/metric modules; after including these existing modules, all41 affected integration/Organ tests passed. A private server-scheduler test is excluded with its server-control implementation. These packaging failures did not affect live training.
+
+ReBac now uses a disclosed incremental-only gradient cap1 under the same original run clocks; see results/20261026/REBAC_GRADIENT_GUARD_V2_ZH.md. Its seed1 failure and seed2 protocol-switch interruption remain archived separately. This revision passed32 relevant synthetic tests including the new guard persistence test; no full long-run stability claim is made.

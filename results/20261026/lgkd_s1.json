@@ -1,0 +1,50 @@
+{
+  "id": "lgkd_s1",
+  "reviewed_at": 1793056785.538743,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.7857312484803624,
+    "mean_asd": 0.022026962078653945,
+    "mean_precision": 0.8394133922054062,
+    "mean_recall": 0.7749230940934136,
+    "backward_transfer": -0.03780189701904157,
+    "restricted_model_ability": null
+  },
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": [
+      0.702977633694441
+    ],
+    "ASD": [
+      0.05709328985949605
+    ],
+    "precision": [
+      0.7860180293342725
+    ],
+    "recall": [
+      0.827014587125693
+    ]
+  },
+  "original_elapsed_hours": 8.204402984513177,
+  "previous_attempt_count": 1,
+  "all_five_seeds_complete": false,
+  "limitations": "Task-conditioned matrix and whole-heart slice average have different protocols/averaging. Background included; legacy ASD retained. Normalized RMA unavailable. This is one seed only; no ranking or five-seed statistics."
+}

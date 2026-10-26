@@ -1,0 +1,43 @@
+{
+  "id": "clip_cis_organ_s1",
+  "reviewed_at": 1793056785.4622993,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.6365158609535903,
+    "mean_asd": 0.022893791567890648,
+    "mean_precision": 0.919118547725671,
+    "mean_recall": 0.6227019133270177,
+    "backward_transfer": -0.34995749114110203,
+    "restricted_model_ability": null
+  },
+  "whole_heart_slice_average_last_checkpoint": {},
+  "original_elapsed_hours": 7.900494431257248,
+  "previous_attempt_count": 1,
+  "all_five_seeds_complete": false,
+  "limitations": "Task-conditioned matrix and whole-heart slice average have different protocols/averaging. Background included; legacy ASD retained. Normalized RMA unavailable. This is one seed only; no ranking or five-seed statistics."
+}

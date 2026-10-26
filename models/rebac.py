@@ -16,6 +16,8 @@ def get_parser():
     p.add_argument('--rebac_feature_weight', type=float, default=4.)
     p.add_argument('--rebac_group_weight', type=float, default=1.)
     p.add_argument('--rebac_adaptation_weight', type=float, default=1.)
+    p.add_argument('--rebac_grad_clip', type=float, default=1.,
+                   help='ResUNet incremental-only gradient norm guard; 0 disables')
     return p
 
 
@@ -63,11 +65,28 @@ class Rebac(MedicalModel):
     def __init__(self, backbone, loss, args, transform):
         require_single_head(backbone, args)
         if min(args.lr, args.rebac_incremental_lr, args.rebac_old_lr) <= 0 or not 0 <= args.rebac_pseudo_threshold <= 1 or any(getattr(args, n) < 0 for n in
-                ('rebac_background_weight', 'rebac_feature_weight', 'rebac_group_weight', 'rebac_adaptation_weight')):
+                ('rebac_background_weight', 'rebac_feature_weight', 'rebac_group_weight', 'rebac_adaptation_weight', 'rebac_grad_clip')):
             raise ValueError('Invalid ReBac threshold or loss weight.')
         super().__init__(RebacResUnet(backbone), loss, args, transform)
         self.task_classes = []
         self.old_count = 1
+        self.guard_stats = {'steps': 0, 'clipped': 0, 'peak_preclip_norm': 0.}
+
+    @property
+    def gradient_clip_max_norm(self):
+        return self.args.rebac_grad_clip if self.current_task else 0.
+
+    def optimization_step(self, loss, **parts):
+        if not torch.isfinite(loss):
+            values = {key: float(value.detach()) for key, value in parts.items()}
+            raise FloatingPointError('rebac non-finite loss components: ' + str(values))
+        value = super().optimization_step(loss, **parts)
+        if self.gradient_clip_max_norm > 0:
+            norm = self.last_losses['gradient_norm_before_clip']
+            self.guard_stats['steps'] += 1
+            self.guard_stats['clipped'] += int(norm > self.gradient_clip_max_norm)
+            self.guard_stats['peak_preclip_norm'] = max(self.guard_stats['peak_preclip_norm'], norm)
+        return value
 
     def rebuild_optimizer(self):
         # All branches, including residual adapters, are registered. Upstream's
@@ -86,11 +105,14 @@ class Rebac(MedicalModel):
         return self.args.lr if self.current_task == 0 else self.args.rebac_incremental_lr
 
     def knowledge_state(self):
-        return {'task_classes': self.task_classes, 'old_count': self.old_count}
+        return {'task_classes': self.task_classes, 'old_count': self.old_count,
+                'guard_stats': dict(self.guard_stats)}
 
     def restore_knowledge(self, state):
         self.task_classes = state['task_classes']
         self.old_count = state['old_count']
+        self.guard_stats = dict(state.get('guard_stats',
+            {'steps': 0, 'clipped': 0, 'peak_preclip_norm': 0.}))
 
     def load_state_dict(self, state_dict, strict=True):
         counts = state_dict['_extra_state']['knowledge']['task_classes']
