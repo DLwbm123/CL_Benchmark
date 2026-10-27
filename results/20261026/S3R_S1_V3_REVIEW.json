@@ -1,0 +1,70 @@
+{
+  "id": "s3r_s1",
+  "protocol_id": "s3r-source-logits-v3",
+  "reviewed_at": 1793098172.2454991,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true,
+      "importance_abs_max": 0.001732995267957449
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true,
+      "importance_abs_max": 0.0059938859194517136
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true,
+      "importance_abs_max": 0.10185176134109497
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true,
+      "importance_abs_max": 0.1447201669216156
+    },
+    {
+      "file": "T4_latest.pth",
+      "current_task": 5,
+      "task_open": false,
+      "tensors_finite": true,
+      "importance_abs_max": 0.2643747627735138
+    },
+    {
+      "file": "T5_latest.pth",
+      "current_task": 6,
+      "task_open": false,
+      "tensors_finite": true,
+      "importance_abs_max": 0.33346426486968994
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.6572465192001142,
+    "forward_transfer": 0.2824687704042923,
+    "backward_transfer": -0.18674920932172512,
+    "mean_asd": 0.02087627767606905,
+    "mean_precision": 0.6466287441159001,
+    "mean_recall": 0.6955084782544795,
+    "restricted_model_ability": null
+  },
+  "metric_labels": {
+    "mean_dice": "A-Dice",
+    "forward_transfer": "E-FWT",
+    "backward_transfer": "BWTR"
+  },
+  "original_elapsed_hours": 19.543095358014106,
+  "previous_attempt_count": 3,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "Corrected v3 numerical/optimizer adapter, not author-native reproduction. Old probability-BCE attempts invalid and excluded, original costs preserved. Background and legacy ASD retained; RMA reference unavailable, DRR taskwise accounting pending. Variable matrix and nonzero importance do not prove absence of all pixelwise failure modes. Single seed, no tuning."
+}
