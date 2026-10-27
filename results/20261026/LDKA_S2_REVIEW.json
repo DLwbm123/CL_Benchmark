@@ -1,0 +1,74 @@
+{
+  "id": "ldka_s2",
+  "protocol_id": "class-ldka-gradient-guard-v2",
+  "reviewed_at": 1793101777.6305892,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 28200,
+        "clipped": 15672,
+        "peak_preclip_norm": 1380.1075439453125
+      }
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 56400,
+        "clipped": 43872,
+        "peak_preclip_norm": 1948.9320068359375
+      }
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 84600,
+        "clipped": 72072,
+        "peak_preclip_norm": 2998.42919921875
+      }
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.48574065988351117,
+    "backward_transfer": 0.015761025556956708,
+    "mean_asd": 0.030680558618121884,
+    "mean_precision": 0.8409128454624444,
+    "mean_recall": 0.4907589904919251,
+    "restricted_model_ability": null
+  },
+  "metric_labels": {
+    "mean_dice": "A-Dice",
+    "backward_transfer": "BWTR",
+    "forward_transfer": "E-FWT (Domain only)"
+  },
+  "original_elapsed_hours": 12.436441552374099,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "Explicit ResUNet framework adapter, not native author reproduction. Background and legacy ASD retained. RMA reference unavailable and DRR accounting pending. Old invalid/failed attempts excluded while original elapsed costs retained. No score-based tuning or additional pixelwise collapse diagnosis.",
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": [
+      0.5790787914695185
+    ],
+    "ASD": [
+      0.15192009013543806
+    ],
+    "precision": [
+      0.7990212113060073
+    ],
+    "recall": [
+      0.6913911315968124
+    ]
+  }
+}
