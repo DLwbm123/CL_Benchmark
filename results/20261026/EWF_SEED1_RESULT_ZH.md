@@ -2,7 +2,7 @@
 
 Class-CL与Organ-CL seed1的训练/独立test均返回0，分别3/4个完整任务checkpoint，current_task依次到3/4、task_open=false，张量有限。原首次执行至退出9.663/9.753小时，包含旧中断成本，原时限不变。
 
-| Setting | test任务条件宏Dice | Dice BWT | whole-heart切片平均Dice |
+| Setting | test任务条件宏Dice | Dice BWTR | whole-heart切片平均Dice |
 |---|---:|---:|---:|
 | Class-CL | 0.512717750 | -0.017070850 | 0.598457362 |
 | Organ-CL | 0.631102637 | -0.143234495 | 不适用 |

@@ -2,7 +2,7 @@
 
 训练/test退出码均0，四任务checkpoint的current_task1..4、task_open=false、直接状态张量有限。原首次实际执行至退出7.277小时，无旧attempt，原时限不变。
 
-| Seed | test任务条件宏Dice | Dice BWT |
+| Seed | test任务条件宏Dice | Dice BWTR |
 |---|---:|---:|
 | 1（既有） | 0.636515861 | -0.349957491 |
 | 2（新增） | 0.709224106 | -0.258503259 |

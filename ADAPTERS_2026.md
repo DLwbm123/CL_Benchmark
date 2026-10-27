@@ -19,3 +19,5 @@ Organ-LDKA seed1 completed with macro Dice0.26605 and all66750 incremental steps
 Class-CLIP-CIS seed2 is recorded in results/20261026/CLIP_CIS_SEED2_RESULT_ZH.md; task-conditioned and whole-heart numbers remain distinct, with only2/5seeds available.
 
 Organ-CLIP-CIS seed2 is recorded in results/20261026/CLIP_CIS_ORGAN_SEED2_RESULT_ZH.md; both available seeds show forgetting, with no five-seed claim.
+
+Reporting follows the manuscript metrics and benchmarking purpose; see results/20261026/BENCHMARK_REPORTING_POLICY_ZH.md. Legacy CSV backward_transfer already calculates BWTR; this terminology correction changes no measured values or training. Poor scores alone do not authorize tuning. Legacy storage efficiency is not silently renamed DRR.

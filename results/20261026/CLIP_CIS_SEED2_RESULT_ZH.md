@@ -2,7 +2,7 @@
 
 训练/test均返回0，3个任务checkpoint核验current_task1..3、task_open=false、张量有限。首次实际执行至测试退出7.167小时，无旧attempt，原24小时时钟不变。
 
-| Seed | test任务条件宏Dice | Dice BWT | whole-heart切片平均Dice |
+| Seed | test任务条件宏Dice | Dice BWTR | whole-heart切片平均Dice |
 |---|---:|---:|---:|
 | 1（既有） | 0.819436669 | -0.028314038 | 0.626722479 |
 | 2（新增） | 0.834039266 | -0.007170173 | 0.616317092 |
