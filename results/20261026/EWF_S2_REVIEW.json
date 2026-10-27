@@ -1,0 +1,55 @@
+{
+  "id": "ewf_s2",
+  "protocol_id": "frozen-perf-v1",
+  "reviewed_at": 1793103566.0992064,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.5454974023517586,
+    "backward_transfer": 0.00107674323061277,
+    "mean_asd": 0.028757188593411236,
+    "mean_precision": 0.720441192988423,
+    "mean_recall": 0.5275191949264514,
+    "restricted_model_ability": null
+  },
+  "metric_label": "BWTR (legacy CSV backward_transfer)",
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": [
+      0.5907598901474572
+    ],
+    "ASD": [
+      0.13736700315805223
+    ],
+    "precision": [
+      0.7735869666976842
+    ],
+    "recall": [
+      0.7062861328118035
+    ]
+  },
+  "original_elapsed_hours": 7.499866841634114,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "Frozen framework adapter. Task-conditioned metrics and whole-heart slice means differ. Background/legacy ASD retained; matched RMA reference and taskwise DRR accounting unavailable. No score-based tuning."
+}
