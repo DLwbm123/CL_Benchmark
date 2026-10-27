@@ -1,0 +1,42 @@
+{
+  "id": "clip_cis_organ_s2",
+  "reviewed_at": 1793083813.7237365,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.7092241062758773,
+    "mean_asd": 0.01862315209000446,
+    "mean_precision": 0.8140963033735823,
+    "mean_recall": 0.6791795597457615,
+    "backward_transfer": -0.25850325864348045,
+    "restricted_model_ability": null
+  },
+  "original_elapsed_hours": 7.276604127817683,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "limitations": "Explicit task-aware Organ adapter; background-inclusive patient-average matrix and legacy ASD retained. No whole-heart metric for this setting or normalized RMA reference. Only two seeds complete; no full five-seed conclusion."
+}
