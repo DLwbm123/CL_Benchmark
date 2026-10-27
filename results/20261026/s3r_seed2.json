@@ -1,0 +1,55 @@
+{
+  "id": "s3r_s2",
+  "protocol_id": "s3r-source-optimizer-v2",
+  "reviewed_at": 1793071173.2091959,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T4_latest.pth",
+      "current_task": 5,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T5_latest.pth",
+      "current_task": 6,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_metrics": {
+    "mean_dice": 0.49578925901759313,
+    "mean_asd": 0.0166657894820172,
+    "mean_precision": 0.9916671052590379,
+    "mean_recall": 0.5000000001764233,
+    "backward_transfer": 0.0,
+    "restricted_model_ability": null
+  },
+  "original_elapsed_hours": 3.684552542567253,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "interpretation": "Six identical stage matrix rows; test metrics identical to reviewed seed1. Background-inclusive macro metrics are consistent with degeneration, not retention success. No additional pixel-level check for this seed, so no claim that all test pixels are background. Negative result retained without tuning/restart."
+}
