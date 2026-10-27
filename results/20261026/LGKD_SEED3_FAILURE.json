@@ -1,0 +1,11 @@
+{
+  "id": "lgkd_s3",
+  "status": "FAILED_OR_STOPPED",
+  "train_returncode": 1,
+  "original_elapsed_hours": 4.452021604180336,
+  "failure_stage": "task3 startup before any logged finite task3 loss",
+  "T1_all_state_finite": true,
+  "additional_optimization_updates": 0,
+  "heldout_access": false,
+  "interpretation": "Second seed failure at task3 transition; repeatability strengthens numerical instability evidence, does not identify a unique code defect. No blind retry/parameter search; retains original checkpoints/logs/costs. See LGKD_SEED2_FAILURE_ZH.md for previous bounded audit and source-recipe differences."
+}
