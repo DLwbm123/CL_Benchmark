@@ -1,0 +1,47 @@
+{
+  "id": "ewf_organ_s2",
+  "protocol_id": "frozen-perf-v1",
+  "reviewed_at": 1793099960.5126617,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.5905613554014798,
+    "mean_asd": 0.026592043070038533,
+    "mean_precision": 0.8922925782023072,
+    "mean_recall": 0.5736288348621312,
+    "backward_transfer": -0.20327067751595393,
+    "restricted_model_ability": null
+  },
+  "metric_label": "BWTR (legacy CSV backward_transfer)",
+  "original_elapsed_hours": 7.612211612992817,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "Explicit framework adapter, not native author reproduction. Background/legacy ASD retained. Matched RMA reference and verified taskwise DRR accounting unavailable. No score-driven tuning. Old attempts excluded, original elapsed cost preserved."
+}
