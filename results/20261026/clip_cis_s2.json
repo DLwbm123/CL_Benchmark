@@ -1,0 +1,50 @@
+{
+  "id": "clip_cis_s2",
+  "reviewed_at": 1793081962.7435722,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.8340392662835424,
+    "mean_asd": 0.013457824675600227,
+    "mean_precision": 0.9048109927248756,
+    "mean_recall": 0.7999150304272278,
+    "backward_transfer": -0.007170172950338374,
+    "restricted_model_ability": null
+  },
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": [
+      0.6163170924706641
+    ],
+    "ASD": [
+      0.060157603724329635
+    ],
+    "precision": [
+      0.6783004541871749
+    ],
+    "recall": [
+      0.8472357529476876
+    ]
+  },
+  "original_elapsed_hours": 7.166867860953013,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "limitations": "Class matrix uses known task masks and patient averaging; whole-heart uses common labels and slice averaging. Background-inclusive metrics and legacy ASD retained; no normalized RMA reference. Only two seeds complete, no five-seed claim."
+}
