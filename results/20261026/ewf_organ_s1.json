@@ -1,0 +1,43 @@
+{
+  "id": "ewf_organ_s1",
+  "reviewed_at": 1793060357.5165834,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.6311026370188634,
+    "mean_asd": 0.03464483555135841,
+    "mean_precision": 0.9085348077050951,
+    "mean_recall": 0.6378396311276429,
+    "backward_transfer": -0.14323449494915497,
+    "restricted_model_ability": null
+  },
+  "whole_heart_slice_average_last_checkpoint": {},
+  "original_elapsed_hours": 9.752769173913531,
+  "previous_attempt_count": 1,
+  "all_five_seeds_complete": false,
+  "limitations": "Single seed; background-inclusive task-conditioned matrix and whole-heart slice-average differ. Existing ASD retained; normalized RMA unavailable. No tuning or restart based on these scores."
+}
