@@ -35,3 +35,5 @@ TED seed1 v3 and Class-LDKA seed2 completed under frozen protocols; see results/
 Class-EWF seed2 is reviewed under the frozen protocol: A-Dice0.5454974024, BWTR0.0010767432, whole-heart slice Dice0.5907598901. See results/20261026/EWF_SEED2_RESULT_ZH.md; only2/5 seeds are complete.
 
 Organ-CIT seed2 and corrected S3R seed2 v3 are reviewed; each combination has2/5 valid seeds. Metrics and original costs are in results/20261026/CIT_ORGAN_S3R2_RESULTS_ZH.md; old probability-BCE S3R results remain invalid and separate.
+
+LGKD seed2 failed with a non-finite loss at the start of task3. It is retained separately, not counted complete or automatically retried; bounded train-only audit and source-recipe differences are documented in results/20261026/LGKD_SEED2_FAILURE_ZH.md.

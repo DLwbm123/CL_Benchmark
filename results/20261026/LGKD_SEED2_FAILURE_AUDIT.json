@@ -1,0 +1,17 @@
+{
+  "id": "lgkd_s2",
+  "checked_at": 1793114418.1246908,
+  "checkpoint_T1_all_tensors_finite": true,
+  "input_finite": true,
+  "labels": [
+    0
+  ],
+  "supervised": 1.0363404750823975,
+  "kd": 5.6057634353637695,
+  "logits_finite": true,
+  "teacher_logits_finite": true,
+  "optimization_updates": 0,
+  "heldout_access": false,
+  "conclusion": "Failure follows first task3 update in actual GPU log. T1 checkpoint and representative task3 train forward finite. Exact failed shuffled batch not saved; no unique root cause proven. Loss implementation uses stable log-softmax; no demonstrated probability-BCE bug. Preserve failure; no automatic retry or score-driven guard tuning.",
+  "source_config_note": "Adapter inherits benchmark plain SGD .008 and epoch StepLR; upstream uses SGD momentum/Nesterov/weight decay and PolyLR. This predeclared adapter difference is not a demonstrated cause of this seed-specific failure; any recipe realignment needs qualification and uniform protocol accounting."
+}
