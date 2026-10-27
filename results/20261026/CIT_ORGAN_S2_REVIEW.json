@@ -1,0 +1,51 @@
+{
+  "id": "cit_organ_s2",
+  "protocol_id": "cit-source-optimizer-v2",
+  "reviewed_at": 1793107165.806259,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.7168455559304469,
+    "backward_transfer": -0.20350713686830135,
+    "mean_asd": 0.025910633132896446,
+    "mean_precision": 0.8079609251624741,
+    "mean_recall": 0.7048548928194412,
+    "restricted_model_ability": null
+  },
+  "metric_labels": {
+    "mean_dice": "A-Dice",
+    "backward_transfer": "BWTR",
+    "forward_transfer": "E-FWT (Domain only)"
+  },
+  "original_elapsed_hours": 10.203207385937374,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "Disclosed framework adapter, not native author reproduction. Background/legacy ASD retained. RMA reference unavailable; DRR taskwise accounting pending. Invalid previous attempts excluded, original elapsed costs retained. No score-driven tuning or new pixelwise diagnostic."
+}
