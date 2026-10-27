@@ -4,11 +4,16 @@
   "baseline_size": "mid",
   "seed": 0,
   "GPU_ids": "0",
-  "lr": 0.008,
+  "lr": 0.0002,
   "n_epochs": 150,
   "batch_size": 8,
   "save_freq": 0,
   "ted_lambda": 0.001,
   "ted_gugf": true,
-  "ted_supervised": "dice_bce"
+  "ted_supervised": "dice_bce",
+  "lr_decay_rate": 1.0,
+  "ted_optimizer": "Adam",
+  "ted_incremental_lr": 0.0001,
+  "ted_epoch_gamma": 0.99,
+  "ted_bce_impl": "logits"
 }

@@ -1,0 +1,44 @@
+[
+  {
+    "method": "ted",
+    "task": "T0",
+    "training_batch_foreground_fraction": 0.04076576232910156,
+    "labels": [
+      0,
+      1
+    ],
+    "predicted_fg_pixels": 0,
+    "foreground_probability_max": 0.0,
+    "logit_gap_min": 501674784.0,
+    "logit_gap_max": 348588310528.0,
+    "probability_BCE": 4.076576232910156,
+    "stable_equivalent_CE": 2890374656.0,
+    "old_logit_gradient_max": 0.0,
+    "stable_logit_gradient_max": 1.9073486328125e-06,
+    "old_nonzero_gradient_count": 0,
+    "stable_nonzero_gradient_count": 42746,
+    "optimizer": "SGD",
+    "importance_max": null
+  },
+  {
+    "method": "s3r",
+    "task": "T0",
+    "training_batch_foreground_fraction": 0.04076576232910156,
+    "labels": [
+      0,
+      1
+    ],
+    "predicted_fg_pixels": 0,
+    "foreground_probability_max": 0.0,
+    "logit_gap_min": 1233.34912109375,
+    "logit_gap_max": 226319.953125,
+    "probability_BCE": 4.076576232910156,
+    "stable_equivalent_CE": 2190.13818359375,
+    "old_logit_gradient_max": 0.0,
+    "stable_logit_gradient_max": 1.9073486328125e-06,
+    "old_nonzero_gradient_count": 0,
+    "stable_nonzero_gradient_count": 42746,
+    "optimizer": "Adam",
+    "importance_max": 0.0
+  }
+]

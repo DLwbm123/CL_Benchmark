@@ -10,7 +10,7 @@ from torch import nn
 from torch.nn import functional as F
 
 from models.utils.medical import (MedicalModel, binary_targets, load_tensors,
-                                 medical_parser, require_single_head)
+                                 medical_parser, require_single_head, softmax_binary_cross_entropy)
 from models.utils.shape import ShapeResUnet, signed_distance
 
 
@@ -18,6 +18,7 @@ def get_parser():
     parser = medical_parser('Shape and semantics selective regularization')
     parser.set_defaults(lr=5e-4, lr_decay_rate=1.0)
     parser.add_argument('--s3r_optimizer', choices=['Adam', 'SGD'], default='Adam')
+    parser.add_argument('--s3r_bce_impl', choices=['logits', 'probability'], default='logits')
     parser.add_argument('--s3r_weight_decay', type=float, default=1e-4)
     parser.add_argument('--s3r_epoch_gamma', type=float, default=0.98)
     parser.add_argument('--s3r_lambda', type=float, default=10000.)
@@ -152,7 +153,9 @@ class S3r(MedicalModel):
         target = masks[:, 1]
         dice = 1 - (2 * (foreground * target).sum() + 1e-5) / (
             foreground.sum() + target.sum() + 1e-5)
-        supervised = 0.5 * (F.binary_cross_entropy(probs, masks) + dice)
+        bce = (softmax_binary_cross_entropy(logits, labels) if self.args.s3r_bce_impl == 'logits'
+               else F.binary_cross_entropy(probs, masks))
+        supervised = 0.5 * (bce + dice)
         distance = F.mse_loss(regression, signed_distance(labels))
         with torch.no_grad():
             target_code = self.net.shape_encoder.encode(masks)

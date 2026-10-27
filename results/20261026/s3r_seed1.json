@@ -52,5 +52,8 @@
   "all_five_seeds_complete": false,
   "original_elapsed_hours": 6.28583959447013,
   "previous_attempt_count": 2,
-  "representative_train_prediction": "All background on one representative train slice; no raw sample released."
+  "representative_train_prediction": "All background on one representative train slice; no raw sample released.",
+  "valid_for_method_comparison": false,
+  "superseded_by": "Domain numerical audit v3; original measured values preserved",
+  "correction_report": "DOMAIN_COLLAPSE_AUDIT_ZH.md"
 }

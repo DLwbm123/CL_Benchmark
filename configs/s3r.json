@@ -15,5 +15,6 @@
   "s3r_lambda": 10000.0,
   "s3r_mc_samples": 8,
   "s3r_shape_checkpoint": null,
-  "s3r_shape_epochs": 0
+  "s3r_shape_epochs": 0,
+  "s3r_bce_impl": "logits"
 }

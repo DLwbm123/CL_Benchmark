@@ -103,3 +103,5 @@ python -m pytest -q
 测试数据全部由本地张量临时构造，检查点和 CSV 写到测试临时目录；产生的分数没有科研意义。环境版本及最终执行结果见 `IMPLEMENTATION_STATUS.json`。
 
 2026-10-27 S3R源码优化器修正v2：Adam lr5e-4、wd1e-4，逐epoch开始按0.98衰减、跨task保留Adam矩；避免框架二次StepLR衰减。BCE前检查非有限logits/probs。实际协议采用50epochs当前task训练mask ACNN适配，代码模板0仍要求提供prior或显式预训练，不使用随机冻结prior。旧SGD .008失败不混入新协议五seed，详见experiments/20261026_five_seed/S3R_SOURCE_OPTIMIZER_V2_ZH.md。
+
+2026-10-27 数值审计v3：S3R/TED旧概率BCE在真实T0 checkpoint的错误饱和背景处出现零纠正梯度；改用数学等价的稳定logits求值。TED另纠正原来误继承的通用SGD配置，使用Adam base2e-4/inc1e-4、每域新optimizer/epoch gamma.99。旧TED s1/S3R s1,s2结果失效另存，不作有效复现负结果；原时钟不重置。162项CPU测试及两方法各两任务/两步真实train资格通过，尚未证明完整性能。详见experiments/20261026_five_seed/DOMAIN_COLLAPSE_AUDIT_ZH.md。

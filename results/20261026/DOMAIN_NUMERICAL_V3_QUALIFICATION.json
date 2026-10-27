@@ -1,0 +1,104 @@
+{
+  "status": "PASS_TWO_TASK_TWO_UPDATE_QUALIFICATION_NOT_FULL_TRAINING",
+  "held_out_accessed": false,
+  "formal_weights_reused": false,
+  "engineering_optimizer_updates": 8,
+  "methods": [
+    {
+      "method": "ted",
+      "stages": [
+        {
+          "task": 0,
+          "lr": 0.0002,
+          "steps": [
+            {
+              "supervised": 1.2021108865737915,
+              "image_kd": 0.0,
+              "ska": 0.0,
+              "akt": 0.0,
+              "total": 1.2021108865737915
+            },
+            {
+              "supervised": 0.7373497486114502,
+              "image_kd": 0.0,
+              "ska": 0.0,
+              "akt": 0.0,
+              "total": 0.7373497486114502
+            }
+          ],
+          "foreground_probability_max": 0.4980507791042328
+        },
+        {
+          "task": 1,
+          "lr": 0.0001,
+          "steps": [
+            {
+              "supervised": 0.35148733854293823,
+              "image_kd": 1.1027138233184814,
+              "ska": 1.2548433542251587,
+              "akt": 1.2531806230545044,
+              "total": 0.35509806871414185
+            },
+            {
+              "supervised": 0.25602370500564575,
+              "image_kd": 1.6035162210464478,
+              "ska": 1.80965256690979,
+              "akt": -0.0,
+              "total": 0.25943687558174133
+            }
+          ],
+          "foreground_probability_max": 0.4655848443508148
+        }
+      ]
+    },
+    {
+      "method": "s3r",
+      "stages": [
+        {
+          "task": 0,
+          "lr": 0.00049,
+          "steps": [
+            {
+              "supervised": 0.8221394419670105,
+              "sdf": 0.2211727797985077,
+              "embedding": 0.22182561457157135,
+              "regularization": 0.0,
+              "total": 1.265137791633606
+            },
+            {
+              "supervised": 0.7388635873794556,
+              "sdf": 0.169271320104599,
+              "embedding": 0.18270112574100494,
+              "regularization": 0.0,
+              "total": 1.0908360481262207
+            }
+          ],
+          "importance_max": 0.004505908116698265,
+          "foreground_probability_max": 0.49665701389312744
+        },
+        {
+          "task": 1,
+          "lr": 0.00049,
+          "steps": [
+            {
+              "supervised": 0.5836775302886963,
+              "sdf": 0.10902798920869827,
+              "embedding": 0.8168452382087708,
+              "regularization": 0.0,
+              "total": 1.5095508098602295
+            },
+            {
+              "supervised": 0.6190764904022217,
+              "sdf": 0.26910609006881714,
+              "embedding": 0.5877866744995117,
+              "regularization": 4.050000370625639e-06,
+              "total": 1.5164693593978882
+            }
+          ],
+          "importance_max": 0.011056202463805676,
+          "foreground_probability_max": 0.5157685875892639
+        }
+      ]
+    }
+  ]
+}

@@ -58,12 +58,29 @@ def binary_targets(labels, classes):
     return F.one_hot(labels, classes).permute(0, 3, 1, 2).float()
 
 
-def dice_bce(logits, labels):
+def softmax_binary_cross_entropy(logits, labels):
+    """One-hot BCE of softmax probabilities, evaluated without probability underflow.
+
+    For two classes this is exactly categorical CE. For more classes the
+    negative-class log probability is logsumexp of the other log probabilities.
+    """
+    if logits.shape[1] == 2:
+        return F.cross_entropy(logits, labels)
+    target = binary_targets(labels, logits.shape[1])
+    logp = F.log_softmax(logits, 1)
+    log_not_p = torch.stack([torch.cat([logp[:, :c], logp[:, c+1:]], 1).logsumexp(1)
+                             for c in range(logits.shape[1])], 1)
+    return -(target * logp + (1-target) * log_not_p).mean()
+
+
+def dice_bce(logits, labels, stable=True):
     """TED upstream flattened Dice (smooth=1) plus multiclass-probability BCE."""
     target = binary_targets(labels, logits.shape[1])
     probs = logits.softmax(1)
     dice = 1 - (2 * (probs * target).sum() + 1) / (probs.sum() + target.sum() + 1)
-    return F.binary_cross_entropy(probs, target) + dice
+    bce = (softmax_binary_cross_entropy(logits, labels) if stable else
+           F.binary_cross_entropy(probs, target))
+    return bce + dice
 
 
 class MedicalModel(ContinualModel):
@@ -179,6 +196,11 @@ class MedicalModel(ContinualModel):
             raise ValueError('Expected a complete checkpoint for ' + self.NAME)
         if self.NAME == 's3r' and state['config'].get('s3r_optimizer', 'SGD') != self.args.s3r_optimizer:
             raise ValueError('Checkpoint objective configuration mismatch: s3r_optimizer')
+        for key, legacy in ((self.NAME + '_bce_impl', 'probability'),):
+            if self.NAME in ('s3r', 'ted') and state['config'].get(key, legacy) != getattr(self.args, key):
+                raise ValueError('Checkpoint objective configuration mismatch: ' + key)
+        if self.NAME == 'ted' and state['config'].get('ted_optimizer', 'SGD') != self.args.ted_optimizer:
+            raise ValueError('Checkpoint objective configuration mismatch: ted_optimizer')
         if self.NAME in ('cit','cit_organ') and state['config'].get('cit_optimizer','SGD') != self.args.cit_optimizer:
             raise ValueError('Checkpoint objective configuration mismatch: cit_optimizer')
         objective_keys = ('ted_lambda', 'ted_gugf', 'ted_supervised',
@@ -186,7 +208,7 @@ class MedicalModel(ContinualModel):
                           's3r_beta1', 's3r_dropout', 's3r_mc_samples',
                           's3r_importance_batches', 'clip_pseudo_threshold')
         objective_keys += tuple(key for key in state['config']
-                                if key.startswith(('s3r_', 'ewf_', 'lgkd_', 'nest_', 'cit_', 'rebac_', 'ldka_', 'pcdd_', 'organ_')))
+                                if key.startswith(('ted_', 's3r_', 'ewf_', 'lgkd_', 'nest_', 'cit_', 'rebac_', 'ldka_', 'pcdd_', 'organ_')))
         for key in objective_keys:
             if key in state['config'] and state['config'][key] != getattr(self.args, key):
                 raise ValueError('Checkpoint objective configuration mismatch: ' + key)

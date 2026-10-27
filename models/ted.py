@@ -12,6 +12,11 @@ from models.utils.medical import (MedicalModel, dice_bce, medical_parser,
 
 def get_parser():
     parser = medical_parser('Tri-enhanced distillation for Domain-CL')
+    parser.set_defaults(lr=2e-4, lr_decay_rate=1.)
+    parser.add_argument('--ted_optimizer', choices=['Adam', 'SGD'], default='Adam')
+    parser.add_argument('--ted_incremental_lr', type=float, default=1e-4)
+    parser.add_argument('--ted_epoch_gamma', type=float, default=.99)
+    parser.add_argument('--ted_bce_impl', choices=['logits', 'probability'], default='logits')
     parser.add_argument('--ted_lambda', type=float, default=0.001)
     parser.add_argument('--ted_gugf', action='store_true', default=True)
     parser.add_argument('--ted_no_gugf', dest='ted_gugf', action='store_false')
@@ -49,12 +54,33 @@ class Ted(MedicalModel):
         super().__init__(backbone, loss, args, transform)
         if args.ted_lambda < 0:
             raise ValueError('ted_lambda must be nonnegative.')
+        if min(args.lr, args.ted_incremental_lr) <= 0 or not 0 < args.ted_epoch_gamma <= 1:
+            raise ValueError('Invalid TED source optimizer settings.')
+        if args.ted_optimizer == 'Adam':
+            if args.lr_decay_rate != 1.:
+                raise ValueError('TED source epoch decay requires lr_decay_rate=1.')
+            self.opt = torch.optim.Adam(self.net.parameters(), lr=args.lr)
+            self.scheduler = torch.optim.lr_scheduler.StepLR(self.opt, args.lr_decay_epoch, gamma=1.)
+
+    @property
+    def task_learning_rate(self):
+        return self.args.lr if self.current_task == 0 else self.args.ted_incremental_lr
+
+    def begin_task(self, dataset):
+        super().begin_task(dataset)
+        if self.args.ted_optimizer == 'Adam':
+            self.opt.state.clear()  # author constructs a fresh Adam per domain
+
+    def begin_epoch(self, epoch, n_epochs):
+        if self.args.ted_optimizer == 'Adam':
+            for group in self.opt.param_groups:
+                group['lr'] = self.task_learning_rate * self.args.ted_epoch_gamma ** epoch
 
     def observe(self, inputs, labels, not_aug_inputs=None):
         self.require_open_task()
         self.opt.zero_grad(set_to_none=True)
         logits = self.net(inputs)
-        supervised = (dice_bce(logits, labels) if self.args.ted_supervised == 'dice_bce'
+        supervised = (dice_bce(logits, labels, stable=self.args.ted_bce_impl == 'logits') if self.args.ted_supervised == 'dice_bce'
                       else self.loss(logits, labels).mean())
         image_kd = noise_kd = akt = logits.new_zeros(())
         if self.teacher is not None:

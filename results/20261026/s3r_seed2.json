@@ -51,5 +51,8 @@
   "original_elapsed_hours": 3.684552542567253,
   "previous_attempt_count": 0,
   "all_five_seeds_complete": false,
-  "interpretation": "Six identical stage matrix rows; test metrics identical to reviewed seed1. Background-inclusive macro metrics are consistent with degeneration, not retention success. No additional pixel-level check for this seed, so no claim that all test pixels are background. Negative result retained without tuning/restart."
+  "interpretation": "Six identical stage matrix rows; test metrics identical to reviewed seed1. Background-inclusive macro metrics are consistent with degeneration, not retention success. No additional pixel-level check for this seed, so no claim that all test pixels are background. Negative result retained without tuning/restart.",
+  "valid_for_method_comparison": false,
+  "superseded_by": "Domain numerical audit v3; original measured values preserved",
+  "correction_report": "DOMAIN_COLLAPSE_AUDIT_ZH.md"
 }

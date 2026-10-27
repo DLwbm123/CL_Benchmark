@@ -52,5 +52,8 @@
   "interpretation": "Six identical stage rows indicate degeneration; background-inclusive macro metrics cannot establish foreground accuracy or retention. One train slice does not prove all test predictions. Negative result retained without tuning/retry.",
   "original_elapsed_hours": 7.6534642671876485,
   "previous_attempt_count": 1,
-  "all_five_seeds_complete": false
+  "all_five_seeds_complete": false,
+  "valid_for_method_comparison": false,
+  "superseded_by": "Domain numerical audit v3; original measured values preserved",
+  "correction_report": "DOMAIN_COLLAPSE_AUDIT_ZH.md"
 }

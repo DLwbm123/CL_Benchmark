@@ -1,3 +1,5 @@
+> **数值审计更正：本旧协议结果已失效，数值保留供审计，不纳入v3方法比较。参见[审计报告](DOMAIN_COLLAPSE_AUDIT_ZH.md)。**
+
 # S3R seed1：已完成的负结果
 
 仅1/5 seeds、1/70独立运行完成，不能计算五seed均值/标准差。协议s3r-source-optimizer-v2，ResUNet 2D适配、每task150epochs、batch8、当前mask形状预训练50epochs。六阶段完整checkpoint的current_task依次1..6、task_open=false，张量有限，训练/测试退出码均0。

@@ -1,3 +1,5 @@
+> **数值审计更正：本旧协议结果已失效，数值保留供审计，不纳入v3方法比较。参见[审计报告](DOMAIN_COLLAPSE_AUDIT_ZH.md)。**
+
 # TED seed1：已完成的负结果
 
 训练与独立test均正常退出，六阶段checkpoint完整（current_task1..6、task_open=false、所有直接状态张量有限）。原首次实际执行至test退出约7.653小时，含代码替换前的中断成本；原时限未重置。协议仍为原冻结TED参数及perf-v1工程加速，未因低分重跑、改变学习率或选择其他checkpoint。

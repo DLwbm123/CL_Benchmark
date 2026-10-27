@@ -26,7 +26,8 @@ def read_configuration(path):
                 protocol = json.load(source)
             overrides = protocol['overrides']
             allowed = {
-                's3r': {'lr', 'lr_decay_rate', 's3r_optimizer', 's3r_weight_decay', 's3r_epoch_gamma'},
+                's3r': {'lr', 'lr_decay_rate', 's3r_optimizer', 's3r_weight_decay', 's3r_epoch_gamma', 's3r_bce_impl'},
+                'ted': {'lr', 'lr_decay_rate', 'ted_optimizer', 'ted_incremental_lr', 'ted_epoch_gamma', 'ted_bce_impl'},
                 'ldka_organ': {'ldka_organ_grad_clip'},
                 'ldka': {'ldka_grad_clip'},
                 'pcdd': {'pcdd_grad_clip'},

@@ -1,3 +1,5 @@
+> **数值审计更正：本旧协议结果已失效，数值保留供审计，不纳入v3方法比较。参见[审计报告](DOMAIN_COLLAPSE_AUDIT_ZH.md)。**
+
 # S3R seed2：第二个已完成的负结果
 
 六任务checkpoint完整、current_task1..6、task_open=false、张量有限，训练/test退出码0。原首次实际运行至退出3.685小时，没有旧中断或重试；沿用冻结source-optimizer-v2/150epochs/batch8及每task50epochs mask AE适配，原24小时约束不变。
