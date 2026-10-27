@@ -1,0 +1,47 @@
+{
+  "id": "cit_organ_s3",
+  "protocol_id": "cit-source-optimizer-v2",
+  "reviewed_at": 1793144966.3677354,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.7086219021658009,
+    "backward_transfer": -0.1953023739316645,
+    "mean_asd": 0.03050776692601594,
+    "mean_precision": 0.8115270920633909,
+    "mean_recall": 0.7146203412224454,
+    "restricted_model_ability": null
+  },
+  "metric_label": "BWTR (legacy CSV backward_transfer)",
+  "original_elapsed_hours": 10.473699892030822,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "Explicit task-aware Organ adapter, AdamW source alignment retains benchmark epoch schedule, not full author warmup/PolyLR. Background/legacy ASD retained; matched RMA reference/DRR taskwise counts unavailable. No score-driven tuning."
+}
