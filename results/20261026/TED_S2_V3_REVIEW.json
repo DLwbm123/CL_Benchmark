@@ -1,0 +1,64 @@
+{
+  "id": "ted_s2",
+  "protocol_id": "ted-source-logits-v3",
+  "reviewed_at": 1793117965.6398468,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T4_latest.pth",
+      "current_task": 5,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T5_latest.pth",
+      "current_task": 6,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.5690319886738814,
+    "backward_transfer": -0.2575204901495846,
+    "forward_transfer": 0.5008289444606536,
+    "mean_asd": 0.015808392078919233,
+    "mean_precision": 0.8772606622330877,
+    "mean_recall": 0.5451551370566139,
+    "restricted_model_ability": null
+  },
+  "metric_labels": {
+    "mean_dice": "A-Dice",
+    "backward_transfer": "BWTR",
+    "forward_transfer": "E-FWT"
+  },
+  "original_elapsed_hours": 5.764577912290891,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "v3 numerical/optimizer framework adapter, not native author reproduction. Background and legacy ASD retained; matched RMA reference and taskwise DRR accounting unavailable. No score-based tuning; no new pixelwise diagnostics."
+}
