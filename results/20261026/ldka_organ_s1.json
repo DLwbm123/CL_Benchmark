@@ -1,0 +1,64 @@
+{
+  "id": "ldka_organ_s1",
+  "protocol_id": "organ-ldka-gradient-guard-v2",
+  "reviewed_at": 1793080196.9550555,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 0,
+        "clipped": 0,
+        "peak_preclip_norm": 0.0
+      }
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 3150,
+        "clipped": 3150,
+        "peak_preclip_norm": 484643.28125
+      }
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 29850,
+        "clipped": 29850,
+        "peak_preclip_norm": 804926.125
+      }
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 66750,
+        "clipped": 66750,
+        "peak_preclip_norm": 804926.125
+      }
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.2660525154813179,
+    "mean_asd": 0.4917073131531858,
+    "mean_precision": 0.7541463071166766,
+    "mean_recall": 0.5000000371455313,
+    "backward_transfer": -9.561540109870049e-05,
+    "restricted_model_ability": null
+  },
+  "original_elapsed_hours": 14.578550791607963,
+  "previous_attempt_count": 2,
+  "all_five_seeds_complete": false,
+  "interpretation": "Low task-aware macro Dice and nearly unchanged phase rows do not establish effective learning or retention. Finite tensors/guarded updates only demonstrate numerical execution. No pixel-level collapse diagnosis performed for this run; no automatic score-driven tuning/retry.",
+  "limitations": "Paper-derived 2D Organ adapter with incremental gradient cap1, not author-native hyperparameter. Background-inclusive metrics/legacy ASD/task-aware routing; no matched normalized RMA. One seed only."
+}
