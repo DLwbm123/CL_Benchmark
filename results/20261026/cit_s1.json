@@ -1,0 +1,51 @@
+{
+  "id": "cit_s1",
+  "protocol_id": "cit-source-optimizer-v2",
+  "reviewed_at": 1793071223.898857,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.8028428299058091,
+    "mean_asd": 0.017199664709010326,
+    "mean_precision": 0.8249308342502436,
+    "mean_recall": 0.8059545746484469,
+    "backward_transfer": -0.013209376946798097,
+    "restricted_model_ability": null
+  },
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": [
+      0.7806497349024477
+    ],
+    "ASD": [
+      0.06946439495285822
+    ],
+    "precision": [
+      0.8507013481677232
+    ],
+    "recall": [
+      0.8452456643632976
+    ]
+  },
+  "original_elapsed_hours": 12.66552410059505,
+  "previous_attempt_count": 2,
+  "all_five_seeds_complete": false,
+  "limitations": "Single seed; task-conditioned macro matrix and whole-heart slice average are different protocols. Background and legacy ASD retained; normalized RMA unavailable. AdamW alignment keeps benchmark epoch schedule, not full author warmup/PolyLR. Old SGD interruption archived and excluded; original clock/cost retained."
+}
