@@ -1,0 +1,67 @@
+{
+  "id": "ldka_organ_s2",
+  "protocol_id": "organ-ldka-gradient-guard-v2",
+  "reviewed_at": 1793121561.4327052,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 0,
+        "clipped": 0,
+        "peak_preclip_norm": 0.0
+      }
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 3150,
+        "clipped": 3150,
+        "peak_preclip_norm": 9821743.0
+      }
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 29850,
+        "clipped": 29850,
+        "peak_preclip_norm": 9821743.0
+      }
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 66750,
+        "clipped": 66750,
+        "peak_preclip_norm": 38157408.0
+      }
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.49170710707092585,
+    "backward_transfer": 8.171891449754756e-07,
+    "mean_asd": 0.032284668095253766,
+    "mean_precision": 0.8588594693100325,
+    "mean_recall": 0.4999979522488469,
+    "restricted_model_ability": null
+  },
+  "metric_label": "BWTR (legacy CSV backward_transfer)",
+  "original_elapsed_hours": 11.487526737252871,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "Paper-derived task-aware 2D Organ adapter with incremental-only cap1, not native author protocol. Near-static matrix/weak score retained, not evidence of successful retention; no new pixelwise diagnosis. Background/legacy ASD retained; RMA reference and DRR accounting unavailable. No score-based tuning."
+}
