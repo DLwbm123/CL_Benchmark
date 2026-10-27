@@ -1,0 +1,43 @@
+{
+  "id": "cit_organ_s1",
+  "protocol_id": "cit-source-optimizer-v2",
+  "reviewed_at": 1793076568.5388012,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.7227927684732209,
+    "mean_asd": 0.022422576023718385,
+    "mean_precision": 0.830138815324044,
+    "mean_recall": 0.7050181787702351,
+    "backward_transfer": -0.18539145764762852,
+    "restricted_model_ability": null
+  },
+  "original_elapsed_hours": 13.694100643197695,
+  "previous_attempt_count": 2,
+  "all_five_seeds_complete": false,
+  "limitations": "One seed only. Organ adaptation uses known task routing; background-inclusive macro metrics/legacy ASD preserved. No matched reference for normalized RMA. AdamW source alignment retains benchmark epoch schedule, not full author recipe. Old failure and interruption excluded from v2 metrics but their original elapsed time retained."
+}
