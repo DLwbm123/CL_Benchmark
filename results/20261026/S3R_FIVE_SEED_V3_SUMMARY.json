@@ -1,0 +1,27 @@
+{
+  "protocol_id": "s3r-source-logits-v3",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "aggregate": {
+    "mean_dice": {
+      "mean": 0.6555872852611989,
+      "sample_std": 0.017205162788512026
+    },
+    "backward_transfer": {
+      "mean": -0.18029872207402298,
+      "sample_std": 0.051750281396858104
+    },
+    "forward_transfer": {
+      "mean": 0.2816105061794637,
+      "sample_std": 0.14806818589909304
+    }
+  },
+  "RMA": null,
+  "DRR": null,
+  "limitations": "seed1 and seed2 elapsed costs include invalid historical attempts; no protocol mixing; stable logits extreme branch differs from author clamp."
+}
