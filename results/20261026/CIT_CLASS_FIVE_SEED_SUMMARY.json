@@ -1,0 +1,83 @@
+{
+  "method": "cit",
+  "protocol": "cit-source-optimizer-v2",
+  "seeds": [
+    {
+      "seed": 1,
+      "metrics": {
+        "mean_dice": 0.8028428299058091,
+        "mean_asd": 0.017199664709010326,
+        "mean_precision": 0.8249308342502436,
+        "mean_recall": 0.8059545746484469,
+        "backward_transfer": -0.013209376946798097,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "mean_dice": 0.806600877045757,
+        "mean_asd": 0.015843457150507324,
+        "mean_precision": 0.8609099303728267,
+        "mean_recall": 0.7839886580274879,
+        "backward_transfer": -0.017870766914992963,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 3,
+      "metrics": {
+        "mean_dice": 0.8177069411701624,
+        "backward_transfer": -0.017633136052962285,
+        "mean_asd": 0.015534129469297499,
+        "mean_precision": 0.8563335704152845,
+        "mean_recall": 0.8041622138287018,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 4,
+      "metrics": {
+        "mean_dice": 0.8023079143703419,
+        "backward_transfer": -0.01283054577465011,
+        "mean_asd": 0.016271403261654688,
+        "mean_precision": 0.8598006513854658,
+        "mean_recall": 0.785500905371031,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 5,
+      "metrics": {
+        "mean_dice": 0.7957460669721632,
+        "backward_transfer": -0.023183123047008553,
+        "mean_asd": 0.01660502280762471,
+        "mean_precision": 0.8619126559504994,
+        "mean_recall": 0.7684675863082907,
+        "restricted_model_ability": null
+      }
+    }
+  ],
+  "mean_and_sample_std": {
+    "mean_dice": {
+      "mean": 0.8050409258928467,
+      "sample_std": 0.008086358434277527
+    },
+    "backward_transfer": {
+      "mean": -0.0169453897472824,
+      "sample_std": 0.004216881761636782
+    },
+    "mean_asd": {
+      "mean": 0.016290735479618908,
+      "sample_std": 0.0006515007985002495
+    },
+    "mean_precision": {
+      "mean": 0.852777528474864,
+      "sample_std": 0.015708234970589884
+    },
+    "mean_recall": {
+      "mean": 0.7896147876367916,
+      "sample_std": 0.01560767226479262
+    }
+  }
+}
