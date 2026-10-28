@@ -1,0 +1,43 @@
+{
+  "id": "nest_s4",
+  "protocol_id": "frozen-perf-v1",
+  "reviewed_at": 1793195438.4078648,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.7947971773271546,
+    "backward_transfer": -0.01749013009099632,
+    "mean_asd": 0.01836602693081456,
+    "mean_precision": 0.8420789840867413,
+    "mean_recall": 0.7888370234451481,
+    "restricted_model_ability": null
+  },
+  "original_elapsed_hours": 6.748194441133076,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "2D framework adaptation, not native reproduction; background and legacy ASD retained; RMA reference and taskwise DRR evidence unavailable.",
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": 0.7129942621501407
+  }
+}
