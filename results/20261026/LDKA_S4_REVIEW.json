@@ -1,0 +1,48 @@
+{
+  "id": "ldka_s4",
+  "protocol_id": "class-ldka-gradient-guard-v2",
+  "reviewed_at": 1793182828.4726954,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "guard_stats": {
+    "steps": 84600,
+    "clipped": 71861,
+    "peak_preclip_norm": 3310.694580078125
+  },
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.4917838017137817,
+    "backward_transfer": 0.0072539951230546065,
+    "mean_asd": 0.03048189342678825,
+    "mean_precision": 0.813497838709354,
+    "mean_recall": 0.5033579961360766,
+    "restricted_model_ability": null
+  },
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": 0.5754413943876733
+  },
+  "original_elapsed_hours": 11.995494927697711,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "2D framework adaptation, not native reproduction; background and legacy ASD retained; RMA reference and taskwise DRR evidence unavailable."
+}

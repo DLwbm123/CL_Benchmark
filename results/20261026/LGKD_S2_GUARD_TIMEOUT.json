@@ -1,0 +1,15 @@
+{
+  "id": "lgkd_s2",
+  "status": "TIMED_OUT",
+  "train_returncode": 124,
+  "test_returncode": null,
+  "phase": "train",
+  "original_started_at": 1793095923.2384307,
+  "deadline": 1793182323.2384307,
+  "finished_at": 1793182030.9313254,
+  "last_observed_task": 3,
+  "last_observed_epoch": 110,
+  "protocol_id": "lgkd-incremental-gradient-guard-v2",
+  "previous_failure_archived": true,
+  "reason": "Original 24-hour limit with five-minute exit reserve; no complete task3 checkpoint or test result."
+}
