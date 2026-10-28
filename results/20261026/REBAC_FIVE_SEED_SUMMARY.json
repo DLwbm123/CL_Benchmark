@@ -1,0 +1,84 @@
+{
+  "method": "rebac",
+  "protocol": "rebac-incremental-gradient-guard-v2",
+  "seeds": [
+    {
+      "seed": 1,
+      "metrics": {
+        "mean_dice": 0.6854213404988944,
+        "mean_asd": 0.030036244347048786,
+        "mean_precision": 0.7899295905641912,
+        "mean_recall": 0.7018068893820809,
+        "backward_transfer": -0.05299700968263734,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "mean_dice": 0.6876209336184719,
+        "mean_asd": 0.024061508848684753,
+        "mean_precision": 0.7516943165945752,
+        "mean_recall": 0.7195929207681382,
+        "backward_transfer": -0.06211293609754169,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 3,
+      "metrics": {
+        "mean_dice": 0.7116318384710755,
+        "backward_transfer": -0.0714270458860808,
+        "mean_asd": 0.025057249504142672,
+        "mean_precision": 0.7645589878282507,
+        "mean_recall": 0.7294588485171202,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 4,
+      "metrics": {
+        "mean_dice": 0.685920681175744,
+        "backward_transfer": -0.07446082137636532,
+        "mean_asd": 0.025168246034592928,
+        "mean_precision": 0.7405558458829643,
+        "mean_recall": 0.7155348824764719,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 5,
+      "metrics": {
+        "mean_dice": 0.7288883780194308,
+        "backward_transfer": -0.061895432154440023,
+        "mean_asd": 0.023756444960688492,
+        "mean_precision": 0.7918683955448552,
+        "mean_recall": 0.7428740557866306,
+        "restricted_model_ability": null
+      }
+    }
+  ],
+  "mean_and_sample_std": {
+    "mean_dice": {
+      "mean": 0.6998966343567233,
+      "sample_std": 0.019581818380912584
+    },
+    "backward_transfer": {
+      "mean": -0.06457864903941303,
+      "sample_std": 0.008543588719335188
+    },
+    "mean_asd": {
+      "mean": 0.025615938739031525,
+      "sample_std": 0.002545861027371536
+    },
+    "mean_precision": {
+      "mean": 0.7677214272829673,
+      "sample_std": 0.022809629028597955
+    },
+    "mean_recall": {
+      "mean": 0.7218535193860883,
+      "sample_std": 0.01538348818362125
+    }
+  },
+  "limitations": "ResUNet gradient guard adaptation, not author native parameters. Background and legacy ASD retained; RMA and DRR lack required evidence."
+}
