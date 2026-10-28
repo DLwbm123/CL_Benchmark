@@ -1,0 +1,36 @@
+[
+  {
+    "clip": 0.0,
+    "updates": [
+      0.693180501461029,
+      0.6931725740432739,
+      0.6931667327880859,
+      0.69312983751297,
+      0.6930139660835266
+    ],
+    "heldout": false,
+    "failed_checkpoint_replayed": false,
+    "guard_stats": {
+      "steps": 0,
+      "clipped": 0,
+      "peak_preclip_norm": 0.0
+    }
+  },
+  {
+    "clip": 1.0,
+    "updates": [
+      0.693180501461029,
+      0.6931737661361694,
+      0.6931676864624023,
+      0.6931685209274292,
+      0.6931730508804321
+    ],
+    "heldout": false,
+    "failed_checkpoint_replayed": false,
+    "guard_stats": {
+      "steps": 5,
+      "clipped": 5,
+      "peak_preclip_norm": 15.986649513244629
+    }
+  }
+]

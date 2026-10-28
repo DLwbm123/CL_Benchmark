@@ -12,6 +12,8 @@ def get_parser():
     parser.set_defaults(ldka_grad_clip=0.)  # this adapter has its own incremental-only guard
     parser.add_argument('--ldka_organ_grad_clip', type=float, default=1.0,
                         help='Incremental-only global gradient-norm guard for the Organ adapter; 0 disables')
+    parser.add_argument('--ldka_organ_base_grad_clip', type=float, default=0.0,
+                        help='Base-task gradient guard for the Organ adapter; 0 disables')
     return parser
 
 
@@ -32,12 +34,12 @@ class LdkaOrgan(OrganModel):
         self.register_buffer('competition', torch.zeros(args.organ_tasks, 2, 2))
         self.epoch, self.total_epochs, self.progress = 0, max(1, args.n_epochs), .5
         self.guard_stats = {'steps': 0, 'clipped': 0, 'peak_preclip_norm': 0.}
-        if args.ldka_organ_grad_clip < 0:
+        if min(args.ldka_organ_grad_clip, args.ldka_organ_base_grad_clip) < 0:
             raise ValueError('Organ gradient-norm guard must be nonnegative.')
 
     @property
     def gradient_clip_max_norm(self):
-        return self.args.ldka_organ_grad_clip if self.current_task else 0.
+        return self.args.ldka_organ_grad_clip if self.current_task else self.args.ldka_organ_base_grad_clip
 
     @property
     def task_learning_rate(self):

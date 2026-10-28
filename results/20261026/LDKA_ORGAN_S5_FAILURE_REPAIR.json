@@ -1,0 +1,13 @@
+{
+  "id": "ldka_organ_s5",
+  "original_failure": "base task epoch128 loss reached 5.398268720454618e19 then non-finite loss, train exit 1, no test",
+  "original_protocol": "organ-ldka-gradient-guard-v2",
+  "repair_protocol": "organ-ldka-all-task-gradient-guard-v3",
+  "base_clip": 1.0,
+  "incremental_clip": 1.0,
+  "qualification": "seed5 random initialization, 5 CPU updates on a base train batch finite with/without cap; cap activated 5/5, peak preclip 15.98665; not the failing checkpoint or batch",
+  "heldout_access": false,
+  "tests": "30 relevant tests passed",
+  "caveat": "Candidate guard is an explicit 2D adaptation, not original author parameters; this local qualification does not establish root cause or long-run success. Prior completed seeds use prior protocol and are not pooled with v3.",
+  "time": 1793202741.663407
+}
