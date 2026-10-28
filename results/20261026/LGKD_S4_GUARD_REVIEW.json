@@ -1,0 +1,48 @@
+{
+  "id": "lgkd_s4",
+  "protocol_id": "lgkd-incremental-gradient-guard-v2",
+  "reviewed_at": 1793197224.2550743,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "guard_stats": {
+    "steps": 56400,
+    "clipped": 56062,
+    "peak_preclip_norm": 86.25395965576172
+  },
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.7793976536623862,
+    "backward_transfer": -0.02237848571139756,
+    "mean_asd": 0.019621926095138593,
+    "mean_precision": 0.845144119355088,
+    "mean_recall": 0.7594529197560894,
+    "restricted_model_ability": null
+  },
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": 0.7187685784969364
+  },
+  "original_elapsed_hours": 9.13316794514656,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "2D framework adaptation, gradient guard is not native author configuration; seed1 uses different protocol and cannot be pooled; seed2 timed out. Background and legacy ASD retained; RMA and DRR unavailable."
+}
