@@ -1,0 +1,83 @@
+{
+  "method": "ewf_organ",
+  "protocol": "frozen-perf-v1",
+  "seeds": [
+    {
+      "seed": 1,
+      "metrics": {
+        "mean_dice": 0.6311026370188634,
+        "mean_asd": 0.03464483555135841,
+        "mean_precision": 0.9085348077050951,
+        "mean_recall": 0.6378396311276429,
+        "backward_transfer": -0.14323449494915497,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "mean_dice": 0.5905613554014798,
+        "mean_asd": 0.026592043070038533,
+        "mean_precision": 0.8922925782023072,
+        "mean_recall": 0.5736288348621312,
+        "backward_transfer": -0.20327067751595393,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 3,
+      "metrics": {
+        "mean_dice": 0.6313852804592609,
+        "backward_transfer": -0.11027056666508013,
+        "mean_asd": 0.025057832503292007,
+        "mean_precision": 0.9671090542618813,
+        "mean_recall": 0.5915865968614713,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 4,
+      "metrics": {
+        "mean_dice": 0.573708004122502,
+        "backward_transfer": -0.22506769219338907,
+        "mean_asd": 0.027365703486204228,
+        "mean_precision": 0.9758058573019746,
+        "mean_recall": 0.5513642525954894,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 5,
+      "metrics": {
+        "mean_dice": 0.5368956231294535,
+        "backward_transfer": -0.2563253838632156,
+        "mean_asd": 0.030282015013404835,
+        "mean_precision": 0.9350427476534522,
+        "mean_recall": 0.5278810455155442,
+        "restricted_model_ability": null
+      }
+    }
+  ],
+  "mean_and_sample_std": {
+    "mean_dice": {
+      "mean": 0.592730580026312,
+      "sample_std": 0.04015814663478592
+    },
+    "backward_transfer": {
+      "mean": -0.18763376303735874,
+      "sample_std": 0.05983458464353374
+    },
+    "mean_asd": {
+      "mean": 0.0287884859248596,
+      "sample_std": 0.0037846369086154794
+    },
+    "mean_precision": {
+      "mean": 0.9357570090249421,
+      "sample_std": 0.036116395686711815
+    },
+    "mean_recall": {
+      "mean": 0.5764600721924558,
+      "sample_std": 0.04181506876288928
+    }
+  }
+}

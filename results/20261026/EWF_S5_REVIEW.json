@@ -1,0 +1,43 @@
+{
+  "id": "ewf_s5",
+  "protocol_id": "frozen-perf-v1",
+  "reviewed_at": 1793217032.6520605,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.5719459233713676,
+    "backward_transfer": -0.002496072357660466,
+    "mean_asd": 0.027159857930489747,
+    "mean_precision": 0.8138938775931246,
+    "mean_recall": 0.5443616975253228,
+    "restricted_model_ability": null
+  },
+  "original_elapsed_hours": 6.096273208061854,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": true,
+  "DRR": null,
+  "limitations": "2D framework adaptation, not native reproduction; background and legacy ASD retained; RMA and DRR lack required evidence.",
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": 0.6228759893916367
+  }
+}
