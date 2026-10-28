@@ -1,0 +1,22 @@
+{
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "aggregate": {
+    "mean_dice": {
+      "mean": 0.8283313040537219,
+      "sample_std": 0.007479925274138398
+    },
+    "backward_transfer": {
+      "mean": -0.013497550198573105,
+      "sample_std": 0.008924007736873261
+    }
+  },
+  "RMA": null,
+  "DRR": null,
+  "limitations": "Task-conditioned macro metrics; background and legacy ASD retained. Historical attempts and costs remain in seed reviews."
+}

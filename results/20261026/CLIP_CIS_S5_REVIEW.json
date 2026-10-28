@@ -1,0 +1,43 @@
+{
+  "id": "clip_cis_s5",
+  "protocol_id": "frozen-perf-v1",
+  "reviewed_at": 1793206233.0977356,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.829293461669534,
+    "backward_transfer": -0.012902226227776387,
+    "mean_asd": 0.01436637142388287,
+    "mean_precision": 0.8891177607968804,
+    "mean_recall": 0.7974215016018135,
+    "restricted_model_ability": null
+  },
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": 0.6487312747044537
+  },
+  "original_elapsed_hours": 8.41036221007506,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": true,
+  "DRR": null,
+  "limitations": "2D framework adaptation, not native reproduction; background and legacy ASD retained; RMA reference and taskwise DRR evidence unavailable."
+}
