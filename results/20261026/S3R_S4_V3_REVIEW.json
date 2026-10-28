@@ -1,0 +1,67 @@
+{
+  "id": "s3r_s4",
+  "protocol_id": "s3r-source-logits-v3",
+  "reviewed_at": 1793157588.3805664,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T4_latest.pth",
+      "current_task": 5,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T5_latest.pth",
+      "current_task": 6,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.6451790816815287,
+    "backward_transfer": -0.12567867649608405,
+    "mean_asd": 0.014725845010287357,
+    "mean_precision": 0.7983882070654497,
+    "mean_recall": 0.6260319045679265,
+    "restricted_model_ability": null,
+    "forward_transfer": 0.10476058046666438
+  },
+  "original_elapsed_hours": 3.662855348255899,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "2D framework adaptation, not native reproduction; background and legacy ASD retained; RMA reference and taskwise DRR evidence unavailable.",
+  "task_importance_max": [
+    0.021866606548428535,
+    0.0745859146118164,
+    0.22045716643333435,
+    0.26084133982658386,
+    0.3080822229385376,
+    0.5975278615951538
+  ]
+}
