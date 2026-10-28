@@ -1,0 +1,92 @@
+{
+  "method": "ted",
+  "protocol": "ted-source-logits-v3",
+  "seeds": [
+    {
+      "seed": 1,
+      "metrics": {
+        "mean_dice": 0.5282546793083959,
+        "backward_transfer": -0.28289247988622684,
+        "mean_asd": 0.016439478431536866,
+        "mean_precision": 0.8789383336886153,
+        "mean_recall": 0.5185505105059097,
+        "restricted_model_ability": null,
+        "forward_transfer": 0.2614807829714502
+      }
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "mean_dice": 0.5690319886738814,
+        "backward_transfer": -0.2575204901495846,
+        "forward_transfer": 0.5008289444606536,
+        "mean_asd": 0.015808392078919233,
+        "mean_precision": 0.8772606622330877,
+        "mean_recall": 0.5451551370566139,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 3,
+      "metrics": {
+        "mean_dice": 0.5313267719908003,
+        "backward_transfer": -0.31177661694987946,
+        "mean_asd": 0.01637139356060884,
+        "mean_precision": 0.8863319969582638,
+        "mean_recall": 0.5212500516560775,
+        "restricted_model_ability": null,
+        "forward_transfer": 0.27470069080327136
+      }
+    },
+    {
+      "seed": 4,
+      "metrics": {
+        "mean_dice": 0.5103901510842681,
+        "backward_transfer": -0.3039468434854355,
+        "forward_transfer": 0.06626752899390388,
+        "mean_asd": 0.016523177268269774,
+        "mean_precision": 0.9053450122261556,
+        "mean_recall": 0.507838496781846,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 5,
+      "metrics": {
+        "mean_dice": 0.531319623409303,
+        "backward_transfer": -0.3123187185360153,
+        "forward_transfer": 0.23409115167444566,
+        "mean_asd": 0.01660848511733243,
+        "mean_precision": 0.7614465829397217,
+        "mean_recall": 0.5204001533319529,
+        "restricted_model_ability": null
+      }
+    }
+  ],
+  "mean_and_sample_std": {
+    "mean_dice": {
+      "mean": 0.5340646428933298,
+      "sample_std": 0.02140083864746222
+    },
+    "backward_transfer": {
+      "mean": -0.29369102980142836,
+      "sample_std": 0.023474334832933198
+    },
+    "forward_transfer": {
+      "mean": 0.26747381978074497,
+      "sample_std": 0.15503316770246592
+    },
+    "mean_asd": {
+      "mean": 0.01635018529133343,
+      "sample_std": 0.00031567703622001185
+    },
+    "mean_precision": {
+      "mean": 0.8618645176091688,
+      "sample_std": 0.05723095540419746
+    },
+    "mean_recall": {
+      "mean": 0.52263886986648,
+      "sample_std": 0.013690221707723835
+    }
+  }
+}
