@@ -1,0 +1,70 @@
+{
+  "id": "pcdd_s2",
+  "protocol_id": "pcdd-incremental-gradient-guard-v2",
+  "reviewed_at": 1793146769.0508056,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 0,
+        "clipped": 0,
+        "peak_preclip_norm": 0.0
+      }
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 28200,
+        "clipped": 28200,
+        "peak_preclip_norm": 40383.23828125
+      }
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 56400,
+        "clipped": 56400,
+        "peak_preclip_norm": 40383.23828125
+      }
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.4872604850353048,
+    "backward_transfer": -0.29274250215002556,
+    "mean_asd": 0.06700034858490499,
+    "mean_precision": 0.5630651753472792,
+    "mean_recall": 0.5759122363682937,
+    "restricted_model_ability": null
+  },
+  "metric_label": "BWTR (legacy CSV backward_transfer)",
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": [
+      0.36379719905082186
+    ],
+    "ASD": [
+      0.17063582658238327
+    ],
+    "precision": [
+      0.4625511759945274
+    ],
+    "recall": [
+      0.6573660712721922
+    ]
+  },
+  "original_elapsed_hours": 13.81774730053213,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "Paper-derived 2D adapter with incremental-only cap1, not author-native parameter. Task-conditioned and whole-heart slice means differ; background/legacy ASD retained. RMA reference/DRR taskwise counts unavailable. No score-driven tuning."
+}
