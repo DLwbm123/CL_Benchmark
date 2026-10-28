@@ -16,6 +16,7 @@ def get_parser():
     parser.add_argument('--lgkd_previous_weight', type=float, default=5.)
     parser.add_argument('--lgkd_novel_weight', type=float, default=1.)
     parser.add_argument('--lgkd_teacher_scale', type=float, default=1.)
+    parser.add_argument('--lgkd_grad_clip', type=float, default=0.)
     return parser
 
 
@@ -52,9 +53,22 @@ class Lgkd(ClassIncrementalModel):
 
     def __init__(self, backbone, loss, args, transform):
         if (args.lgkd_previous_weight < 0 or args.lgkd_novel_weight < 0 or
-                args.lgkd_teacher_scale <= 0):
+                args.lgkd_teacher_scale <= 0 or args.lgkd_grad_clip < 0):
             raise ValueError('LGKD weights must be nonnegative and teacher scale positive.')
         super().__init__(backbone, loss, args, transform)
+        self.guard_stats = {'steps': 0, 'clipped': 0, 'peak_preclip_norm': 0.}
+
+    @property
+    def gradient_clip_max_norm(self):
+        return self.args.lgkd_grad_clip if self.current_task else 0.
+
+    def knowledge_state(self):
+        return dict(super().knowledge_state(), guard_stats=dict(self.guard_stats))
+
+    def restore_knowledge(self, state):
+        super().restore_knowledge(state)
+        self.guard_stats = dict(state.get('guard_stats',
+                                {'steps': 0, 'clipped': 0, 'peak_preclip_norm': 0.}))
 
     def observe(self, inputs, labels, not_aug_inputs=None):
         self.require_open_task()
@@ -68,4 +82,14 @@ class Lgkd(ClassIncrementalModel):
                                           self.args.lgkd_previous_weight,
                                           self.args.lgkd_novel_weight,
                                           self.args.lgkd_teacher_scale)
-        return self.optimization_step(supervised + kd, supervised=supervised, lgkd=kd)
+        if not torch.isfinite(supervised + kd):
+            raise FloatingPointError('lgkd non-finite components: supervised={}, kd={}, input_finite={}, logits_finite={}'.format(
+                float(supervised.detach()), float(kd.detach()),
+                bool(torch.isfinite(inputs).all()), bool(torch.isfinite(logits).all())))
+        value = self.optimization_step(supervised + kd, supervised=supervised, lgkd=kd)
+        if self.gradient_clip_max_norm > 0:
+            norm = self.last_losses['gradient_norm_before_clip']
+            self.guard_stats['steps'] += 1
+            self.guard_stats['clipped'] += int(norm > self.gradient_clip_max_norm)
+            self.guard_stats['peak_preclip_norm'] = max(self.guard_stats['peak_preclip_norm'], norm)
+        return value
