@@ -1,0 +1,84 @@
+{
+  "method": "clip_cis_organ",
+  "protocol": "frozen-perf-v1",
+  "seeds": [
+    {
+      "seed": 1,
+      "metrics": {
+        "mean_dice": 0.6365158609535903,
+        "mean_asd": 0.022893791567890648,
+        "mean_precision": 0.919118547725671,
+        "mean_recall": 0.6227019133270177,
+        "backward_transfer": -0.34995749114110203,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "mean_dice": 0.7092241062758773,
+        "mean_asd": 0.01862315209000446,
+        "mean_precision": 0.8140963033735823,
+        "mean_recall": 0.6791795597457615,
+        "backward_transfer": -0.25850325864348045,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 3,
+      "metrics": {
+        "mean_dice": 0.6371345320065709,
+        "backward_transfer": -0.3697857320002162,
+        "mean_asd": 0.02258067469670015,
+        "mean_precision": 0.8261452923596858,
+        "mean_recall": 0.6234582419722873,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 4,
+      "metrics": {
+        "mean_dice": 0.6860358821508693,
+        "backward_transfer": -0.27742704310940586,
+        "mean_asd": 0.02175881226589887,
+        "mean_precision": 0.9438705883386941,
+        "mean_recall": 0.6590787801483746,
+        "restricted_model_ability": null
+      }
+    },
+    {
+      "seed": 5,
+      "metrics": {
+        "mean_dice": 0.6466273114878844,
+        "backward_transfer": -0.34040349741353854,
+        "mean_asd": 0.02385124502321611,
+        "mean_precision": 0.8359368858420172,
+        "mean_recall": 0.6295482132486512,
+        "restricted_model_ability": null
+      }
+    }
+  ],
+  "mean_and_sample_std": {
+    "mean_dice": {
+      "mean": 0.6631075385749584,
+      "sample_std": 0.0328091413687186
+    },
+    "backward_transfer": {
+      "mean": -0.3192154044615486,
+      "sample_std": 0.04843449441786063
+    },
+    "mean_asd": {
+      "mean": 0.021941535128742046,
+      "sample_std": 0.002000458524355647
+    },
+    "mean_precision": {
+      "mean": 0.8678335235279301,
+      "sample_std": 0.05927643265986789
+    },
+    "mean_recall": {
+      "mean": 0.6427933416884185,
+      "sample_std": 0.025209707318657536
+    }
+  },
+  "limitations": "2D framework adaptation, not native reproduction; background and legacy ASD retained; RMA reference and taskwise DRR evidence unavailable."
+}
