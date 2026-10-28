@@ -1,0 +1,46 @@
+{
+  "id": "cit_organ_s4",
+  "protocol_id": "cit-source-optimizer-v2",
+  "reviewed_at": 1793186419.942825,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.7105895156771931,
+    "backward_transfer": -0.20995372806195148,
+    "mean_asd": 0.027528264054667923,
+    "mean_precision": 0.8211813705119393,
+    "mean_recall": 0.703009693659682,
+    "restricted_model_ability": null
+  },
+  "original_elapsed_hours": 10.911285675168038,
+  "previous_attempt_count": 0,
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "2D framework adaptation, not native reproduction; background and legacy ASD retained; RMA reference and taskwise DRR evidence unavailable."
+}
