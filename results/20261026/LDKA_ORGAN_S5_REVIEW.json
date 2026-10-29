@@ -1,0 +1,72 @@
+{
+  "id": "ldka_organ_s5",
+  "protocol_id": "organ-ldka-all-task-gradient-guard-v3",
+  "reviewed_at": 1793236841.2881777,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 14400,
+        "clipped": 6716,
+        "peak_preclip_norm": 890.5828247070312
+      }
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 17550,
+        "clipped": 9866,
+        "peak_preclip_norm": 1591.680419921875
+      }
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 44250,
+        "clipped": 36566,
+        "peak_preclip_norm": 2922.68017578125
+      }
+    },
+    {
+      "file": "T3_latest.pth",
+      "current_task": 4,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 81150,
+        "clipped": 73466,
+        "peak_preclip_norm": 5449.15185546875
+      }
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.49170632690042343,
+    "backward_transfer": -0.11594252230993148,
+    "mean_asd": 0.03228798055290388,
+    "mean_precision": 0.8588595697320818,
+    "mean_recall": 0.4999963945554042,
+    "restricted_model_ability": null
+  },
+  "original_elapsed_hours": 10.524202368590567,
+  "previous_attempt_count": 1,
+  "guard_stats": {
+    "steps": 81150,
+    "clipped": 73466,
+    "peak_preclip_norm": 5449.15185546875
+  },
+  "all_five_seeds_complete": false,
+  "DRR": null,
+  "limitations": "ResUNet gradient guard adaptation, not author native parameters. Background and legacy ASD retained; RMA and DRR lack required evidence.",
+  "previous_failure_archived": true
+}

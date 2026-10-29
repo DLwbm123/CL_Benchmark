@@ -1,0 +1,63 @@
+{
+  "id": "pcdd_s5",
+  "protocol_id": "pcdd-incremental-gradient-guard-v2",
+  "reviewed_at": 1793236841.3925033,
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_checks": [
+    {
+      "file": "T0_latest.pth",
+      "current_task": 1,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 0,
+        "clipped": 0,
+        "peak_preclip_norm": 0.0
+      }
+    },
+    {
+      "file": "T1_latest.pth",
+      "current_task": 2,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 28200,
+        "clipped": 28200,
+        "peak_preclip_norm": 31385.376953125
+      }
+    },
+    {
+      "file": "T2_latest.pth",
+      "current_task": 3,
+      "task_open": false,
+      "tensors_finite": true,
+      "guard_stats": {
+        "steps": 56400,
+        "clipped": 56400,
+        "peak_preclip_norm": 31385.376953125
+      }
+    }
+  ],
+  "test_task_conditioned_macro_metrics": {
+    "mean_dice": 0.4881345015828033,
+    "backward_transfer": -0.29773129326956616,
+    "mean_asd": 0.07853419845142777,
+    "mean_precision": 0.529307091774163,
+    "mean_recall": 0.6328173870752544,
+    "restricted_model_ability": null
+  },
+  "original_elapsed_hours": 9.57583997103903,
+  "previous_attempt_count": 0,
+  "guard_stats": {
+    "steps": 56400,
+    "clipped": 56400,
+    "peak_preclip_norm": 31385.376953125
+  },
+  "all_five_seeds_complete": true,
+  "DRR": null,
+  "limitations": "ResUNet gradient guard adaptation, not author native parameters. Background and legacy ASD retained; RMA and DRR lack required evidence.",
+  "whole_heart_slice_average_last_checkpoint": {
+    "Dice": 0.34864585639718254
+  }
+}
