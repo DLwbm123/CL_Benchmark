@@ -1,0 +1,29 @@
+{
+  "method": "conuseg-resunet-adaptation-v1",
+  "seed": 1,
+  "status": "COMPLETE_REVIEWED",
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_task_closed_finite": [
+    true,
+    true,
+    true
+  ],
+  "seen_classes": [
+    4,
+    6,
+    8
+  ],
+  "result_csv_rows": 1,
+  "task_a_dice": 0.8174478568685082,
+  "task_bwtr": -0.013737350473592086,
+  "whole_heart_slice_dice": 0.6968111211616436,
+  "task_asd": 0.013420174144535715,
+  "precision": 0.9253782773356557,
+  "recall": 0.7722316675357529,
+  "wall_hours": 2.179691145684984,
+  "seed1_prior_missing_medpy_failure": true,
+  "author_native": false,
+  "rma": null,
+  "drr": null
+}
