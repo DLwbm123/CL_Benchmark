@@ -1,0 +1,171 @@
+{
+  "method": "conuseg-resunet-adaptation-v1",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "n": 5,
+  "standard_deviation": "sample",
+  "results": [
+    {
+      "method": "conuseg-resunet-adaptation-v1",
+      "seed": 1,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "checkpoint_task_closed_finite": [
+        true,
+        true,
+        true
+      ],
+      "seen_classes": [
+        4,
+        6,
+        8
+      ],
+      "result_csv_rows": 1,
+      "task_a_dice": 0.8174478568685082,
+      "task_bwtr": -0.013737350473592086,
+      "whole_heart_slice_dice": 0.6968111211616436,
+      "task_asd": 0.013420174144535715,
+      "precision": 0.9253782773356557,
+      "recall": 0.7722316675357529,
+      "wall_hours": 2.179691145684984,
+      "seed1_prior_missing_medpy_failure": true,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    },
+    {
+      "method": "conuseg-resunet-adaptation-v1",
+      "seed": 2,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "checkpoint_task_closed_finite": [
+        true,
+        true,
+        true
+      ],
+      "seen_classes": [
+        4,
+        6,
+        8
+      ],
+      "result_csv_rows": 1,
+      "task_a_dice": 0.839254589404669,
+      "task_bwtr": -0.016312841240736477,
+      "whole_heart_slice_dice": 0.6950879760975971,
+      "task_asd": 0.012327619748067939,
+      "precision": 0.915696765905599,
+      "recall": 0.7998786825370493,
+      "wall_hours": 2.2118058841758304,
+      "seed1_prior_missing_medpy_failure": false,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    },
+    {
+      "task_a_dice": 0.8208648797338132,
+      "task_bwtr": -0.01763862742498008,
+      "whole_heart_slice_dice": 0.6799021638931295,
+      "task_asd": 0.01306354466079579,
+      "precision": 0.9187954105338285,
+      "recall": 0.7789514385334394,
+      "wall_hours": 7.663519117699729,
+      "method": "conuseg-resunet-adaptation-v1",
+      "seed": 3,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "checkpoint_task_closed_finite": [
+        true,
+        true,
+        true
+      ],
+      "seen_classes": [
+        4,
+        6,
+        8
+      ],
+      "result_csv_rows": 1,
+      "prior_attempt": false,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    },
+    {
+      "method": "conuseg-resunet-adaptation-v1",
+      "seed": 4,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "checkpoint_task_closed_finite": [
+        true,
+        true,
+        true
+      ],
+      "seen_classes": [
+        4,
+        6,
+        8
+      ],
+      "result_csv_rows": 1,
+      "task_a_dice": 0.8252469516633626,
+      "task_bwtr": -0.01662175887182116,
+      "whole_heart_slice_dice": 0.671692933735588,
+      "task_asd": 0.013232894404700692,
+      "precision": 0.9141641341487099,
+      "recall": 0.7844026611301956,
+      "wall_hours": 4.937662145760324,
+      "prior_attempt": false,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    },
+    {
+      "task_a_dice": 0.8285854125434658,
+      "task_bwtr": -0.013053589812917245,
+      "whole_heart_slice_dice": 0.6911545794777668,
+      "task_asd": 0.012417508668652719,
+      "precision": 0.919889319489663,
+      "recall": 0.7854393738016676,
+      "wall_hours": 7.638510404229164,
+      "method": "conuseg-resunet-adaptation-v1",
+      "seed": 5,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "checkpoint_task_closed_finite": [
+        true,
+        true,
+        true
+      ],
+      "seen_classes": [
+        4,
+        6,
+        8
+      ],
+      "result_csv_rows": 1,
+      "prior_attempt": false,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    }
+  ],
+  "metrics": {
+    "task_a_dice": {
+      "mean": 0.8262799380427638,
+      "sample_std": 0.008397207360997768
+    },
+    "task_bwtr": {
+      "mean": -0.01547283356480941,
+      "sample_std": 0.0019736354268476185
+    }
+  },
+  "rma": null,
+  "drr": null
+}
