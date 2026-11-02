@@ -1,0 +1,52 @@
+{
+  "method": "clnet-organ-2d-train-pruning-v1",
+  "seed": 1,
+  "status": "COMPLETE_REVIEWED",
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "task_checkpoints_closed_finite": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "seen_tasks": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "pruning_events": [
+    15,
+    15,
+    15,
+    15
+  ],
+  "accepted_events": [
+    8,
+    3,
+    9,
+    11
+  ],
+  "final_sparsity": [
+    0.5805371356700836,
+    0.8399996752326515,
+    0.38015426522863616,
+    0.42819516598563934
+  ],
+  "ema_updates": [
+    4800,
+    1050,
+    8900,
+    12300
+  ],
+  "task_a_dice": 0.831346028376081,
+  "task_bwtr": 0.0,
+  "task_asd": 0.011115940311051373,
+  "precision": 0.8756247546970817,
+  "recall": 0.8162171372140138,
+  "wall_hours": 2.059008323483997,
+  "author_native": false,
+  "rma": null,
+  "drr": null
+}
