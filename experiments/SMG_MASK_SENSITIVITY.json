@@ -1,0 +1,24 @@
+{
+  "seed": 7,
+  "samples": 24,
+  "sampling_steps": 200,
+  "split": "first 24 nonempty site2 train masks",
+  "controls": "same initial noise, original versus empty and 64 pixel horizontally rolled mask",
+  "counterfactuals": {
+    "empty": {
+      "raw_mean_absolute_difference": 0.041223801051576935,
+      "clamped_mean_absolute_difference": 0.001281319414980923,
+      "original_foreground_region_mean_difference": 0.2969111081932773,
+      "original_background_region_mean_difference": 0.034778245292586184
+    },
+    "shifted": {
+      "raw_mean_absolute_difference": 0.0549129955470562,
+      "clamped_mean_absolute_difference": 0.001278854621583984,
+      "original_foreground_region_mean_difference": 0.26394657502424046,
+      "original_background_region_mean_difference": 0.049643517886323
+    }
+  },
+  "foreground_fraction": 0.024588902791341145,
+  "test_used": false,
+  "interpretation": "Sensitivity alone is not fidelity or image quality."
+}
