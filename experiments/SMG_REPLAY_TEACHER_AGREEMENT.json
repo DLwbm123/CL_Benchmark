@@ -1,0 +1,25 @@
+{
+  "seed": 7,
+  "teacher": "fixed v2 seed2 task 1 checkpoint",
+  "real_site1_validation": {
+    "foreground_micro_dice": 0.42879586967906436,
+    "predicted_foreground_fraction": 0.019538392411901594,
+    "reference_foreground_fraction": 0.011148168685588431
+  },
+  "replay_site2_train_mask_agreement": {
+    "clamp": {
+      "foreground_micro_dice": 0.0,
+      "predicted_foreground_fraction": 0.02338445754278274,
+      "reference_foreground_fraction": 0.013896851312546503,
+      "saturation_fraction": 0.953994387672061
+    },
+    "minmax": {
+      "foreground_micro_dice": 0.0,
+      "predicted_foreground_fraction": 0.0010821932838076637,
+      "reference_foreground_fraction": 0.013896851312546503,
+      "saturation_fraction": 3.0880882626488094e-05
+    }
+  },
+  "interpretation": "Teacher agreement is a proxy, not true mask fidelity. Both transforms share each raw generated batch.",
+  "test_used": false
+}
