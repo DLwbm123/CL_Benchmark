@@ -1,0 +1,43 @@
+{
+  "seed": 7,
+  "site": "1 validation",
+  "samples": 24,
+  "sample_rule": "first nonempty validation masks",
+  "same_noise_for_timesteps_and_mask_controls": true,
+  "timesteps": {
+    "50": {
+      "zero_prediction_noise_mse": 1.0002382000287373,
+      "mask_conditioned_noise_mse": 0.03396285014847914,
+      "empty_mask_noise_mse": 0.03434241283684969,
+      "mask_vs_empty_output_mse": 0.0002492731825138132,
+      "foreground_noise_mse": 0.05705204570400317,
+      "background_noise_mse": 0.03338043000742668
+    },
+    "250": {
+      "zero_prediction_noise_mse": 1.0002382000287373,
+      "mask_conditioned_noise_mse": 0.005335385173869629,
+      "empty_mask_noise_mse": 0.005412292239877085,
+      "mask_vs_empty_output_mse": 9.285209913893293e-05,
+      "foreground_noise_mse": 0.006505618961243245,
+      "background_noise_mse": 0.005305866200017599
+    },
+    "500": {
+      "zero_prediction_noise_mse": 1.0002382000287373,
+      "mask_conditioned_noise_mse": 0.00113026275842761,
+      "empty_mask_noise_mse": 0.0011924630962312222,
+      "mask_vs_empty_output_mse": 6.139431934570894e-05,
+      "foreground_noise_mse": 0.0010270514215048304,
+      "background_noise_mse": 0.0011328662719979191
+    },
+    "900": {
+      "zero_prediction_noise_mse": 1.0002382000287373,
+      "mask_conditioned_noise_mse": 0.0004561122235221167,
+      "empty_mask_noise_mse": 0.00044617094681598246,
+      "mask_vs_empty_output_mse": 1.3782981720093327e-05,
+      "foreground_noise_mse": 0.00028127799517991495,
+      "background_noise_mse": 0.0004605223810513119
+    }
+  },
+  "test_used": false,
+  "caveat": "Forward-noise prediction is a diagnostic and does not establish sample fidelity."
+}
