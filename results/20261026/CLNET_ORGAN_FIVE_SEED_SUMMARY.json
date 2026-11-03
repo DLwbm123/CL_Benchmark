@@ -1,0 +1,242 @@
+{
+  "method": "clnet-organ-2d-train-pruning-v1",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "n": 5,
+  "standard_deviation": "sample",
+  "results": [
+    {
+      "method": "clnet-organ-2d-train-pruning-v1",
+      "seed": 1,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "task_checkpoints_closed_finite": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "seen_tasks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pruning_events": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "accepted_events": [
+        8,
+        3,
+        9,
+        11
+      ],
+      "final_sparsity": [
+        0.5805371356700836,
+        0.8399996752326515,
+        0.38015426522863616,
+        0.42819516598563934
+      ],
+      "ema_updates": [
+        4800,
+        1050,
+        8900,
+        12300
+      ],
+      "task_a_dice": 0.831346028376081,
+      "task_bwtr": 0.0,
+      "task_asd": 0.011115940311051373,
+      "precision": 0.8756247546970817,
+      "recall": 0.8162171372140138,
+      "wall_hours": 2.059008323483997,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    },
+    {
+      "method": "clnet-organ-2d-train-pruning-v1",
+      "seed": 2,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "task_checkpoints_closed_finite": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "seen_tasks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pruning_events": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "accepted_events": [
+        10,
+        15,
+        8,
+        2
+      ],
+      "task_a_dice": 0.800967762310307,
+      "task_bwtr": 0.0,
+      "task_asd": 0.011000423043882044,
+      "precision": 0.9452259607309816,
+      "recall": 0.7917727420976243,
+      "wall_hours": 7.4300640958547595,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    },
+    {
+      "method": "clnet-organ-2d-train-pruning-v1",
+      "seed": 3,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "task_checkpoints_closed_finite": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "seen_tasks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pruning_events": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "accepted_events": [
+        3,
+        7,
+        6,
+        10
+      ],
+      "task_a_dice": 0.8226773266645501,
+      "task_bwtr": 0.0,
+      "task_asd": 0.0107605786859442,
+      "precision": 0.8761026356574542,
+      "recall": 0.8014387313894515,
+      "wall_hours": 7.4245031159453925,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    },
+    {
+      "method": "clnet-organ-2d-train-pruning-v1",
+      "seed": 4,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "task_checkpoints_closed_finite": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "seen_tasks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pruning_events": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "accepted_events": [
+        11,
+        7,
+        9,
+        10
+      ],
+      "task_a_dice": 0.8109542777389839,
+      "task_bwtr": 0.0,
+      "task_asd": 0.01129648553346114,
+      "precision": 0.8570637409820996,
+      "recall": 0.7954190773100153,
+      "wall_hours": 7.449527041448487,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    },
+    {
+      "method": "clnet-organ-2d-train-pruning-v1",
+      "seed": 5,
+      "status": "COMPLETE_REVIEWED",
+      "train_returncode": 0,
+      "test_returncode": 0,
+      "task_checkpoints_closed_finite": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "seen_tasks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pruning_events": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "accepted_events": [
+        4,
+        5,
+        5,
+        14
+      ],
+      "task_a_dice": 0.8383700575945028,
+      "task_bwtr": 0.0,
+      "task_asd": 0.010758769107348529,
+      "precision": 0.8824168945755914,
+      "recall": 0.8197129256527886,
+      "wall_hours": 7.363400631613201,
+      "author_native": false,
+      "rma": null,
+      "drr": null
+    }
+  ],
+  "metrics": {
+    "task_a_dice": {
+      "mean": 0.8208630905368849,
+      "sample_std": 0.015113619605599177
+    },
+    "task_bwtr": {
+      "mean": 0.0,
+      "sample_std": 0.0
+    },
+    "task_asd": {
+      "mean": 0.010986439336337457,
+      "sample_std": 0.00023234750775688365
+    }
+  },
+  "rma": null,
+  "drr": null
+}
