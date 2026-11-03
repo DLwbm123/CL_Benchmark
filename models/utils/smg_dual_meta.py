@@ -34,7 +34,11 @@ def first_order_dual_meta(model, loss_fn, current, replay, meta_train, meta_test
     def objective(inner_batch, outer_batch, rate):
         inner = evaluate(params, inner_batch)
         inner_grad = torch.autograd.grad(inner, tuple(params.values()), retain_graph=True)
-        adapted = {name: p - rate * g.detach()
+        norm = torch.linalg.vector_norm(torch.stack([g.detach().norm() for g in inner_grad]))
+        if not torch.isfinite(norm):
+            raise ValueError('Non-finite inner gradient norm.')
+        scale = norm.clamp_min(1).reciprocal()
+        adapted = {name: p - rate * scale * g.detach()
                    for (name, p), g in zip(params.items(), inner_grad)}
         return inner + evaluate(adapted, outer_batch)
 

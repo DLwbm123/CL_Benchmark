@@ -28,6 +28,8 @@ def generate_replay(generator, current_masks, previous_sites, image_channels=1):
             image = generator.sample(current_masks, ids, shape)
             if tuple(image.shape) != shape or not torch.isfinite(image).all():
                 raise FloatingPointError('Invalid generated replay image')
+            # Match the fixed training intensity range before replay is reused.
+            image = image.clamp(-1, 1)
             images.append(image)
             labels.append(current_masks.clone())
             sites.append(ids)
@@ -68,8 +70,12 @@ class SMGReplayBuffer:
         if count < 1 or 2 * required > self.max_bytes:
             raise MemoryError('Replay buffer would exceed its reserved byte budget')
         images, labels, sites = [], [], []
+        try:
+            device = next(generator.parameters()).device
+        except StopIteration:
+            device = masks.device
         for start in range(0, masks.shape[0], batch_size):
-            chunk = masks[start:start + batch_size]
+            chunk = masks[start:start + batch_size].to(device)
             x, y, s = generate_replay(generator, chunk, previous_sites, image_channels)
             images.append(x.to(device='cpu', dtype=torch.float32))
             labels.append(y[:, 0].to(device='cpu', dtype=torch.long))

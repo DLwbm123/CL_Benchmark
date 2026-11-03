@@ -1,0 +1,34 @@
+{
+  "method": "smg-normalized-resunet-50k-ddim200-innerclip1-range-v2",
+  "seed": 2,
+  "status": "COMPLETE_REVIEWED",
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_task_closed_finite": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "generator_updates_total": [
+    8334,
+    16668,
+    25001,
+    33334,
+    41667,
+    50000
+  ],
+  "task_a_dice": 0.4961688844172987,
+  "task_bwtr": -0.20232598782819075,
+  "task_e_fwt": 0.4540322284307034,
+  "task_asd": 0.016763377045415483,
+  "precision": 0.7138607166991914,
+  "recall": 0.5001527178932013,
+  "wall_hours": 22.948082978195615,
+  "includes_previous_failed_attempt": true,
+  "author_native": false,
+  "rma": null,
+  "drr": null
+}
