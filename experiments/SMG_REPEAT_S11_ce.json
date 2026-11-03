@@ -1,0 +1,20 @@
+{
+  "mode": "ce",
+  "seed": 11,
+  "epochs": 20,
+  "scores": {
+    "1": {
+      "foreground_micro_dice": 0.018842508036990818,
+      "predicted_foreground_fraction": 0.008493951026429521,
+      "reference_foreground_fraction": 0.011148168685588431
+    },
+    "2": {
+      "foreground_micro_dice": 0.06084966225646179,
+      "predicted_foreground_fraction": 0.008421897888183594,
+      "reference_foreground_fraction": 0.008661270141601562
+    }
+  },
+  "checkpoint_role": "fixed seed2 first-task v2 branch, not exact resume",
+  "selection_split": "sites 1 and 2 validation only",
+  "test_used": false
+}
