@@ -1,0 +1,18 @@
+{
+  "method": "smg-normalized-resunet-50k-ddim200-lr3e4-v1",
+  "seed": 5,
+  "status": "FAILED",
+  "train_returncode": 1,
+  "test_returncode": null,
+  "failure": "nonfinite dual-meta outer loss during task 6",
+  "completed_task_checkpoints_present": 5,
+  "final_task_checkpoint_present": false,
+  "wall_hours": 22.115701013074982,
+  "original_deadline_remaining_hours_at_failure": 7.884298986925019,
+  "attempt_bytes": 3311906816,
+  "task_a_dice": null,
+  "task_bwtr": null,
+  "author_native": false,
+  "reason_not_retried": "remaining original clock insufficient for full restart at observed throughput; no precise sampler resume",
+  "root_cause": "not established"
+}
