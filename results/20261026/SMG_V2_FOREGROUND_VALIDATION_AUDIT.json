@@ -1,0 +1,66 @@
+{
+  "2": {
+    "1": {
+      "foreground_micro_dice": 0.0,
+      "predicted_foreground_fraction": 2.678404463098404e-05,
+      "reference_foreground_fraction": 0.011148168685588431
+    },
+    "2": {
+      "foreground_micro_dice": 0.0,
+      "predicted_foreground_fraction": 1.2715657552083334e-05,
+      "reference_foreground_fraction": 0.008661270141601562
+    },
+    "3": {
+      "foreground_micro_dice": 0.0015430153728635538,
+      "predicted_foreground_fraction": 7.120768229166667e-05,
+      "reference_foreground_fraction": 0.053197224934895836
+    },
+    "4": {
+      "foreground_micro_dice": 0.0,
+      "predicted_foreground_fraction": 0.00014936006986177884,
+      "reference_foreground_fraction": 0.017750373253455527
+    },
+    "5": {
+      "foreground_micro_dice": 0.0,
+      "predicted_foreground_fraction": 2.6526817908653847e-05,
+      "reference_foreground_fraction": 0.011574613131009616
+    },
+    "6": {
+      "foreground_micro_dice": 0.007090086478437661,
+      "predicted_foreground_fraction": 0.0006274382273356119,
+      "reference_foreground_fraction": 0.01324931780497233
+    }
+  },
+  "4": {
+    "1": {
+      "foreground_micro_dice": 0.003543323307651106,
+      "predicted_foreground_fraction": 0.00067138671875,
+      "reference_foreground_fraction": 0.011148168685588431
+    },
+    "2": {
+      "foreground_micro_dice": 0.013726695349313665,
+      "predicted_foreground_fraction": 0.00064849853515625,
+      "reference_foreground_fraction": 0.008661270141601562
+    },
+    "3": {
+      "foreground_micro_dice": 0.05286535508979898,
+      "predicted_foreground_fraction": 0.0037831624348958334,
+      "reference_foreground_fraction": 0.053197224934895836
+    },
+    "4": {
+      "foreground_micro_dice": 0.005831169422805339,
+      "predicted_foreground_fraction": 0.0015734159029447115,
+      "reference_foreground_fraction": 0.017750373253455527
+    },
+    "5": {
+      "foreground_micro_dice": 0.1309807974670046,
+      "predicted_foreground_fraction": 0.002734727125901442,
+      "reference_foreground_fraction": 0.011574613131009616
+    },
+    "6": {
+      "foreground_micro_dice": 0.28341073102666403,
+      "predicted_foreground_fraction": 0.004976590474446614,
+      "reference_foreground_fraction": 0.01324931780497233
+    }
+  }
+}

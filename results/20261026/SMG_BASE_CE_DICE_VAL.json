@@ -1,0 +1,10 @@
+{
+  "mode": "ce_dice",
+  "seed": 7,
+  "epochs": 20,
+  "foreground_micro_dice": 0.6330603767278631,
+  "predicted_foreground_fraction": 0.016049486525515293,
+  "reference_foreground_fraction": 0.011148168685588431,
+  "selection_split": "site 1 validation only",
+  "test_used": false
+}
