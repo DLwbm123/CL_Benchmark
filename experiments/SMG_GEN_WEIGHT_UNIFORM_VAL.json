@@ -1,0 +1,28 @@
+{
+  "mode": "uniform",
+  "seed": 7,
+  "updates": 1000,
+  "train_split": "site1 train",
+  "validation_split": "first 24 nonempty site1 validation slices",
+  "selection": "fixed final step",
+  "timesteps": {
+    "50": {
+      "foreground_noise_mse": 0.055309125614947455,
+      "background_noise_mse": 0.030995794510979915
+    },
+    "250": {
+      "foreground_noise_mse": 0.006177125511503598,
+      "background_noise_mse": 0.004772329344897102
+    },
+    "500": {
+      "foreground_noise_mse": 0.000935209004151217,
+      "background_noise_mse": 0.0008269536222199098
+    },
+    "900": {
+      "foreground_noise_mse": 0.0002812945863381754,
+      "background_noise_mse": 0.00011571452182298422
+    }
+  },
+  "test_used": false,
+  "caveat": "generator-only fixed checkpoint branch; forward noise MSE does not prove replay fidelity"
+}
