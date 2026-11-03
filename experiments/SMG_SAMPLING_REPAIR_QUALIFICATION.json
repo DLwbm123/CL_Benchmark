@@ -1,0 +1,25 @@
+{
+  "seed": 7,
+  "samples": 24,
+  "sampling_steps": 200,
+  "split": "first 24 nonempty site2 train masks",
+  "comparison": "same initial noise; clip estimated clean image at every DDIM step versus final clipping",
+  "results": {
+    "final_clamp": {
+      "teacher_mask_foreground_micro_dice": 0.0,
+      "predicted_foreground_fraction": 0.023595174153645832,
+      "mask_foreground_fraction": 0.024588902791341145,
+      "saturation_fraction": 0.9517904917399088,
+      "empty_mask_mean_abs_difference": 0.001281319414980923
+    },
+    "intermediate_clean_clamp": {
+      "teacher_mask_foreground_micro_dice": 0.0,
+      "predicted_foreground_fraction": 0.0034281412760416665,
+      "mask_foreground_fraction": 0.024588902791341145,
+      "saturation_fraction": 0.0002231597900390625,
+      "empty_mask_mean_abs_difference": 0.035097744315862656
+    }
+  },
+  "test_used": false,
+  "teacher_caveat": "Agreement is an imperfect proxy, not image fidelity."
+}
