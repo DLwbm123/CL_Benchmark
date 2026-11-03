@@ -1,0 +1,21 @@
+{
+  "mode": "minmax",
+  "seed": 7,
+  "epochs": 20,
+  "scores": {
+    "1": {
+      "foreground_micro_dice": 0.1255950098661754,
+      "predicted_foreground_fraction": 0.006209677838264627,
+      "reference_foreground_fraction": 0.011148168685588431
+    },
+    "2": {
+      "foreground_micro_dice": 0.17703197293004627,
+      "predicted_foreground_fraction": 0.014355659484863281,
+      "reference_foreground_fraction": 0.008661270141601562
+    }
+  },
+  "replay_saturation_fraction": 3.088088124059141e-05,
+  "checkpoint_role": "fixed seed2 first-task v2 branch, not exact resume",
+  "selection_split": "sites 1 and 2 validation only",
+  "test_used": false
+}
