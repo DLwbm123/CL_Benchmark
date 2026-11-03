@@ -1,0 +1,39 @@
+{
+  "method": "smg-normalized-resunet-50k-ddim200-lr3e4-v1",
+  "seed": 3,
+  "status": "INVALID_NUMERICAL",
+  "train_returncode": 0,
+  "test_returncode": 0,
+  "checkpoint_task_closed": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "checkpoint_all_state_finite": [
+    true,
+    true,
+    true,
+    false,
+    false,
+    false
+  ],
+  "generator_updates_total": [
+    8334,
+    16668,
+    25001,
+    33334,
+    41667,
+    50000
+  ],
+  "diagnostic_metrics_not_valid_for_comparison": {
+    "task_a_dice": 0.4520986053403036,
+    "task_bwtr": -0.09241022428716808,
+    "task_e_fwt": 0.3798337572033301
+  },
+  "wall_hours": 23.56380068037245,
+  "invalid_reason": "extreme dual-meta training losses and replay normalization range violation; prior to subsequent unmodified updates",
+  "author_native": false
+}
