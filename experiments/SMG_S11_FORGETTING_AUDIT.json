@@ -1,0 +1,75 @@
+{
+  "checkpoint_task_indices": "zero-based",
+  "split": "validation only",
+  "seed": 11,
+  "test_used": false,
+  "results": {
+    "0": {
+      "1": {
+        "dice": 0.21252139526648173,
+        "predicted_fraction": 0.010854355832363697,
+        "reference_fraction": 0.011148168685588431
+      }
+    },
+    "1": {
+      "1": {
+        "dice": 0.06817981974060233,
+        "predicted_fraction": 0.018388951078374335,
+        "reference_fraction": 0.011148168685588431
+      },
+      "2": {
+        "dice": 0.5962794135764445,
+        "predicted_fraction": 0.00940100351969401,
+        "reference_fraction": 0.008661270141601562
+      }
+    },
+    "2": {
+      "1": {
+        "dice": 0.22212373541519292,
+        "predicted_fraction": 0.007897884287732714,
+        "reference_fraction": 0.011148168685588431
+      },
+      "2": {
+        "dice": 0.6133899188980201,
+        "predicted_fraction": 0.00901635487874349,
+        "reference_fraction": 0.008661270141601562
+      }
+    },
+    "3": {
+      "1": {
+        "dice": 0.15326537323248932,
+        "predicted_fraction": 0.0011927827875664893,
+        "reference_fraction": 0.011148168685588431
+      },
+      "2": {
+        "dice": 0.5971277021617294,
+        "predicted_fraction": 0.0040442148844401045,
+        "reference_fraction": 0.008661270141601562
+      }
+    },
+    "4": {
+      "1": {
+        "dice": 0.4509094151212554,
+        "predicted_fraction": 0.007058488561751995,
+        "reference_fraction": 0.011148168685588431
+      },
+      "2": {
+        "dice": 0.7847380883147095,
+        "predicted_fraction": 0.006643931070963542,
+        "reference_fraction": 0.008661270141601562
+      }
+    },
+    "5": {
+      "1": {
+        "dice": 0.01015228426395939,
+        "predicted_fraction": 0.0003001436274102394,
+        "reference_fraction": 0.011148168685588431
+      },
+      "2": {
+        "dice": 0.0,
+        "predicted_fraction": 2.0662943522135418e-05,
+        "reference_fraction": 0.008661270141601562
+      }
+    }
+  }
+}
