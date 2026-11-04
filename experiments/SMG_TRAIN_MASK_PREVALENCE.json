@@ -1,0 +1,37 @@
+{
+  "split": "train only",
+  "resize": "256x256 as dataset",
+  "test_used": false,
+  "sites": {
+    "1": {
+      "foreground_fraction": 0.026114276873312914,
+      "empty_slice_fraction": 0.4418604651162791,
+      "slice_count": 301
+    },
+    "2": {
+      "foreground_fraction": 0.013896851312546503,
+      "empty_slice_fraction": 0.42857142857142855,
+      "slice_count": 168
+    },
+    "3": {
+      "foreground_fraction": 0.021261198624320653,
+      "empty_slice_fraction": 0.3159420289855073,
+      "slice_count": 345
+    },
+    "4": {
+      "foreground_fraction": 0.013505499046969127,
+      "empty_slice_fraction": 0.4457831325301205,
+      "slice_count": 166
+    },
+    "5": {
+      "foreground_fraction": 0.015230893269437286,
+      "empty_slice_fraction": 0.6237113402061856,
+      "slice_count": 582
+    },
+    "6": {
+      "foreground_fraction": 0.01214952902360396,
+      "empty_slice_fraction": 0.6122159090909091,
+      "slice_count": 704
+    }
+  }
+}
