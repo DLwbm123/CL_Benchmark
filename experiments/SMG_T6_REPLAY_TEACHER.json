@@ -1,0 +1,32 @@
+{
+  "sample": "first 24 nonempty site6 train masks",
+  "seed": 701,
+  "real_validation_teacher": {
+    "1": {
+      "foreground_micro_dice": 0.4509094151212554,
+      "predicted_foreground_fraction": 0.007058488561751995,
+      "reference_foreground_fraction": 0.011148168685588431
+    },
+    "2": {
+      "foreground_micro_dice": 0.7847380883147095,
+      "predicted_foreground_fraction": 0.006643931070963542,
+      "reference_foreground_fraction": 0.008661270141601562
+    }
+  },
+  "synthetic_teacher_mask_agreement": {
+    "1": {
+      "foreground_micro_dice": 0.010640608034744842,
+      "predicted_foreground_fraction": 0.008931477864583334,
+      "reference_foreground_fraction": 0.03205744425455729,
+      "saturation_fraction": 0.8014609018961588
+    },
+    "2": {
+      "foreground_micro_dice": 0.0055943113267954035,
+      "predicted_foreground_fraction": 0.005673726399739583,
+      "reference_foreground_fraction": 0.03205744425455729,
+      "saturation_fraction": 0.7574227650960287
+    }
+  },
+  "qualification": "descriptive proxy only; no clinical fidelity or causal inference",
+  "test_used": false
+}
