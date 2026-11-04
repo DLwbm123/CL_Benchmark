@@ -1,0 +1,120 @@
+{
+  "checkpoint_checks": [
+    {
+      "task": 0,
+      "keys": [
+        "format",
+        "method",
+        "config",
+        "model",
+        "optimizer",
+        "generator_optimizer",
+        "scheduler"
+      ],
+      "finite": true
+    },
+    {
+      "task": 1,
+      "keys": [
+        "format",
+        "method",
+        "config",
+        "model",
+        "optimizer",
+        "generator_optimizer",
+        "scheduler"
+      ],
+      "finite": true
+    },
+    {
+      "task": 2,
+      "keys": [
+        "format",
+        "method",
+        "config",
+        "model",
+        "optimizer",
+        "generator_optimizer",
+        "scheduler"
+      ],
+      "finite": true
+    },
+    {
+      "task": 3,
+      "keys": [
+        "format",
+        "method",
+        "config",
+        "model",
+        "optimizer",
+        "generator_optimizer",
+        "scheduler"
+      ],
+      "finite": true
+    },
+    {
+      "task": 4,
+      "keys": [
+        "format",
+        "method",
+        "config",
+        "model",
+        "optimizer",
+        "generator_optimizer",
+        "scheduler"
+      ],
+      "finite": true
+    },
+    {
+      "task": 5,
+      "keys": [
+        "format",
+        "method",
+        "config",
+        "model",
+        "optimizer",
+        "generator_optimizer",
+        "scheduler"
+      ],
+      "finite": true
+    }
+  ],
+  "sites": {
+    "1": {
+      "foreground_micro_dice": 0.01015228426395939,
+      "predicted_foreground_fraction": 0.0003001436274102394,
+      "reference_foreground_fraction": 0.011148168685588431
+    },
+    "2": {
+      "foreground_micro_dice": 0.0,
+      "predicted_foreground_fraction": 2.0662943522135418e-05,
+      "reference_foreground_fraction": 0.008661270141601562
+    },
+    "3": {
+      "foreground_micro_dice": 0.5394203869127988,
+      "predicted_foreground_fraction": 0.022143758138020834,
+      "reference_foreground_fraction": 0.053197224934895836
+    },
+    "4": {
+      "foreground_micro_dice": 0.28392588227591176,
+      "predicted_foreground_fraction": 0.004658038799579327,
+      "reference_foreground_fraction": 0.017750373253455527
+    },
+    "5": {
+      "foreground_micro_dice": 0.5751771260237168,
+      "predicted_foreground_fraction": 0.00563812255859375,
+      "reference_foreground_fraction": 0.011574613131009616
+    },
+    "6": {
+      "foreground_micro_dice": 0.616647338889169,
+      "predicted_foreground_fraction": 0.008817593256632486,
+      "reference_foreground_fraction": 0.01324931780497233
+    }
+  },
+  "validation_mean_foreground_micro_dice": 0.3375538363942593,
+  "validation_min_foreground_micro_dice": 0.0,
+  "preregistered_gate_passed": false,
+  "training_returncode": 0,
+  "seed": 11,
+  "test_used": false
+}
