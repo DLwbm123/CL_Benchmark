@@ -1,0 +1,129 @@
+{
+  "arms": {
+    "s13_minmax": {
+      "mode": "minmax",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.06400962879886204,
+          "predicted_foreground_fraction": 0.0007202473092586436,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.04383059685716299,
+          "predicted_foreground_fraction": 0.0003611246744791667,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.5467528575015999,
+          "predicted_foreground_fraction": 0.00637205441792806,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 3.06129441014491e-05,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    "s11_minmax": {
+      "mode": "minmax",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.004043031425380625,
+          "predicted_foreground_fraction": 0.0003347193941156915,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 0.00012334187825520834,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.5800465730825103,
+          "predicted_foreground_fraction": 0.008524497350056967,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 3.0625949875684455e-05,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    "s13_clamp": {
+      "mode": "clamp",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.010256261679535281,
+          "predicted_foreground_fraction": 5.746395029920213e-05,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 2.384185791015625e-05,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.5104510071284326,
+          "predicted_foreground_fraction": 0.005168358484903972,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.762704074382782,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    "s11_clamp": {
+      "mode": "clamp",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.005906706404326191,
+          "predicted_foreground_fraction": 0.0008889056266622341,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.012471887139644245,
+          "predicted_foreground_fraction": 0.000667572021484375,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.47998155466182574,
+          "predicted_foreground_fraction": 0.013980786005655924,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.7642717957496643,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    }
+  },
+  "site_mean": {
+    "clamp": {
+      "1": 0.008081484041930737,
+      "2": 0.0062359435698221225,
+      "6": 0.49521628089512915
+    },
+    "minmax": {
+      "1": 0.034026330112121334,
+      "2": 0.021915298428581496,
+      "6": 0.5633997152920551
+    }
+  },
+  "old_site_average_difference_minmax_minus_clamp": 0.020812100464474986,
+  "preregistered_gate_passed": false,
+  "all_returncodes_zero": true,
+  "test_used": false,
+  "limitation": "Two random seeds share one T4 checkpoint, independent synthetic replay; not independent full training seeds."
+}
