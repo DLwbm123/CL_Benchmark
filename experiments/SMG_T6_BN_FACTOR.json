@@ -1,0 +1,233 @@
+{
+  "arms": [
+    {
+      "mode": "dual",
+      "bn_source": "current",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.013368801582429575,
+          "predicted_foreground_fraction": 0.0007512518700132978,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 0.00028514862060546875,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.5034034207262553,
+          "predicted_foreground_fraction": 0.008793910344441732,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.7642717957496643,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "mode": "dual",
+      "bn_source": "mixed",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 0.0008608229616855053,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.007797689308581035,
+          "predicted_foreground_fraction": 0.00022602081298828125,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.6008484862234422,
+          "predicted_foreground_fraction": 0.01477503776550293,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.7642717957496643,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "mode": "joint",
+      "bn_source": "current",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.15057910027749913,
+          "predicted_foreground_fraction": 0.0013116065492021277,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.10902034168485983,
+          "predicted_foreground_fraction": 0.0005121231079101562,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.08142939824763476,
+          "predicted_foreground_fraction": 0.0006192525227864584,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.7642717957496643,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "mode": "joint",
+      "bn_source": "mixed",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.2473948416132941,
+          "predicted_foreground_fraction": 0.002918324571974734,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.2927742418569824,
+          "predicted_foreground_fraction": 0.0015277862548828125,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.6394824890888384,
+          "predicted_foreground_fraction": 0.00922067960103353,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.7642717957496643,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "mode": "dual",
+      "bn_source": "current",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.01122321732229906,
+          "predicted_foreground_fraction": 0.0003069613842253989,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.00043355733795794494,
+          "predicted_foreground_fraction": 0.0001373291015625,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.5405305973819258,
+          "predicted_foreground_fraction": 0.007920583089192709,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.762704074382782,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "mode": "dual",
+      "bn_source": "mixed",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.02398211503285685,
+          "predicted_foreground_fraction": 0.0008324156416223404,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0007452069642978118,
+          "predicted_foreground_fraction": 0.0007235209147135416,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.5736298489385324,
+          "predicted_foreground_fraction": 0.0198210875193278,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.762704074382782,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "mode": "joint",
+      "bn_source": "current",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.1592581995994486,
+          "predicted_foreground_fraction": 0.0013338454226230053,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.17670843776106934,
+          "predicted_foreground_fraction": 0.0008516311645507812,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.0745902206238329,
+          "predicted_foreground_fraction": 0.0005398591359456381,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.762704074382782,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "mode": "joint",
+      "bn_source": "mixed",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.2510821489650292,
+          "predicted_foreground_fraction": 0.002614772066156915,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.26774899324602847,
+          "predicted_foreground_fraction": 0.0013640721638997395,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.6273121044730018,
+          "predicted_foreground_fraction": 0.008877992630004883,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.762704074382782,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    }
+  ],
+  "test_used": false,
+  "shared_origin": "pilot seed11 fifth-task checkpoint",
+  "all_arms_returncode": 0,
+  "elapsed_hours": 5.9519689919551215,
+  "disk_kib": 120
+}
