@@ -1,0 +1,129 @@
+{
+  "arms": {
+    "s11_dual": {
+      "mode": "dual",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.001442169022209403,
+          "predicted_foreground_fraction": 0.0012332023458277925,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.010989395583242922,
+          "predicted_foreground_fraction": 0.00042184193929036457,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.3983758274748653,
+          "predicted_foreground_fraction": 0.008828481038411459,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.7642717957496643,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    "s11_joint": {
+      "mode": "joint",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.3227694114686019,
+          "predicted_foreground_fraction": 0.004330736525515293,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.43073012286400225,
+          "predicted_foreground_fraction": 0.0025936762491861978,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.6430083503995918,
+          "predicted_foreground_fraction": 0.009801467259724935,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.7642717957496643,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    "s13_dual": {
+      "mode": "dual",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.05255573450877342,
+          "predicted_foreground_fraction": 0.00034169947847406917,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.04179533213644524,
+          "predicted_foreground_fraction": 0.00019200642903645834,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.3046232971501326,
+          "predicted_foreground_fraction": 0.0025428136189778647,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.762704074382782,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    "s13_joint": {
+      "mode": "joint",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.2622312889874179,
+          "predicted_foreground_fraction": 0.0026176939619348403,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.24332668682060848,
+          "predicted_foreground_fraction": 0.0012232462565104167,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.6239341391289369,
+          "predicted_foreground_fraction": 0.008895635604858398,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.762704074382782,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    }
+  },
+  "site_means": {
+    "dual": {
+      "1": 0.02699895176549141,
+      "2": 0.02639236385984408,
+      "6": 0.3514995623124989
+    },
+    "joint": {
+      "1": 0.2925003502280099,
+      "2": 0.33702840484230534,
+      "6": 0.6334712447642643
+    }
+  },
+  "old_site_mean_difference": 0.28806871972248993,
+  "preregistered_gate_passed": true,
+  "all_return_codes": 0,
+  "wall_hours": 3.4313297008805805,
+  "disk_kib": 72
+}
