@@ -1,0 +1,250 @@
+{
+  "arms": [
+    {
+      "origin_seed": 2,
+      "mode": "dual",
+      "bn_source": "current",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.007166424983712671,
+          "predicted_foreground_fraction": 0.004299894292303857,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.010623412965745972,
+          "predicted_foreground_fraction": 0.0036074320475260415,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.3647266558688781,
+          "predicted_foreground_fraction": 0.0302734375,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.6047438383102417,
+      "checkpoint_role": "fixed v2 fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "origin_seed": 2,
+      "mode": "dual",
+      "bn_source": "mixed",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.004543597286916728,
+          "predicted_foreground_fraction": 0.008715852778008643,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.00034423407917383823,
+          "predicted_foreground_fraction": 0.004267374674479167,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.33529816699135195,
+          "predicted_foreground_fraction": 0.01526625951131185,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.6047438383102417,
+      "checkpoint_role": "fixed v2 fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "origin_seed": 2,
+      "mode": "joint",
+      "bn_source": "current",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 6.9800843583776595e-06,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 0.0,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.004290884228642831,
+          "predicted_foreground_fraction": 0.0002342065175374349,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.6047438383102417,
+      "checkpoint_role": "fixed v2 fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "origin_seed": 2,
+      "mode": "joint",
+      "bn_source": "mixed",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.01036768718145194,
+          "predicted_foreground_fraction": 0.01681534787441822,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.010634356817537972,
+          "predicted_foreground_fraction": 0.005926450093587239,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.30340233739187966,
+          "predicted_foreground_fraction": 0.029033899307250977,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.6047438383102417,
+      "checkpoint_role": "fixed v2 fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "origin_seed": 4,
+      "mode": "dual",
+      "bn_source": "current",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.009823207327310771,
+          "predicted_foreground_fraction": 0.0018073548661901595,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.006764755623203111,
+          "predicted_foreground_fraction": 0.0007371902465820312,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.34717441866889126,
+          "predicted_foreground_fraction": 0.015520970026652018,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.20286549627780914,
+      "checkpoint_role": "fixed v2 fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "origin_seed": 4,
+      "mode": "dual",
+      "bn_source": "mixed",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 0.0008111507334607712,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 0.0020106633504231772,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.27830438120148976,
+          "predicted_foreground_fraction": 0.014703671137491861,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.20286549627780914,
+      "checkpoint_role": "fixed v2 fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "origin_seed": 4,
+      "mode": "joint",
+      "bn_source": "current",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 5.843791555851064e-06,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 0.0,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.25065561592095015,
+          "predicted_foreground_fraction": 0.0045092105865478516,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.20286549627780914,
+      "checkpoint_role": "fixed v2 fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "origin_seed": 4,
+      "mode": "joint",
+      "bn_source": "mixed",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 8.362835558776796e-05,
+          "predicted_foreground_fraction": 0.0004981832301363032,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 7.184346516927083e-05,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.6006461816975316,
+          "predicted_foreground_fraction": 0.011422157287597656,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.20286549627780914,
+      "checkpoint_role": "fixed v2 fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    }
+  ],
+  "primary_old_site_effect_by_origin": {
+    "2": -0.006451003291684038,
+    "4": -0.00829398147525694
+  },
+  "primary_mean_effect": -0.007372492383470489,
+  "dual_mixed_minus_current_by_site": {
+    "1": -0.006223017512053357,
+    "2": -0.008521967254887623,
+    "6": -0.04914926317246382
+  },
+  "gate_passed": false,
+  "all_arms_returncode_zero": true,
+  "wall_hours": 7.609161053233676,
+  "actual_disk_kib": 120
+}

@@ -1,0 +1,9 @@
+{
+ "purpose": "Check whether sixth-domain BN and update-rule findings extend to two independent prior training origins; diagnostic branch, not full SMG or exact resume.",
+ "origins": "fixed v2 seed2 and seed4 fifth-task checkpoints, CE upstream; no selection by score; these differ from prior CE+Dice pilot",
+ "design": "2 origins x dual/joint x BN current/mixed, 8 arms; each origin uses deterministic diagnostic seed11; 20 epochs batch8 CE+soft foreground Dice, site6 train, five old prompts, DDIM200 clamp; final validation sites 1,2,6 only, no test",
+ "randomness": "separate train/replay-index/meta-split streams; independently generated replay on GPUs, not guaranteed bitwise paired; origin comparison confounds all upstream differences",
+ "primary": "Within each origin compare dual mixed vs dual current; average site1 and site2 foreground micro Dice. To qualify preserved dual+mixed for full pilot, all 8 arms return0 and finite, both origin old-site differences positive, mean difference >=0.05, each site1,2,6 across-origin mean no decline over 0.02. Qualifies further pilot only, not final test.",
+ "secondary": "Report joint and interaction separately. Joint is mechanism control, not automatic SMG replacement. Report per-origin per-site foreground Dice and predicted/reference rates and saturation.",
+ "limits": "single shared original clock 16h, <=10GB hard guard, no restart, no extension, only GPU1/5 at most one arm per GPU; >=16384 MiB free each launch, stop later waves on failure; no generated images persisted; expected output under 1MB"
+}
