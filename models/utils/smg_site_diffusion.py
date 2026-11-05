@@ -9,12 +9,16 @@ from torch import nn
 
 
 class SiteDiffusion(nn.Module):
-    def __init__(self, denoiser, steps=1000, beta_start=1e-4, beta_end=0.02):
+    def __init__(self, denoiser, steps=1000, beta_start=1e-4, beta_end=0.02,
+                 sampling_steps=None):
         super().__init__()
         if steps < 2 or not 0 < beta_start <= beta_end < 1:
             raise ValueError('Invalid diffusion schedule')
         self.denoiser = denoiser
         self.steps = steps
+        self.sampling_steps = steps if sampling_steps is None else sampling_steps
+        if type(self.sampling_steps) is not int or not 2 <= self.sampling_steps <= steps:
+            raise ValueError('Invalid sampling step count')
         betas = torch.linspace(beta_start, beta_end, steps)
         self.register_buffer('betas', betas)
         self.register_buffer('alpha_bars', torch.cumprod(1 - betas, dim=0))
@@ -43,6 +47,24 @@ class SiteDiffusion(nn.Module):
         x = torch.randn(image_shape, device=mask.device) if noise is None else noise.clone()
         if tuple(x.shape) != tuple(image_shape):
             raise ValueError('Invalid initial noise shape')
+        if self.sampling_steps < self.steps:
+            # Deterministic DDIM-style respacing over the original forward
+            # schedule. This is a changed sampling protocol, not author parity.
+            times = torch.linspace(self.steps - 1, 0, self.sampling_steps,
+                                   device=x.device).round().long().tolist()
+            for index, step in enumerate(times):
+                t = torch.full((image_shape[0],), step, device=x.device, dtype=torch.long)
+                prediction = self.denoiser(x, mask, t, site_id)
+                if prediction.shape != x.shape:
+                    raise ValueError('Denoiser output shape must match image')
+                alpha = self.alpha_bars[step]
+                clean = (x - (1 - alpha).sqrt() * prediction) / alpha.sqrt()
+                if index + 1 == len(times):
+                    x = clean
+                else:
+                    next_alpha = self.alpha_bars[times[index + 1]]
+                    x = next_alpha.sqrt() * clean + (1 - next_alpha).sqrt() * prediction
+            return x
         for step in reversed(range(self.steps)):
             t = torch.full((image_shape[0],), step, device=x.device, dtype=torch.long)
             prediction = self.denoiser(x, mask, t, site_id)
