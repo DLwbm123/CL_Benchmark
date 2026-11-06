@@ -1,0 +1,22 @@
+{
+  "purpose": "two-domain comparison of interpolated label conversion",
+  "starting_checkpoints": "fixed T0 from each method seed 1 and 2; branch diagnostic, not full training",
+  "methods": [
+    "s3r",
+    "ted"
+  ],
+  "seeds": [
+    1,
+    2
+  ],
+  "arms": [
+    "original truncation",
+    "threshold at 0.5 before nearest resize"
+  ],
+  "train": "site2 train; 20 epochs, batch8, fixed RNG 1106; restored optimizer, TED teacher, S3R anchor and importance; S3R shape prior 50 epochs as source run",
+  "evaluation": "site1 and site2 val after epoch20; foreground micro Dice and prediction/reference rates; primary uses 0.5 labels in both arms and original-label evaluation is also reported",
+  "no_test": true,
+  "selection": "each method separately must complete all four arms, finite models/optimizers, mean improvement across 2 seeds and 2 sites at least .03 with both seed means positive and no site mean drop over .02, to qualify for independent follow-up only",
+  "caveats": "0.5 is a convention, not verified original ground truth; fixed T0 branches and independent GPU arithmetic are not full reproduction or bitwise pairing",
+  "stop": "any nonfinite loss, gradient, parameter or optimizer; loss>10000; any arm failure, deadline or storage cap; no automatic retries"
+}

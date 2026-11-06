@@ -1,0 +1,222 @@
+{
+  "s3r": {
+    "1": {
+      "original": {
+        "1": {
+          "original": {
+            "foreground_micro_dice": 0.054143047682560855,
+            "prediction_fraction": 0.16800170249127327,
+            "reference_fraction": 0.011148168685588431
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.05617021891978123,
+            "prediction_fraction": 0.16800170249127327,
+            "reference_fraction": 0.011595381067154254
+          }
+        },
+        "2": {
+          "original": {
+            "foreground_micro_dice": 0.42294094539740734,
+            "prediction_fraction": 0.0059051513671875,
+            "reference_fraction": 0.008661270141601562
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.414260023273035,
+            "prediction_fraction": 0.0059051513671875,
+            "reference_fraction": 0.009119987487792969
+          }
+        }
+      },
+      "threshold": {
+        "1": {
+          "original": {
+            "foreground_micro_dice": 0.2345862967925418,
+            "prediction_fraction": 0.05802982411486037,
+            "reference_fraction": 0.011148168685588431
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.2386097109470808,
+            "prediction_fraction": 0.05802982411486037,
+            "reference_fraction": 0.011595381067154254
+          }
+        },
+        "2": {
+          "original": {
+            "foreground_micro_dice": 0.5635963985289766,
+            "prediction_fraction": 0.006379445393880208,
+            "reference_fraction": 0.008661270141601562
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.553971737391554,
+            "prediction_fraction": 0.006379445393880208,
+            "reference_fraction": 0.009119987487792969
+          }
+        }
+      }
+    },
+    "2": {
+      "original": {
+        "1": {
+          "original": {
+            "foreground_micro_dice": 0.12512946997888985,
+            "prediction_fraction": 0.11626775214012633,
+            "reference_fraction": 0.011148168685588431
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.1283531762656693,
+            "prediction_fraction": 0.11626775214012633,
+            "reference_fraction": 0.011595381067154254
+          }
+        },
+        "2": {
+          "original": {
+            "foreground_micro_dice": 0.5305231235784685,
+            "prediction_fraction": 0.012303670247395834,
+            "reference_fraction": 0.008661270141601562
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.5303518169542831,
+            "prediction_fraction": 0.012303670247395834,
+            "reference_fraction": 0.009119987487792969
+          }
+        }
+      },
+      "threshold": {
+        "1": {
+          "original": {
+            "foreground_micro_dice": 0.13278337377818147,
+            "prediction_fraction": 0.08464196387757646,
+            "reference_fraction": 0.011148168685588431
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.13596150180734373,
+            "prediction_fraction": 0.08464196387757646,
+            "reference_fraction": 0.011595381067154254
+          }
+        },
+        "2": {
+          "original": {
+            "foreground_micro_dice": 0.3711636064092685,
+            "prediction_fraction": 0.015265146891276041,
+            "reference_fraction": 0.008661270141601562
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.3686659974709617,
+            "prediction_fraction": 0.015265146891276041,
+            "reference_fraction": 0.009119987487792969
+          }
+        }
+      }
+    }
+  },
+  "ted": {
+    "1": {
+      "original": {
+        "1": {
+          "original": {
+            "foreground_micro_dice": 0.7031532781146382,
+            "prediction_fraction": 0.013427896702543218,
+            "reference_fraction": 0.011148168685588431
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.7054679441853223,
+            "prediction_fraction": 0.013427896702543218,
+            "reference_fraction": 0.011595381067154254
+          }
+        },
+        "2": {
+          "original": {
+            "foreground_micro_dice": 0.7045396103253881,
+            "prediction_fraction": 0.007409731547037761,
+            "reference_fraction": 0.008661270141601562
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.702488557252202,
+            "prediction_fraction": 0.007409731547037761,
+            "reference_fraction": 0.009119987487792969
+          }
+        }
+      },
+      "threshold": {
+        "1": {
+          "original": {
+            "foreground_micro_dice": 0.7020917343715858,
+            "prediction_fraction": 0.013367023873836436,
+            "reference_fraction": 0.011148168685588431
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.7048602530921199,
+            "prediction_fraction": 0.013367023873836436,
+            "reference_fraction": 0.011595381067154254
+          }
+        },
+        "2": {
+          "original": {
+            "foreground_micro_dice": 0.7011387042866581,
+            "prediction_fraction": 0.00769805908203125,
+            "reference_fraction": 0.008661270141601562
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.7009167375484359,
+            "prediction_fraction": 0.00769805908203125,
+            "reference_fraction": 0.009119987487792969
+          }
+        }
+      }
+    },
+    "2": {
+      "original": {
+        "1": {
+          "original": {
+            "foreground_micro_dice": 0.5805024029621739,
+            "prediction_fraction": 0.014454456085854389,
+            "reference_fraction": 0.011148168685588431
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.5861899212971329,
+            "prediction_fraction": 0.014454456085854389,
+            "reference_fraction": 0.011595381067154254
+          }
+        },
+        "2": {
+          "original": {
+            "foreground_micro_dice": 0.6343236602156652,
+            "prediction_fraction": 0.006992657979329427,
+            "reference_fraction": 0.008661270141601562
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.6314169593181549,
+            "prediction_fraction": 0.006992657979329427,
+            "reference_fraction": 0.009119987487792969
+          }
+        }
+      },
+      "threshold": {
+        "1": {
+          "original": {
+            "foreground_micro_dice": 0.5730435571139256,
+            "prediction_fraction": 0.015703241875831116,
+            "reference_fraction": 0.011148168685588431
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.5802580721888565,
+            "prediction_fraction": 0.015703241875831116,
+            "reference_fraction": 0.011595381067154254
+          }
+        },
+        "2": {
+          "original": {
+            "foreground_micro_dice": 0.643211119666726,
+            "prediction_fraction": 0.007439613342285156,
+            "reference_fraction": 0.008661270141601562
+          },
+          "threshold": {
+            "foreground_micro_dice": 0.6420563618213929,
+            "prediction_fraction": 0.007439613342285156,
+            "reference_fraction": 0.009119987487792969
+          }
+        }
+      }
+    }
+  }
+}
