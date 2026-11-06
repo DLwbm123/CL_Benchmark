@@ -1,0 +1,23 @@
+{
+  "batches": [
+    {
+      "slices": 8,
+      "empty_slices": 8,
+      "foreground_fraction": 0.0
+    },
+    {
+      "slices": 8,
+      "empty_slices": 0,
+      "foreground_fraction": 0.01587677001953125
+    },
+    {
+      "slices": 8,
+      "empty_slices": 0,
+      "foreground_fraction": 0.037502288818359375
+    }
+  ],
+  "post_hoc": true,
+  "split": "site6 train first 24",
+  "validation_used": false,
+  "test_used": false
+}
