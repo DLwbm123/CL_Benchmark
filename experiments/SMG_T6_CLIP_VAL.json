@@ -1,0 +1,140 @@
+{
+  "arms": [
+    {
+      "clip_limit": 1.0,
+      "mode": "dual",
+      "bn_source": "current",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.00841532718432902,
+          "predicted_foreground_fraction": 0.0015057502908909575,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0016556291390728477,
+          "predicted_foreground_fraction": 0.0009390513102213541,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.4972646008947234,
+          "predicted_foreground_fraction": 0.01576058069864909,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.7642717957496643,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "clip_limit": 10.0,
+      "mode": "dual",
+      "bn_source": "current",
+      "seed": 11,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.06161299593534878,
+          "predicted_foreground_fraction": 0.0007129425698138297,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.007594566963633708,
+          "predicted_foreground_fraction": 4.5140584309895836e-05,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.4957877366684037,
+          "predicted_foreground_fraction": 0.0050516923268636065,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.7642717957496643,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "clip_limit": 1.0,
+      "mode": "dual",
+      "bn_source": "current",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.013422253422253422,
+          "predicted_foreground_fraction": 0.00041361058011968083,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.0,
+          "predicted_foreground_fraction": 0.0001548131306966146,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.4730191898616195,
+          "predicted_foreground_fraction": 0.007896661758422852,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.762704074382782,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    },
+    {
+      "clip_limit": 10.0,
+      "mode": "dual",
+      "bn_source": "current",
+      "seed": 13,
+      "epochs": 20,
+      "scores": {
+        "1": {
+          "foreground_micro_dice": 0.05905806130077249,
+          "predicted_foreground_fraction": 0.0005773990712267288,
+          "reference_foreground_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.028081349062748787,
+          "predicted_foreground_fraction": 0.00012334187825520834,
+          "reference_foreground_fraction": 0.008661270141601562
+        },
+        "6": {
+          "foreground_micro_dice": 0.5711765023154034,
+          "predicted_foreground_fraction": 0.00737913449605306,
+          "reference_foreground_fraction": 0.01324931780497233
+        }
+      },
+      "replay_saturation_fraction": 0.762704074382782,
+      "checkpoint_role": "fixed seed11 pilot fifth-task branch, not exact resume",
+      "selection_split": "sites 1, 2 and 6 validation only",
+      "test_used": false,
+      "finite": true
+    }
+  ],
+  "return_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "elapsed_hours": 3.1493962342209287,
+  "disk_kib": 88,
+  "old_site_effect_by_seed": {
+    "11": 0.029568303287790313,
+    "13": 0.03685857847063393
+  },
+  "old_site_effect_mean": 0.033213440879212124,
+  "site_effect_across_seeds": {
+    "1": 0.04941673831476942,
+    "2": 0.017010143443654823,
+    "6": 0.048340224113732094
+  },
+  "preregistered_gate_passed": false,
+  "gate": "all four arms finite, rc0, 20 epochs; old-site effect mean >= 0.05, both seed effects positive, each site mean effect >= -0.02"
+}
