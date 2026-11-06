@@ -1,0 +1,330 @@
+{
+  "split": "validation",
+  "checkpoint": "final task only",
+  "results": {
+    "s3r": {
+      "1": {
+        "1": {
+          "foreground_micro_dice": 0.36392782582761707,
+          "prediction_fraction": 0.023686023468666887,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.453818090719777,
+          "prediction_fraction": 0.011641502380371094,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.2418918798612368,
+          "prediction_fraction": 0.015360921223958334,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.027206086102224348,
+          "prediction_fraction": 0.005546863262469952,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.255799657035623,
+          "prediction_fraction": 0.010191697340745192,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.5290463674072857,
+          "prediction_fraction": 0.01771203676859538,
+          "reference_fraction": 0.01324931780497233
+        }
+      },
+      "2": {
+        "1": {
+          "foreground_micro_dice": 0.3837979039246336,
+          "prediction_fraction": 0.01979827880859375,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.5021640779394712,
+          "prediction_fraction": 0.010802268981933594,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.11085776330076004,
+          "prediction_fraction": 0.0067637125651041664,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.011765970846197564,
+          "prediction_fraction": 0.0013533372145432692,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.28499391161091614,
+          "prediction_fraction": 0.004812152569110577,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.3981478218582393,
+          "prediction_fraction": 0.009303013483683268,
+          "reference_fraction": 0.01324931780497233
+        }
+      },
+      "3": {
+        "1": {
+          "foreground_micro_dice": 0.7070201648355576,
+          "prediction_fraction": 0.011560967627992021,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.7489072173104689,
+          "prediction_fraction": 0.007411003112792969,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.1388565376644488,
+          "prediction_fraction": 0.004624837239583333,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.09778686366522635,
+          "prediction_fraction": 0.0011966411884014423,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.30128590415400375,
+          "prediction_fraction": 0.0022905789888822115,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.22543193159306904,
+          "prediction_fraction": 0.002597173055013021,
+          "reference_fraction": 0.01324931780497233
+        }
+      },
+      "4": {
+        "1": {
+          "foreground_micro_dice": 0.5234625791457372,
+          "prediction_fraction": 0.01266901543799867,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.6316357591589128,
+          "prediction_fraction": 0.006063779195149739,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.009529266306806188,
+          "prediction_fraction": 0.0007757568359375,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.003283533081595797,
+          "prediction_fraction": 0.00012295062725360578,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.08237886299314301,
+          "prediction_fraction": 0.0007843017578125,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.32934075083257647,
+          "prediction_fraction": 0.0035506089528401694,
+          "reference_fraction": 0.01324931780497233
+        }
+      },
+      "5": {
+        "1": {
+          "foreground_micro_dice": 0.30074869619382233,
+          "prediction_fraction": 0.02872385877244016,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.4145176990466773,
+          "prediction_fraction": 0.011912981669108072,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.05740347510775938,
+          "prediction_fraction": 0.004481404622395833,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.0009965432406340506,
+          "prediction_fraction": 0.001094818115234375,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.10695760426032229,
+          "prediction_fraction": 0.002002422626201923,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.5702671990277429,
+          "prediction_fraction": 0.009899616241455078,
+          "reference_fraction": 0.01324931780497233
+        }
+      }
+    },
+    "ted": {
+      "1": {
+        "1": {
+          "foreground_micro_dice": 0.17790161373734814,
+          "prediction_fraction": 0.004232203706781915,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.025964633132029076,
+          "prediction_fraction": 0.0001293818155924479,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.004654374539808255,
+          "prediction_fraction": 0.00013102213541666666,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.0014199854699161218,
+          "prediction_fraction": 2.1420992337740383e-05,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.03356832486502073,
+          "prediction_fraction": 0.00022993821364182692,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.07601037763044105,
+          "prediction_fraction": 0.0005352497100830078,
+          "reference_fraction": 0.01324931780497233
+        }
+      },
+      "2": {
+        "1": {
+          "foreground_micro_dice": 0.3422830351162568,
+          "prediction_fraction": 0.005816682856133643,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.2676336923364253,
+          "prediction_fraction": 0.0015513102213541667,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.010496194084585188,
+          "prediction_fraction": 0.00033935546875,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.0011805020412847798,
+          "prediction_fraction": 0.00014671912560096153,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.12726087818884177,
+          "prediction_fraction": 0.0008527315579927885,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.16722437381372948,
+          "prediction_fraction": 0.001238107681274414,
+          "reference_fraction": 0.01324931780497233
+        }
+      },
+      "3": {
+        "1": {
+          "foreground_micro_dice": 0.1996913484344737,
+          "prediction_fraction": 0.004524393284574468,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.02736076610145084,
+          "prediction_fraction": 0.00016880035400390625,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.0004817637140158829,
+          "prediction_fraction": 1.3020833333333334e-05,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.0,
+          "prediction_fraction": 0.0,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.025115294775299966,
+          "prediction_fraction": 0.0001838097205528846,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.13205350646443165,
+          "prediction_fraction": 0.0009500980377197266,
+          "reference_fraction": 0.01324931780497233
+        }
+      },
+      "4": {
+        "1": {
+          "foreground_micro_dice": 0.18902228264626586,
+          "prediction_fraction": 0.002940888100482048,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.04553402562181066,
+          "prediction_fraction": 0.00024700164794921875,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.001765177855041455,
+          "prediction_fraction": 5.18798828125e-05,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.0,
+          "prediction_fraction": 5.868765024038462e-07,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.047228696717101885,
+          "prediction_fraction": 0.00030987079326923075,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.036866522230595326,
+          "prediction_fraction": 0.00024962425231933594,
+          "reference_fraction": 0.01324931780497233
+        }
+      },
+      "5": {
+        "1": {
+          "foreground_micro_dice": 0.2839998079784936,
+          "prediction_fraction": 0.005759056578291223,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.04616864379608849,
+          "prediction_fraction": 0.0012537638346354167,
+          "reference_fraction": 0.008661270141601562
+        },
+        "3": {
+          "foreground_micro_dice": 0.0012082755476185952,
+          "prediction_fraction": 0.000347900390625,
+          "reference_fraction": 0.053197224934895836
+        },
+        "4": {
+          "foreground_micro_dice": 0.0002300588293292142,
+          "prediction_fraction": 0.00010651808518629808,
+          "reference_fraction": 0.017750373253455527
+        },
+        "5": {
+          "foreground_micro_dice": 0.06667680088167671,
+          "prediction_fraction": 0.0007796067457932692,
+          "reference_fraction": 0.011574613131009616
+        },
+        "6": {
+          "foreground_micro_dice": 0.053298508143619694,
+          "prediction_fraction": 0.0006864070892333984,
+          "reference_fraction": 0.01324931780497233
+        }
+      }
+    }
+  }
+}
