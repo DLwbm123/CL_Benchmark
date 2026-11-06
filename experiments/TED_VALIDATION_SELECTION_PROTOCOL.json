@@ -1,0 +1,19 @@
+{
+  "purpose": "isolate per-task validation model selection vs final-epoch selection in project-adapted TED, not a faithful author reproduction",
+  "method": "ted",
+  "seeds": [
+    11,
+    13
+  ],
+  "arms": [
+    "last epoch",
+    "highest current-site validation foreground micro Dice each epoch; earliest tie"
+  ],
+  "initialization": "fresh random per seed, no pretrained model weights",
+  "training": "site1 then site2, 20 epochs each, batch8; same original project inputs, labels, model, optimizer and objectives; restore selected network and BN before teacher creation",
+  "selection_and_evaluation": "selection on each current site's full validation every epoch; evaluate site1 and 2 val at end of task2, using foreground micro Dice and predicted/reference foreground rates. Validation reused in selection, hence optimistic, especially current-site; any pass requires independent further validation before test.",
+  "no_test": true,
+  "qualification": "all four arms rc0 finite; average gain over two sites and two seeds >=0.03, each seed mean positive and no site mean decrease >0.02; only permits independent follow-up",
+  "limitations": "authors' validation metric and exact restore semantics not independently verified; different network, preprocessing, data order and split; GPUs not bitwise paired; results are exploration not unbiased generalization",
+  "stop": "nonfinite loss, logits, parameters, optimizer or validation, loss >10000, any arm failure, deadline or disk cap; no retries"
+}

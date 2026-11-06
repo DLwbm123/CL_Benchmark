@@ -1,0 +1,84 @@
+{
+  "11": {
+    "last": {
+      "selection": {},
+      "results": {
+        "1": {
+          "foreground_micro_dice": 0.6353770427916671,
+          "prediction_fraction": 0.008012487533244681,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.39923878774107424,
+          "prediction_fraction": 0.0025307337443033853,
+          "reference_fraction": 0.008661270141601562
+        }
+      }
+    },
+    "best": {
+      "selection": {
+        "1": {
+          "epoch": 17,
+          "score": 0.7981260528770519
+        },
+        "2": {
+          "epoch": 5,
+          "score": 0.5475006904170119
+        }
+      },
+      "results": {
+        "1": {
+          "foreground_micro_dice": 0.6478465203115946,
+          "prediction_fraction": 0.014066168602476729,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.5475006904170119,
+          "prediction_fraction": 0.0051517486572265625,
+          "reference_fraction": 0.008661270141601562
+        }
+      }
+    }
+  },
+  "13": {
+    "last": {
+      "selection": {},
+      "results": {
+        "1": {
+          "foreground_micro_dice": 0.5957607831308783,
+          "prediction_fraction": 0.0184514471825133,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.5748570653770536,
+          "prediction_fraction": 0.005405743916829427,
+          "reference_fraction": 0.008661270141601562
+        }
+      }
+    },
+    "best": {
+      "selection": {
+        "1": {
+          "epoch": 12,
+          "score": 0.8093245114633021
+        },
+        "2": {
+          "epoch": 1,
+          "score": 0.5809517552504215
+        }
+      },
+      "results": {
+        "1": {
+          "foreground_micro_dice": 0.5954025486209198,
+          "prediction_fraction": 0.020226661195146278,
+          "reference_fraction": 0.011148168685588431
+        },
+        "2": {
+          "foreground_micro_dice": 0.5809517552504215,
+          "prediction_fraction": 0.005854606628417969,
+          "reference_fraction": 0.008661270141601562
+        }
+      }
+    }
+  }
+}
