@@ -1,0 +1,80 @@
+{
+  "split": "validation",
+  "checkpoint": "first task, diagnostic only",
+  "results": {
+    "s3r": {
+      "1": {
+        "1": {
+          "foreground_micro_dice": 0.7684170311429626,
+          "prediction_fraction": 0.013495749615608378,
+          "reference_fraction": 0.011148168685588431
+        }
+      },
+      "2": {
+        "1": {
+          "foreground_micro_dice": 0.7876715980274557,
+          "prediction_fraction": 0.01321070244971742,
+          "reference_fraction": 0.011148168685588431
+        }
+      },
+      "3": {
+        "1": {
+          "foreground_micro_dice": 0.7915142967233495,
+          "prediction_fraction": 0.011179822556515957,
+          "reference_fraction": 0.011148168685588431
+        }
+      },
+      "4": {
+        "1": {
+          "foreground_micro_dice": 0.7848232629563925,
+          "prediction_fraction": 0.01200184923537234,
+          "reference_fraction": 0.011148168685588431
+        }
+      },
+      "5": {
+        "1": {
+          "foreground_micro_dice": 0.7712462889267893,
+          "prediction_fraction": 0.014549904681266622,
+          "reference_fraction": 0.011148168685588431
+        }
+      }
+    },
+    "ted": {
+      "1": {
+        "1": {
+          "foreground_micro_dice": 0.7734473383404263,
+          "prediction_fraction": 0.013987764399102393,
+          "reference_fraction": 0.011148168685588431
+        }
+      },
+      "2": {
+        "1": {
+          "foreground_micro_dice": 0.7502318919225891,
+          "prediction_fraction": 0.014577338036070479,
+          "reference_fraction": 0.011148168685588431
+        }
+      },
+      "3": {
+        "1": {
+          "foreground_micro_dice": 0.7468985102884759,
+          "prediction_fraction": 0.014916440273853058,
+          "reference_fraction": 0.011148168685588431
+        }
+      },
+      "4": {
+        "1": {
+          "foreground_micro_dice": 0.7549943057049915,
+          "prediction_fraction": 0.014650710085605053,
+          "reference_fraction": 0.011148168685588431
+        }
+      },
+      "5": {
+        "1": {
+          "foreground_micro_dice": 0.7432476253928199,
+          "prediction_fraction": 0.01638371893700133,
+          "reference_fraction": 0.011148168685588431
+        }
+      }
+    }
+  }
+}
