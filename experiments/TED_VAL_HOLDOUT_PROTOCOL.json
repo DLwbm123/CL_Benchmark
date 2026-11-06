@@ -1,0 +1,19 @@
+{
+  "purpose": "exploratory TED selection control using nonoverlapping metadata validation blocks",
+  "method": "ted",
+  "seeds": [
+    17,
+    19
+  ],
+  "arms": [
+    "last epoch",
+    "best current-domain selection-block foreground micro Dice, ties earliest"
+  ],
+  "initialization": "fresh random per seed, no pretrained segmentation model",
+  "training": "site1 then site2, 20 epochs per task, batch8; same original project inputs, labels, model, optimizer and objectives; restore selected network and BN before teacher creation",
+  "validation": "at each site first metadata-defined inclusive boundary block for selection; second disjoint block only for held-out evaluation after task2; exact metadata provenance unconfirmed; each set contains one block per site; no patient-independent assertion",
+  "no_test": true,
+  "qualification": "all four arms rc0 finite; mean gain over two sites and two seeds >=0.03, each seed mean positive and no site mean decrease >0.02; pass permits prespecified six-domain validation follow-up only",
+  "limitations": "two seeds and one block per group/site; unverified patient independence; authors' ScoreDice and exact restore semantics not verified; GPU arithmetic not bitwise paired; exploratory, not unbiased final test",
+  "stop": "nonfinite loss, logits, parameters, optimizer or validation, loss >10000, any arm failure, deadline or disk cap; no retries"
+}

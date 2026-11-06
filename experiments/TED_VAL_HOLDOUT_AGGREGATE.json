@@ -1,0 +1,13 @@
+{
+  "methods": "TED project adaptation",
+  "seeds_count": 2,
+  "site_count": 2,
+  "metric": "foreground micro Dice; aggregated equally across seeds and sites",
+  "last_mean": 0.07782283437635697,
+  "best_mean": 0.33835004120472706,
+  "mean_difference": 0.26052720682837005,
+  "all_seed_mean_differences_positive": true,
+  "all_site_mean_decreases_within_0_02": true,
+  "gate_passed": true,
+  "limitations": "one metadata-defined holdout block per site; patient independence not verified; two seeds; GPU arithmetic not bitwise paired; no test access"
+}
