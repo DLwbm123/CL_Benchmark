@@ -1,0 +1,51 @@
+{
+  "batches": [
+    {
+      "current_loss": 0.10611462593078613,
+      "replay_loss": 1.5051814317703247,
+      "current_grad_norm": 43.23712283001425,
+      "replay_grad_norm": 15.01801316742984,
+      "cosine": -0.3044217953439025,
+      "prompt_counts": [
+        3,
+        0,
+        4,
+        1,
+        0
+      ]
+    },
+    {
+      "current_loss": 1.4253591299057007,
+      "replay_loss": 1.5919950008392334,
+      "current_grad_norm": 14.742721098991801,
+      "replay_grad_norm": 17.62821179363921,
+      "cosine": 0.9250851686087582,
+      "prompt_counts": [
+        3,
+        2,
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "current_loss": 1.7023438215255737,
+      "replay_loss": 1.6726484298706055,
+      "current_grad_norm": 31.690444497974163,
+      "replay_grad_norm": 20.131000553902524,
+      "cosine": 0.8511643894933997,
+      "prompt_counts": [
+        2,
+        2,
+        0,
+        1,
+        3
+      ]
+    }
+  ],
+  "split": "site6 train first 24",
+  "training": false,
+  "test_used": false,
+  "validation_used": false,
+  "status": "complete"
+}
