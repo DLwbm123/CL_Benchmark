@@ -1,0 +1,22 @@
+{
+  "purpose": "two-domain, fresh-initialization intensity adaptation control; not author-exact case preprocessing",
+  "methods": [
+    "s3r",
+    "ted"
+  ],
+  "seeds": [
+    11,
+    13
+  ],
+  "arms": [
+    "original existing HDF5 inputs",
+    "per-slice minmax [0,1] then clip [.001,.99]"
+  ],
+  "initialization": "random initialization, method configuration from previous protocol, no pretrained segmentation checkpoint",
+  "training": "site1 then site2, 20 epochs per task, batch8; S3R shape prior 50 epochs per task and normal importance estimation; original label conversion unchanged",
+  "evaluation": "site1 and site2 validation only after second task, each arm uses its own training intensity mapping, foreground micro Dice and prediction/reference rates",
+  "no_test": true,
+  "qualification": "for each method all four arms complete finite, mean across 2 seeds and 2 sites gain >=0.03, both seed averages positive and no site mean decrease >0.02; pass permits independent follow-up only",
+  "limitations": "per-slice minmax is not case-volume minmax; unknown site-specific grouping, two seeds, separate GPUs not bitwise paired, two-task diagnostic not full evaluation",
+  "stop": "any nonfinite loss, gradient, parameter or optimizer; loss>10000; any arm failure, deadline or storage cap; no automatic retry"
+}
