@@ -1,0 +1,70 @@
+{
+  "groups": {
+    "empty": [
+      {
+        "current_loss": 0.16955077648162842,
+        "replay_loss": 1.0100781917572021,
+        "current_grad_norm": 66.63937017434596,
+        "replay_grad_norm": 0.9594927671697727,
+        "cosine": -0.030537037407826442
+      },
+      {
+        "current_loss": 0.9811403751373291,
+        "replay_loss": 1.0165235996246338,
+        "current_grad_norm": 2.8045191885423293,
+        "replay_grad_norm": 1.1834319373880782,
+        "cosine": 0.05452785385383873
+      },
+      {
+        "current_loss": 1.0010271072387695,
+        "replay_loss": 0.9967616200447083,
+        "current_grad_norm": 0.5793548813668141,
+        "replay_grad_norm": 0.5469701248098505,
+        "cosine": 0.07241508839778739
+      },
+      {
+        "current_loss": 0.9956805109977722,
+        "replay_loss": 1.0082221031188965,
+        "current_grad_norm": 0.5998174628569092,
+        "replay_grad_norm": 0.9110626821686578,
+        "cosine": 0.10400304028471587
+      }
+    ],
+    "nonempty": [
+      {
+        "current_loss": 1.6306034326553345,
+        "replay_loss": 2.248685121536255,
+        "current_grad_norm": 25.002271539036194,
+        "replay_grad_norm": 37.10985370316035,
+        "cosine": 0.7638685974602615
+      },
+      {
+        "current_loss": 1.9437922239303589,
+        "replay_loss": 2.722405195236206,
+        "current_grad_norm": 35.29616482035064,
+        "replay_grad_norm": 50.97122560285272,
+        "cosine": 0.892981396335145
+      },
+      {
+        "current_loss": 1.866236925125122,
+        "replay_loss": 2.0030312538146973,
+        "current_grad_norm": 32.041549718842916,
+        "replay_grad_norm": 29.143400213671153,
+        "cosine": 0.9033025518436552
+      },
+      {
+        "current_loss": 1.964806318283081,
+        "replay_loss": 2.1356253623962402,
+        "current_grad_norm": 35.95532160558562,
+        "replay_grad_norm": 33.59757542055833,
+        "cosine": 0.9352316941988632
+      }
+    ]
+  },
+  "sampling": "seed1106 no replacement, exclude first 24",
+  "split": "site6 train",
+  "validation_used": false,
+  "test_used": false,
+  "training": false,
+  "patient_independence": false
+}
