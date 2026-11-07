@@ -1,0 +1,19 @@
+{
+  "purpose": "paired diagnostic of S3R entropy-confidence sign correction with T0 importance recomputed from scratch, not complete training",
+  "method": "s3r",
+  "seeds": [
+    1,
+    2
+  ],
+  "arms": [
+    "legacy exp(+entropy)",
+    "corrected source-aligned exp(-entropy)"
+  ],
+  "initialization": "fixed prior project T0 segmentation and shape state per seed; clear importance/anchor and recompute on site1 train before starting site2 for both arms, with fixed RNG and unchanged segmentation model/optimizer",
+  "training": "site2 train 20 epochs batch8, original input and labels; same shape prior retraining and optimizer; fixed RNG reset after importance computation and after shape preparation",
+  "validation": "site1 and site2 validation after task2, primary original-label foreground micro Dice and predicted/reference foreground rates; 0.5 label conversion secondary applies identically",
+  "qualification": "four arms rc0 finite; across-seed/site mean improvement >=0.03, each seed mean positive and no site across-seed mean decreases >0.02; permits independent follow-up only. Correct formula remains necessary for fidelity regardless of performance.",
+  "no_test": true,
+  "limitations": "two old fixed upstream segmentation models, prior input first-task train explicitly accessed before second-task starts, adapter pretrained shape not author weights, two domains, independent GPU arithmetic not bitwise paired; not complete reproduction",
+  "stop": "nonfinite loss, logits, importance, parameters or optimizer; modified network/optimizer during importance, shape state changes during segmentation, loss >10000; any arm failure, deadline or disk cap; no retries"
+}

@@ -1,0 +1,13 @@
+{
+  "method": "S3R project adaptation",
+  "seeds_count": 2,
+  "sites_count": 2,
+  "metric": "foreground micro Dice, original label convention, equal weighting across seeds and sites",
+  "legacy_mean": 0.27039691945061106,
+  "corrected_mean": 0.26499779969881176,
+  "mean_difference": -0.005399119751799294,
+  "all_seed_mean_differences_positive": false,
+  "all_site_mean_decreases_within_0_02": false,
+  "qualification_passed": false,
+  "limitations": "two sites and fixed old T0 segmentation states; importance recalculated before site2; project shape prior; independent GPUs not bitwise paired; no test"
+}
