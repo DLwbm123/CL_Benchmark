@@ -1,0 +1,20 @@
+{
+  "purpose": "six-domain validation qualification of TED current-domain validation selection; exploratory and not a final benchmark result",
+  "method": "ted",
+  "seeds": [
+    21,
+    23
+  ],
+  "arms": [
+    "last epoch",
+    "highest current-domain selection-block foreground micro Dice each epoch, earliest tie"
+  ],
+  "initialization": "fresh random per seed, no pretrained segmentation model",
+  "training": "six existing project sites in project order, 50 epochs per task, batch8, original project inputs, labels, backbone, optimizer and objectives; validation selection restores network/BN before teacher creation. 50 epochs matches TED reference default, differs from original benchmark 150; both arms equal budget.",
+  "validation": "each site's first metadata-defined inclusive boundary sequence block used for selection; all remaining blocks used only once for held-out evaluation after sixth task. First two sites' held-out blocks were previously explored. Metadata identity provenance unverified; no patient independence assertion.",
+  "no_test": true,
+  "qualification": "all four arms rc0 and finite; selected arm mean held-out foreground micro Dice >=0.25 and each site's seed-mean >=0.05; selected-minus-last mean across two seeds/six sites >=0.03, each seed mean positive, no site mean decreases >0.02; pass permits separately preregistered independent multi-seed protocol only, not automatic test",
+  "privacy": "only publish aggregate across sites and seeds; no individual block/site metrics because block may identify a single subject",
+  "limitations": "two seeds, 2-4 metadata blocks/site, patient independence unverified, first two sites' holdout blocks already explored, validation reused across candidate development, no independent final performance claim; author ScoreDice and exact restoration not fully verified; different backbone/order/epochs; independent GPUs not bitwise paired",
+  "stop": "nonfinite loss, logits, parameters, optimizer or validation, loss >10000; any arm failure, deadline or disk cap; no retries"
+}
