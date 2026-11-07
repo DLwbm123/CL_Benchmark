@@ -1,0 +1,19 @@
+{
+  "purpose": "S3R shape encoder reuse versus current-domain retraining; mechanism control, not author-native reproduction",
+  "method": "s3r",
+  "seeds": [
+    1,
+    2
+  ],
+  "arms": [
+    "retrain prior 50 epochs on current site",
+    "reuse frozen T0 prior without further training"
+  ],
+  "initialization": "fixed project T0 checkpoint per seed; model, optimizer, anchor and importance restored",
+  "training": "site2 train for 20 epochs, batch8; original data and label conversion, identical segmentation objective and optimizer; shape pretraining RNG fixed then both arms reset random streams to seed2107 before segmentation training; no intermediate model selection",
+  "validation": "site1 and site2 validation after task2 only, primary original-label foreground micro Dice and predicted/reference foreground rates; 0.5 threshold label convention also reported as secondary, applied identically to both arms",
+  "qualification": "four arms rc0 finite; across-seed/site mean improvement >=0.03, each seed mean positive, no site across-seed mean decreases >0.02; permits independent follow-up only",
+  "no_test": true,
+  "limitations": "author source and README disagree about shape prior per round; author weights/data unavailable, reuse is project T0 adapter prior not original; two fixed upstream models, two domains, independent GPU arithmetic not bitwise paired; no final performance claim",
+  "stop": "nonfinite loss, logits, parameters or optimizer, prior changes during segmentation, loss >10000, any arm failure, deadline or disk cap; no retries"
+}

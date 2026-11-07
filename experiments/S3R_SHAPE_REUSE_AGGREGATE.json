@@ -1,0 +1,13 @@
+{
+  "method": "S3R project adaptation",
+  "seeds_count": 2,
+  "sites_count": 2,
+  "metric": "foreground micro Dice; original label convention, equal weighting across seeds and sites",
+  "retrain_mean": 0.23755993152506139,
+  "reuse_mean": 0.25544540838790863,
+  "mean_difference": 0.01788547686284728,
+  "all_seed_mean_differences_positive": true,
+  "all_site_mean_decreases_within_0_02": true,
+  "gate_passed": false,
+  "limitations": "two sites and two fixed T0 starts; project shape prior, not author pretrained weights; GPU arithmetic not bitwise paired; no test access"
+}
