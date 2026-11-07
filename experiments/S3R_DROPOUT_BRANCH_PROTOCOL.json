@@ -1,0 +1,19 @@
+{
+  "purpose": "S3R importance-computation dropout enabled versus disabled, both arms use corrected entropy-confidence sign",
+  "method": "s3r",
+  "seeds": [
+    1,
+    2
+  ],
+  "arms": [
+    "dropout enabled during importance MC passes",
+    "dropout disabled during importance MC passes"
+  ],
+  "initialization": "fixed project T0 model and shape state per seed; discard previous importance/anchor and recompute on site1 train before site2 with fixed RNG and unchanged segmentation network/optimizer",
+  "training": "site2 train 20 epochs batch8; original input and labels, normal dropout enabled in both segmentation training arms; same shape prior retraining and optimizer; RNG reset before segmentation training",
+  "validation": "site1 and site2 validation after task2; primary original-label foreground micro Dice and predicted/reference foreground rates; 0.5 label convention secondary, same in both arms",
+  "qualification": "all four arms rc0 finite; disabled-minus-enabled across two seeds/sites mean >=0.03, both seed means positive and no site mean decreases >0.02; permits independent follow-up only",
+  "no_test": true,
+  "limitations": "author code eval plus is_training assignment appears to leave dropout disabled in checked PyTorch; actual author run/intention unknown; fixed project T0 segmentation and shape prior are not author pretrained weights, two-domain diagnostic, separate GPUs not bitwise paired",
+  "stop": "nonfinite loss, logits, importance, parameters or optimizer; modified model/optimizer during importance or shape prior during segmentation; loss>10000; any arm failure, timeout or disk cap; no retries"
+}
