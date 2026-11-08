@@ -1,0 +1,15 @@
+{
+  "seeds": [
+    11,
+    13
+  ],
+  "domains": 6,
+  "segmentation_epochs_per_domain": 20,
+  "shape_prior_epochs_per_domain": 50,
+  "metric": "foreground micro Dice averaged over six domains and two seeds",
+  "mean": 0.2598452941960908,
+  "at_least_one_domain_seed_zero": true,
+  "all_returncodes_zero": true,
+  "split": "validation",
+  "limitations": "pilot; not author original; original benchmark 150 epochs; no test; not a comparable study to published paper"
+}
