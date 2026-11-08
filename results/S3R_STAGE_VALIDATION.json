@@ -1,0 +1,18 @@
+{
+  "seeds": [
+    11,
+    13
+  ],
+  "domains": 6,
+  "epochs": 20,
+  "split": "validation",
+  "foreground_micro_dice": {
+    "all_diagonal": 0.3043868605828932,
+    "all_final": 0.2894762786022591,
+    "first_three_diagonal": 0.4894372311491337,
+    "first_three_final": 0.4392852684241699,
+    "last_three_diagonal": 0.11933649001665281,
+    "last_three_final": 0.13966728878034831
+  },
+  "limits": "observational diagnostic; at most two seeds; foreground micro Dice; no test; adapted model and shape prior; not an author-exact reproduction"
+}
