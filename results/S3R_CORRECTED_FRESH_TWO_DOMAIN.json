@@ -1,0 +1,15 @@
+{
+  "seeds": [
+    11,
+    13
+  ],
+  "tasks": 2,
+  "epochs_per_task": 20,
+  "split": "validation",
+  "metric": "foreground micro Dice averaged equally over two sites and seeds",
+  "legacy_mean": 0.465904875401407,
+  "corrected_mean": 0.6669050344147744,
+  "difference": 0.2010001590133674,
+  "all_arms_returncode_zero": true,
+  "limitations": "two domains, independent GPUs, not full reproduction; no test; corrected symbol is required for author-formula fidelity; config checkpoint used for configuration only"
+}
