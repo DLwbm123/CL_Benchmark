@@ -1,0 +1,39 @@
+{
+  "status": "VALIDATED",
+  "methods": {
+    "focus": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 50,
+      "final_foreground_micro_dice_mean": 0.5914419140164631,
+      "sd_across_seed_domain_means": 0.010495882358029573,
+      "mean_just_learned_domain_dice": 0.7506867960233556,
+      "mean_change_final_minus_just_learned": -0.15924488200689257,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "new_steps": 32250,
+        "replay_steps": 24650,
+        "gin_steps": 15987,
+        "cknet_steps": 0,
+        "ftgen_steps": 0,
+        "kd_steps": 0
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true
+    }
+  },
+  "test_accessed": false,
+  "scope": "completed full six-domain50epoch FOCUS with optimizer adaptation, both seeds",
+  "comparison": {
+    "status": "VALIDATED",
+    "mean_paired_delta_vs_preserved_sgd50": 0.4669994971270707,
+    "improved_seed_means": 2,
+    "total_seeds": 2,
+    "improved_seed_domain_pairs": 12,
+    "total_seed_domain_pairs": 12,
+    "all_workers_guard_and_storage_watch_exited": true,
+    "elapsed_seconds": 1127.368134021759,
+    "comparison": "same50epoch,batch4,seed41/43,source/sharedstream,ResUNet32,data,inference; optimizer+baseLR package differs; execution times differ"
+  }
+}
