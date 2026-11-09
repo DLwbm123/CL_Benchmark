@@ -1,0 +1,23 @@
+{
+  "status": "VALIDATED",
+  "method": "ted_author_components",
+  "seeds": 2,
+  "domains": 6,
+  "epochs_per_domain": 50,
+  "mean_foreground_micro_dice": 0.71457019441268,
+  "sd_across_seed_domain_means": 0.008195327616569558,
+  "mean_just_learned_dice": 0.8388825018956001,
+  "mean_change_final_minus_just_learned": -0.1243123074829201,
+  "zero_seed_domain_combinations": 0,
+  "all_epoch_counts_rc_checkpoints_finite": true,
+  "mechanism_counts_total": {
+    "supervised": 56900,
+    "image_kd": 49300,
+    "ska": 49300,
+    "akt_gugf": 49300
+  },
+  "test_accessed": false,
+  "allocated_bytes": 91000832,
+  "elapsed_seconds_including_smoke": 1292.469780921936,
+  "qualification": "author-component adapted validation experiment, not original-paper replication or independent final test"
+}

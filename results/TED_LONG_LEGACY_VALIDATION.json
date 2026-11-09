@@ -1,0 +1,13 @@
+{
+  "method": "ted_shared_backbone_legacy_inference",
+  "seeds": 2,
+  "domains": 6,
+  "epochs_per_domain": 150,
+  "mean_foreground_micro_dice": 0.16857952838463747,
+  "sd_across_seed_domain_means": 0.06657744877026475,
+  "all_epoch_counts_rc0": true,
+  "finite_check": "branch asserts model/optimizer/logits finite before serializing result; no final checkpoint retained",
+  "test_accessed": false,
+  "inference": "running BN statistics,teacher eval,old project adapter",
+  "elapsed_seconds": 39336.51309466362
+}

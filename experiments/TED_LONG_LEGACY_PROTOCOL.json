@@ -1,0 +1,15 @@
+{
+  "purpose": "independent long-training TED six-domain validation pilot",
+  "seeds": [
+    31,
+    37
+  ],
+  "epochs_per_domain": 150,
+  "tasks": 6,
+  "mode": "per-epoch validation selection on first block; final six-domain holdout on remaining blocks",
+  "data": "project original, validation only, no test",
+  "limitations": "block patient independence unverified; first two sites holdout previously used for exploration; independent seed and different 150 vs prior failed 50 epoch experiment; author metric differs",
+  "wall_seconds": 39600,
+  "storage_bytes": 10000000000,
+  "completed_status": "two seeds rc0; see results/TED_LONG_LEGACY_VALIDATION.json; no final checkpoint retained"
+}

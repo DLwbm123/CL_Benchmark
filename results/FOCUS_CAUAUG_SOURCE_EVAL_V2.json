@@ -1,0 +1,51 @@
+{
+  "status": "VALIDATED",
+  "methods": {
+    "focus": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 150,
+      "final_foreground_micro_dice_mean": 0.7678396902539629,
+      "sd_across_seed_domain_means": 0.009112351480495254,
+      "mean_just_learned_domain_dice": 0.8257751771174506,
+      "mean_change_final_minus_just_learned": -0.057935486863487706,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "new_steps": 96750,
+        "replay_steps": 73950,
+        "gin_steps": 48406,
+        "cknet_steps": 0,
+        "ftgen_steps": 0,
+        "kd_steps": 0
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true
+    },
+    "cauaug": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 50,
+      "final_foreground_micro_dice_mean": 0.7277172668489487,
+      "sd_across_seed_domain_means": 0.03711888250853743,
+      "mean_just_learned_domain_dice": 0.8250165552304518,
+      "mean_change_final_minus_just_learned": -0.09729928838150315,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 1,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "new_steps": 56900,
+        "replay_steps": 0,
+        "gin_steps": 0,
+        "cknet_steps": 56900,
+        "ftgen_steps": 49300,
+        "kd_steps": 49300
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true
+    }
+  },
+  "allocated_bytes": 755605504,
+  "elapsed_seconds_including_smoke": 2863.551313638687,
+  "test_accessed": false,
+  "inference_note": "CauAug source-compatible per-slice batch BN; validation buffers restored"
+}

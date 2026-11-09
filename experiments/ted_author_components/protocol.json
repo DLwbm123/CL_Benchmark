@@ -1,0 +1,30 @@
+{
+  "purpose": "independent TED author-component six-domain validation, correcting documented backbone/teacher/inference differences from the shared-backbone adapter; not a continuation or a paper-number search",
+  "budget_bytes": 3000000000,
+  "seeds": [
+    41,
+    43
+  ],
+  "epochs_per_domain": 50,
+  "batch_size": 4,
+  "source_commit": "446f79be52d3e83dea92d7ff352c883154404fbb",
+  "method": "TED full SKA + AKT + GUGF",
+  "model": "author UNet2D default 5 blocks, base16, BatchNorm",
+  "optimizer": "Adam reset per domain; 2e-4 initial,1e-4 continual,gamma .99/epoch",
+  "lambda_d": 0.001,
+  "teacher": "author weights-only freeze with train-mode BN",
+  "inference": "source-style per-slice batch-statistic BN; restore validation-mutated buffers, no parameter updates",
+  "data": "same existing six-domain HDF5 train/validation order; no test; integer-truncated labels frozen",
+  "input_adaptation": "256x256 instead of source192; explicit slice-level minmax and clip[.001,.99] instead of source case-level normalization because case boundaries unverified",
+  "selection": "first metadata val sequence block earliest max foreground micro Dice; remaining blocks developmental evaluation",
+  "limitations": [
+    "true domain and case identity unverified",
+    "validation exposed during earlier development",
+    "backbone differs from original benchmark adapter; no direct equal-budget performance ranking",
+    "case-level preprocessing and original author splits not reproduced",
+    "original source broadcasting in AKT retained for fidelity"
+  ],
+  "failure": "either seed failure stops pair, finite checks, hard per-worker timeout and allocated storage guard; no blind restart",
+  "artifacts": "private rolling model/teacher/optimizer checkpoints; publish only code/protocol and cross-domain cross-seed aggregates",
+  "usage": "User supplies pinned TED source checkout via REFERENCE_ROOT, HDF5 root via DATA_ROOT, output directory via WORK_ROOT, and fixed ARM_SEED. Copy this file to WORK_ROOT/protocol.json. Independent time/storage guard required."
+}

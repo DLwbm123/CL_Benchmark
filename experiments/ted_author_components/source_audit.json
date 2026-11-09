@@ -1,0 +1,18 @@
+{
+  "author_commit": "446f79be52d3e83dea92d7ff352c883154404fbb",
+  "source_findings": [
+    "mp/eval/inference/predictor.py uses slice-by-slice calls without switching eval mode",
+    "mp/agents/agent.py validation does not switch model to eval",
+    "mp/models/model.py finish freezes teacher parameters without setting eval mode",
+    "author UNet2D default base16 BatchNorm; example50epoch batch4 Adam2e-4/1e-4 gamma.99",
+    "preprocessing source is case minmax plus clipping [.001,.99] at192"
+  ],
+  "adapter_differences": [
+    "active old adapter explicitly teacher.eval() and ResUNet backbone",
+    "old validation runner uses net.eval() and batch8",
+    "new author-component run remains an HDF5 adaptation at256 with explicit slice normalization"
+  ],
+  "freeze": "old running trial unchanged; new two seeds41/43 from scratch, no test",
+  "source_fetch": "missing primary source files fetched at pinned commit through explicit local proxy",
+  "smoke_repair": "one-hot target made contiguous for original Dice.view(-1); failure retained before actual training; original start/deadline retained"
+}
