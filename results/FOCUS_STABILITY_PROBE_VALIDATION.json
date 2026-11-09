@@ -1,0 +1,53 @@
+{
+  "status": "VALIDATED",
+  "domains": 2,
+  "seeds": 2,
+  "epochs_per_arm": 50,
+  "arms": 16,
+  "variants": {
+    "full_sgd": {
+      "mean_foreground_micro_dice": 0.21126111628143363,
+      "sd_across_seed_domain_means": 0.02351884376008081,
+      "zero_domain_seed_combinations": 0,
+      "mean_clipped_step_fraction_first10epochs": 0.5356907894736842,
+      "mean_preclip_gradient_norm_first10epochs": 1060546.22275475,
+      "all_epochs_rc_checkpoint_finite": true
+    },
+    "no_ccd": {
+      "mean_foreground_micro_dice": 0.20619924828658323,
+      "sd_across_seed_domain_means": 0.03640178768226787,
+      "zero_domain_seed_combinations": 0,
+      "mean_clipped_step_fraction_first10epochs": 0.5611468301435407,
+      "mean_preclip_gradient_norm_first10epochs": 238643.00013167545,
+      "all_epochs_rc_checkpoint_finite": true,
+      "paired_delta_vs_full_sgd_mean": -0.005061867994850406,
+      "improved_pairs_of_four": 1
+    },
+    "no_gin": {
+      "mean_foreground_micro_dice": 0.09376259289509374,
+      "sd_across_seed_domain_means": 0.05813297853015471,
+      "zero_domain_seed_combinations": 0,
+      "mean_clipped_step_fraction_first10epochs": 0.24755532296650717,
+      "mean_preclip_gradient_norm_first10epochs": 36023.61248333643,
+      "all_epochs_rc_checkpoint_finite": true,
+      "paired_delta_vs_full_sgd_mean": -0.1174985233863399,
+      "improved_pairs_of_four": 0
+    },
+    "full_adam": {
+      "mean_foreground_micro_dice": 0.6120678797501462,
+      "sd_across_seed_domain_means": 0.023805067258915222,
+      "zero_domain_seed_combinations": 0,
+      "mean_clipped_step_fraction_first10epochs": 0.07126943779904306,
+      "mean_preclip_gradient_norm_first10epochs": 5.077418230567128,
+      "all_epochs_rc_checkpoint_finite": true,
+      "paired_delta_vs_full_sgd_mean": 0.4008067634687126,
+      "improved_pairs_of_four": 4
+    }
+  },
+  "test_accessed": false,
+  "interpretation": "independent single-domain development diagnosis; not continual learning performance",
+  "full_adam_sequential_validation_gate": {
+    "passed": true,
+    "rule": "all4 paired improvements, mean>=.05, no zero, lower early clipping; gate fixed before complete results; does not establish sequential efficacy"
+  }
+}
