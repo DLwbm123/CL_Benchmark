@@ -38,3 +38,7 @@ CauAug则保持原损失、CKNet、FTGen、域档案、width-axis KD和teacher/e
 新窗口为2026-11-09北京时间17:04:56–23:04:56，总新增<10GB，8GB提前停止。TED两组各独立2小时、CauAug独立3小时；各组2GB预算/1.8GB提前停止，同时受窗口累计守卫约束。每个方法/修复组一臂失败停止配对，保留证据，不自动盲重试。
 
 HDF5病例/域身份和预处理来源、元数据块独立性仍未充分核实；validation历史曝光，label整数截断不变，stream/batch仍与原benchmark完整配置存在差异。所有结果仅用于开发，test未访问。公开仅包含自写代码、协议、跨域跨seed聚合，患者/逐域逐块指标/权重/特征/档案/凭据保持私有。
+
+## 2026-11-09 完成更新
+
+监督项稳定计算的TED50双seed已完成并核验：最终61.12%，0/12零组合，但仍有明显遗忘。详见 [完整报告](TED_SUP50_NUMERIC_REPAIR_ZH.md) 和 [聚合核验](TED_SUP50_NUMERIC_REPAIR_VALIDATION.json)。stable_all与CauAug150尚在运行；上文“尚未完成”为启动时状态。

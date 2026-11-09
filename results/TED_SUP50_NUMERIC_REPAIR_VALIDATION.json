@@ -1,0 +1,33 @@
+{
+  "status": "VALIDATED",
+  "methods": {
+    "ted": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 50,
+      "final_foreground_micro_dice_mean": 0.6112227924127073,
+      "sd_across_seed_domain_means": 0.001906470649371524,
+      "mean_just_learned_domain_dice": 0.8065059146026072,
+      "mean_change_final_minus_just_learned": -0.19528312218989996,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "supervised": 56900,
+        "image_kd": 49300,
+        "ska": 49300,
+        "akt_gugf": 49300
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true
+    }
+  },
+  "test_accessed": false,
+  "scope": "completed method pair only; other arms may still run",
+  "variant": "stable_sup",
+  "comparison": {
+    "original_50epoch_final_mean": 0.3242638578,
+    "difference_final_mean": 0.2869589346127073,
+    "original_zero_seed_domain_combinations": 6
+  },
+  "duration_minutes": 45.837682791550954
+}
