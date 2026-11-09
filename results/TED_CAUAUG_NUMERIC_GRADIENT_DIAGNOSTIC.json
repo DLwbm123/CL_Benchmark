@@ -1,0 +1,31 @@
+{
+  "status": "VALIDATED",
+  "test_accessed": false,
+  "no_training": true,
+  "methods": {
+    "ted": {
+      "seeds": 2,
+      "domains": 6,
+      "sampled_train_slices_total": 192,
+      "wrong_fg_zero_gradient_fraction_old": 0.7861411570812392,
+      "wrong_fg_zero_gradient_fraction_stable": 0.0,
+      "seed_checkpoints_with_all_sampled_wrong_fg_zero_gradient": 1,
+      "max_abs_logit_across_sample": 15457.5576171875
+    },
+    "cauaug": {
+      "seeds": 2,
+      "domains": 6,
+      "sampled_train_slices_total": 192,
+      "wrong_fg_zero_gradient_fraction_old": 0.0,
+      "wrong_fg_zero_gradient_fraction_stable": 0.0,
+      "seed_checkpoints_with_all_sampled_wrong_fg_zero_gradient": 0,
+      "max_abs_logit_across_sample": 42.99524688720703
+    }
+  },
+  "numeric_checks": {
+    "moderate_value_gradient_equivalence": true,
+    "kd_reduction_axes_preserved": true,
+    "extreme_wrong_prediction_old_zero_gradient": true,
+    "stable_nonzero_finite_gradient": true
+  }
+}

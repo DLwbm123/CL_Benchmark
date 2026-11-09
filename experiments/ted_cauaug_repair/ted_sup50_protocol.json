@@ -1,0 +1,43 @@
+{
+  "seeds": [
+    41,
+    43
+  ],
+  "backbone": "original ResUNet32-mid2915808params",
+  "batch_size": 4,
+  "stream_order": [
+    "BIDMC",
+    "HK",
+    "ISBI",
+    "UCL",
+    "ISBI_1.5",
+    "I2CVB"
+  ],
+  "data": "existingHDF5 train/val,256 resolution,integer label truncation; no test",
+  "selection": "first val metadata block earliest-best per epoch; remaining val blocks development evaluation",
+  "source": "same pinned TED/CauAug definitions and all author components as preserved shared-backbone run",
+  "teacher": "parameter frozen but train-mode BN, unchanged",
+  "evaluation": "per-slice batch-statistic BN, validation buffers/RNG restored; CKNet retained forCauAug",
+  "failures": "stop paired seeds on any failure; preserve evidence and original clock",
+  "limitations": [
+    "development validation historically exposed",
+    "metadata sequence blocks not verified patients",
+    "source/shared stream differs original benchmark",
+    "batch4 differs originalbenchmark8",
+    "loss numerical form change is declared, not author-native result"
+  ],
+  "purpose": "TED targeted numerical repair",
+  "entry": "ted_stable_runner.py",
+  "epochs_per_domain": {
+    "ted": 50
+  },
+  "variant": "stable_sup",
+  "optimizer": "Adam2e-4 first domain,1e-4 subsequent,gamma.99/epoch unchanged",
+  "lambda_distill": 0.001,
+  "input": "slice minmax+clip[.001,.99]",
+  "repair": "supervised two-class DiceBCE computed as Dice+logitsCE; no BCE probability clamp gradient death",
+  "kd": "original clamped-probability KD",
+  "retained": "imageKD,GaussianSKA,source batch-broadcast AKT/GUGF,teacher trainBN,AdamLR unchanged",
+  "comparison": "complete originalsharedTED50 bothseeds retained32.43%, onecollapsedseed; compare two repair variants at same50epoch",
+  "analysis_gate": "complete both seeds all6domains; require no all-domain-collapsed seed and mean improvement over old reference; prefer smallest sufficient repair; no seed selection"
+}

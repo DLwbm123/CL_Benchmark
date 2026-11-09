@@ -1,0 +1,40 @@
+{
+  "seeds": [
+    41,
+    43
+  ],
+  "backbone": "original ResUNet32-mid2915808params",
+  "batch_size": 4,
+  "stream_order": [
+    "BIDMC",
+    "HK",
+    "ISBI",
+    "UCL",
+    "ISBI_1.5",
+    "I2CVB"
+  ],
+  "data": "existingHDF5 train/val,256 resolution,integer label truncation; no test",
+  "selection": "first val metadata block earliest-best per epoch; remaining val blocks development evaluation",
+  "source": "same pinned TED/CauAug definitions and all author components as preserved shared-backbone run",
+  "teacher": "parameter frozen but train-mode BN, unchanged",
+  "evaluation": "per-slice batch-statistic BN, validation buffers/RNG restored; CKNet retained forCauAug",
+  "failures": "stop paired seeds on any failure; preserve evidence and original clock",
+  "limitations": [
+    "development validation historically exposed",
+    "metadata sequence blocks not verified patients",
+    "source/shared stream differs original benchmark",
+    "batch4 differs originalbenchmark8",
+    "loss numerical form change is declared, not author-native result"
+  ],
+  "purpose": "CauAug training-sufficiency150epoch extension without loss changes",
+  "entry": "runner.py",
+  "epochs_per_domain": {
+    "cauaug": 150
+  },
+  "variant": "unchanged",
+  "optimizer": "Adam2e-4 first domain,1e-4 subsequent,gamma.99/epoch unchanged",
+  "lambda_distill": 0.001,
+  "input": "slice minmax[0,1]",
+  "retained": "original DiceBCE/CKNet/FTGen/domain_archive/source width-axis KD andteacherBN unchanged",
+  "comparison": "old completeCauAug50 mean59.09%, same seeds/stream/batch; only training epoch count150"
+}
