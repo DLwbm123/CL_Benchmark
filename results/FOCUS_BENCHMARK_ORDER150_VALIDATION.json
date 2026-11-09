@@ -1,0 +1,35 @@
+{
+  "status": "VALIDATED",
+  "methods": {
+    "focus": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 150,
+      "final_foreground_micro_dice_mean": 0.5381593877099685,
+      "sd_across_seed_domain_means": 0.3230192920505982,
+      "mean_just_learned_domain_dice": 0.6479254799271138,
+      "mean_change_final_minus_just_learned": -0.10976609221714528,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "new_steps": 49350,
+        "replay_steps": 36150,
+        "gin_steps": 24749,
+        "cknet_steps": 0,
+        "ftgen_steps": 0,
+        "kd_steps": 0
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true
+    }
+  },
+  "test_accessed": false,
+  "scope": "complete two-seed original-benchmark-stream/nominalbatch8 development validation, not original test",
+  "closure": {
+    "all_process_groups_exited": true,
+    "elapsed_seconds": 3244.687247276306,
+    "experiment_allocated_bytes": 334598144,
+    "window_allocated_bytes": 1406795776,
+    "further_focus_training": false
+  }
+}

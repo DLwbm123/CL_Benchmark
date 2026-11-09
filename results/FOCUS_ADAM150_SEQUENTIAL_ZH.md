@@ -1,5 +1,7 @@
 # FOCUS六域150epoch完整结果：73.59%
 
+后续原benchmark顺序/batch8核对已完成，见 [核对与收尾报告](FOCUS_BENCHMARK_ORDER150_CLOSURE_ZH.md)。其均值为53.82%，不能将本页73.59%直接代替该配置结果。
+
 双seed41/43均完成六域各150epoch，完整性检查通过。平均foreground Dice为73.59%，比同配置50epoch的59.14%提高14.44个百分点；两个seed均值、全部12个seed×域配对均改善。没有选择部分seed或修改旧结果。
 
 | 聚合指标 | Adam50 | Adam150 |
