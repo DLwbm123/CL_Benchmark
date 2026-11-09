@@ -33,3 +33,7 @@ CauAug使用新150epoch最终checkpoint执行固定train切片梯度诊断，判
 读取诊断输出前记录了后继门槛：固定诊断两路成功、崩溃checkpoint错前景存在且旧零梯度比例超过50%、稳定写法为0%。本次满足门槛。后继CauAug stable_sup150只将监督项改为稳定logits DiceBCE，保留CKNet、FTGen、六域档案、原width-axis KD和teacher/evaluation模式；不改学习率、不删模块。协议为独立从头双seed、六域各150epoch、batch4，独立三小时且不得越过原23:04:56总窗口。
 
 CauAug修复版本已通过合成六阶段完整训练预检：CKNet/FTGen/KD均激活、六域archive与model/optimizer/teacher有限、验证前后模型buffers及RNG恢复。首次预检入口遗漏DATA_ROOT环境变量，未读取真实数据；保留错误记录、补齐合成占位环境后通过，原计时未重置。真实双seed从头训练已启动，尚不能宣称修复后效果改善。
+
+## 完成更新
+
+两组修复150均已完成，TED52.47%、CauAug56.11%，完整配对均无零值组合，但长训与遗忘问题仍存。见 [本轮收尾](TED_CAUAUG_REPAIR_CLOSURE_ZH.md)；上文运行中描述为历史状态。

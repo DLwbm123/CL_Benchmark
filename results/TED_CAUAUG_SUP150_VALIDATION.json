@@ -1,0 +1,72 @@
+{
+  "status": "VALIDATED_COMPLETE",
+  "test_accessed": false,
+  "scope": "two complete repaired method pairs, six domains,150epochs/domain",
+  "methods": {
+    "ted": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 150,
+      "final_foreground_micro_dice_mean": 0.5246601209263588,
+      "sd_across_seed_domain_means": 0.0005931509381292766,
+      "mean_just_learned_domain_dice": 0.8115132718539337,
+      "mean_change_final_minus_just_learned": -0.2868531509275749,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "supervised": 170700,
+        "image_kd": 147900,
+        "ska": 147900,
+        "akt_gugf": 147900
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true,
+      "duration_minutes": 74.47231390078862
+    },
+    "cauaug": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 150,
+      "final_foreground_micro_dice_mean": 0.5611406315289609,
+      "sd_across_seed_domain_means": 0.008413603611592721,
+      "mean_just_learned_domain_dice": 0.7902689951170296,
+      "mean_change_final_minus_just_learned": -0.22912836358806876,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "new_steps": 170700,
+        "replay_steps": 0,
+        "gin_steps": 0,
+        "cknet_steps": 170700,
+        "ftgen_steps": 147900,
+        "kd_steps": 147900
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true,
+      "duration_minutes": 75.66506923039755
+    }
+  },
+  "comparisons": {
+    "ted": {
+      "new": "ted_sup150",
+      "reference": "ted_sup50",
+      "paired_combinations": 12,
+      "improved_combinations": 1,
+      "worsened_combinations": 11,
+      "mean_difference": -0.08656267148634848
+    },
+    "cauaug": {
+      "new": "cauaug_sup150",
+      "reference": "cauaug150",
+      "paired_combinations": 12,
+      "improved_combinations": 12,
+      "worsened_combinations": 0,
+      "mean_difference": 0.40417217195458116
+    },
+    "cauaug_vs_legacy50": {
+      "reference_final_mean": 0.590905576,
+      "difference_final_mean": -0.029764944471039168,
+      "caution": "different epochs and numerical form; not an isolated repair effect"
+    }
+  }
+}
