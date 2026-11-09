@@ -55,5 +55,5 @@
   "failure": "within-method pair stops on error; no blind rerun; immutable clock and deadline",
   "artifacts": "private rolling checkpoints; publish only self-authored code/protocol and cross-domain/cross-seed aggregates",
   "parameter_count": 2915808,
-  "completion_at_report": "FOCUS pair validated; CauAug and TED pairs pending, not selected by partial results"
+  "completion_at_report": "All three method pairs completed and validated; scientific success is not inferred from computational completion"
 }

@@ -1,5 +1,7 @@
 # 统一 ResUNet32 开发验证：FOCUS 完整负结果与 S3R 未完成诊断
 
+后续完整结果见 [最终报告](MEDICAL_SHARED_BACKBONE_FINAL_ZH.md)。本文保留当时的阶段快照。
+
 本报告记录 2026-11-09 已实际结束的 FOCUS 双 seed 实验和 S3R 辅助损失诊断。CauAug/TED 的统一骨干实验在本报告生成时尚未完成，不汇总部分 seed，不据部分结果选优。作者网络验证结果保留在 `MEDICAL_AUTHOR_COMPONENTS_VALIDATION_ZH.md`，不能替换这里的统一骨干结果。
 
 ## FOCUS：计算完成，但当前适配效果不足
