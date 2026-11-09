@@ -1,5 +1,7 @@
 # FOCUS完整六域50epoch验证：优化器适配后的结果
 
+后续150epoch完整结果见 [150epoch报告](FOCUS_ADAM150_SEQUENTIAL_ZH.md)；本文保留50epoch发布时记录。
+
 新双seed六域实验已完成并核验。保留完整CCD/GIN、特征回放和encoder冻结机制，采用Adam .0002后，最终跨六域、两seed平均foreground Dice为59.14%，相比已保存的同协议SGD .01版本12.44%提高46.70个百分点。两个seed的均值和全部12个seed×域配对均改善；没有选择部分seed或替换旧结果。
 
 | 聚合指标 | 原共享骨干SGD50 | 完整机制Adam50 |

@@ -1,0 +1,49 @@
+{
+  "purpose": "FOCUS protocol-alignment validation: restore original benchmark domain stream and nominal training batch8 after positive complete150epoch result; no further hyperparameter tuning",
+  "seeds": [
+    41,
+    43
+  ],
+  "epochs_per_domain": {
+    "focus": 150
+  },
+  "batch_size": 8,
+  "backbone": "original benchmark ResUNet32-mid [32,64,128,256], same initial parameterization for all methods",
+  "data": "same HDF5 domains/train-validation split,256 resolution,integer truncation of fractional labels; no test",
+  "selection": "earliest maximum foreground micro Dice on first metadata validation sequence block each epoch; final remaining validation blocks",
+  "focus": {
+    "source_commit": "d57650aff192744e22bfcb0c93793a078c74aad9",
+    "network": "common ResUNet32-mid, no extra convolutional parameters, single output; freeze through bridge",
+    "ccd": 0.9,
+    "gin_probability": 0.5,
+    "retention": 0.05,
+    "minimum_features_per_domain": 30,
+    "replay": "first-level features with hard targets; same domain-balanced foreground allocation, nominal replay batch8 matching train, may have fewer items when domains do not divide8",
+    "optimizer": "Adam lr .0002, weight decay3e-5, polynomial .9; all other source/shared FOCUS choices unchanged",
+    "encoder": "frozen after first task; source train-mode handling retained"
+  },
+  "limitations": [
+    "development validation only, not original benchmark test evaluation",
+    "two protocol factors stream and nominal train/replay batch changed together for compatibility, not causal attribution",
+    "data identity/patient independence/preprocessing provenance unresolved; validation historically exposed",
+    "original integer label truncation retained",
+    "source balanced replay may yield fewer than nominal8 items for nondivisible old-domain counts; allocation rule unchanged",
+    "train150/b8 and source benchmark domain mapping restored; optimizer/validation selection/FOCUS-specific steps still method adaptations",
+    "FOCUS single-output ResUNet has no nnUNet deep supervision; source mechanism retained as documented"
+  ],
+  "failure": "any arm failure stops pair; preserve evidence; no blind rerun; shared immutable six-hour window",
+  "artifacts": "private rolling checkpoints; publish only self-authored code/protocol and cross-domain/cross-seed aggregates",
+  "entry": "runner.py",
+  "seed_policy": "fresh41/43, no checkpoint reuse, both seeds included",
+  "stream_order": [
+    "ISBI",
+    "ISBI_1.5",
+    "I2CVB",
+    "UCL",
+    "BIDMC",
+    "HK"
+  ],
+  "control": "previous shared-order150epoch/batch4 .7358808193536054 and50epoch/batch4 .5914419140164631; reference only, not same-protocol causal control",
+  "comparison": "source/shared-order150epoch batch4 complete result retained; this changes both stream and nominal train/replay batch, so no single-factor attribution",
+  "completion_gate": "both seeds complete6x150epoch,rc0,finite model/optimizer/replay and activeGIN/replay; do not select only improved seed"
+}

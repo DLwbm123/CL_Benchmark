@@ -1,0 +1,41 @@
+{
+  "status": "VALIDATED",
+  "methods": {
+    "focus": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 150,
+      "final_foreground_micro_dice_mean": 0.7358808193536054,
+      "sd_across_seed_domain_means": 0.013814305525543994,
+      "mean_just_learned_domain_dice": 0.8044050322804802,
+      "mean_change_final_minus_just_learned": -0.06852421292687483,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "new_steps": 96750,
+        "replay_steps": 73950,
+        "gin_steps": 48406,
+        "cknet_steps": 0,
+        "ftgen_steps": 0,
+        "kd_steps": 0
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true
+    }
+  },
+  "test_accessed": false,
+  "scope": "completed full six-domain150epoch FOCUS Adam adaptation, two seeds, source/shared stream, batch4",
+  "comparison": {
+    "status": "VALIDATED",
+    "mean_paired_delta_vs_adam50": 0.1444389053371423,
+    "improved_seed_means": 2,
+    "total_seeds": 2,
+    "improved_seed_domain_pairs": 12,
+    "total_pairs": 12,
+    "all_process_groups_exited": true,
+    "elapsed_seconds": 3229.8344724178314,
+    "experiment_allocated_bytes": 325369856,
+    "window_allocated_bytes": 1072189440,
+    "comparison": "same source/shared stream,batch4,seeds,model,optimizer and evaluation; planned epochs and polynomial LR horizon differ"
+  }
+}
