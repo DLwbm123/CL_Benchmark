@@ -1,0 +1,21 @@
+{
+  "status": "INCOMPLETE_DEADLINE",
+  "planned_arms": 8,
+  "completed_arms": 4,
+  "terminated_arms": 4,
+  "planned_segmentation_epochs_per_arm": 20,
+  "completed_segmentation_epochs_in_terminated_arms": [
+    4,
+    4,
+    4,
+    4
+  ],
+  "time_limit_seconds": 10800,
+  "recorded_guard_elapsed_seconds": 10802.750325441,
+  "shutdown_grace_seconds": 2.750325441,
+  "allocated_bytes_at_inspection": 65536,
+  "remaining_experiment_process_groups": 0,
+  "complete_cross_domain_cross_seed_comparison_available": false,
+  "test_accessed": false,
+  "interpretation": "no auxiliary-loss efficacy conclusion; partial completed-domain metrics withheld from comparison; no restart"
+}

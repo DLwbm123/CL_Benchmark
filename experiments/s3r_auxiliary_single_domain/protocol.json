@@ -1,0 +1,18 @@
+{
+  "purpose": "two independent late-domain single-task diagnostics comparing S3R standard auxiliary SDF/shape terms to disabling those terms",
+  "sites": [
+    5,
+    6
+  ],
+  "seeds": [
+    11,
+    13
+  ],
+  "epochs": 20,
+  "prior_epochs": 50,
+  "mode": "corrected exp(-entropy) both; segonly sets beta,beta1,lambda=0; fixed architecture/training",
+  "evaluation": "validation foreground Dice after each independent domain; group means across sites and seeds; no test; diagnostic not full S3R",
+  "limitations": "segonly no longer full S3R; separate GPUs not bitwise matched; single-task not proof of sequential benefit",
+  "wall_seconds": 10800,
+  "storage_bytes": 5000000000
+}

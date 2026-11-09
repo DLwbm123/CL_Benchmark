@@ -1,0 +1,59 @@
+{
+  "purpose": "independent controlled validation on the manuscript common ResUNet32 backbone; source-network results retained as references, not inserted into common-backbone table",
+  "seeds": [
+    41,
+    43
+  ],
+  "epochs_per_domain": {
+    "focus": 50,
+    "cauaug": 50,
+    "ted": 50
+  },
+  "batch_size": 4,
+  "backbone": "original benchmark ResUNet32-mid [32,64,128,256], same initial parameterization for all methods",
+  "data": "same HDF5 domains/train-validation split,256 resolution,integer truncation of fractional labels; no test",
+  "selection": "earliest maximum foreground micro Dice on first metadata validation sequence block each epoch; final remaining validation blocks",
+  "focus": {
+    "source_commit": "d57650aff192744e22bfcb0c93793a078c74aad9",
+    "network": "common ResUNet32-mid, no extra convolutional parameters, single output; freeze through bridge",
+    "ccd": 0.9,
+    "gin_probability": 0.5,
+    "retention": 0.05,
+    "minimum_features_per_domain": 30,
+    "replay": "first-level features plus hard distilled targets; uniform domain allocation with foreground sampling; alternate new/replay updates",
+    "optimizer": "SGD lr .01 momentum .99 Nesterov weight decay 3e-5 polynomial .9",
+    "encoder": "frozen after first task; source train-mode handling retained"
+  },
+  "cauaug": {
+    "source_commit": "ff23e03caf610f64d6cc7ad744e4df32eb69c699",
+    "network": "common ResUNet32-mid",
+    "CKNet": true,
+    "FTGen": true,
+    "lambda_d": 0.001,
+    "optimizer": "Adam 2e-4 initial,1e-4 continual,gamma .99 per epoch",
+    "KD": "upstream width-axis sum retained literally; probabilities NCHW",
+    "teacher": "weights frozen; source train-mode BN updates retained",
+    "evaluation": "source-style batch-statistic BN,batch1,CKNet fixed RNG,restore buffers",
+    "input_adaptation": "per-slice minmax [0,1], constant slices to zero; selected before training to satisfy source input range, no test or validation performance used"
+  },
+  "ted": {
+    "source_commit": "446f79be52d3e83dea92d7ff352c883154404fbb",
+    "source_losses": "DiceBCE, imageKD, Gaussian SKA, original batch-broadcast AKT/GUGF",
+    "lambda_d": 0.001,
+    "optimizer": "Adam2e-4 initial/1e-4 continual, gamma.99",
+    "teacher": "weights frozen,train-BN",
+    "inference": "per-slice batch-BN with state restoration"
+  },
+  "limitations": [
+    "matched-backbone validation, not author-native implementation",
+    "50epochs/batch4 common among these three, differs from existing conventional150epochs/batch8; disclose method optimizers and computational cost",
+    "FOCUS no deep supervision because common backbone has one output; source CCD on three encoder skip levels,first-level replay,encoder incl bridge frozen after task1",
+    "FOCUS original HDF5 intensities; CauAug slice-minmax[0,1]; TED slice-minmax clipped [.001,.99]; not source patient-level preprocessing",
+    "metadata blocks not verified independent patients;validation repeatedly exposed",
+    "no test or paper-number/seed/checkpoint search"
+  ],
+  "failure": "within-method pair stops on error; no blind rerun; immutable clock and deadline",
+  "artifacts": "private rolling checkpoints; publish only self-authored code/protocol and cross-domain/cross-seed aggregates",
+  "parameter_count": 2915808,
+  "completion_at_report": "FOCUS pair validated; CauAug and TED pairs pending, not selected by partial results"
+}
