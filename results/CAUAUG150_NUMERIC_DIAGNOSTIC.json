@@ -1,0 +1,20 @@
+{
+  "status": "VALIDATED",
+  "methods": {
+    "cauaug": {
+      "seeds": 2,
+      "domains": 6,
+      "sampled_train_slices": 192,
+      "old_zero_gradient_fraction_wrong_foreground": 0.6023394877348658,
+      "stable_zero_gradient_fraction_wrong_foreground": 0.0,
+      "collapsed_checkpoint_zero_gradient_fraction": 0.9769203165429581,
+      "maximum_absolute_logit": 4365.86083984375,
+      "parameters_buffers_restored": true,
+      "all_rc0": true
+    }
+  },
+  "gate_passed": true,
+  "gate_written_before_result_inspection": true,
+  "no_training": true,
+  "test_accessed": false
+}

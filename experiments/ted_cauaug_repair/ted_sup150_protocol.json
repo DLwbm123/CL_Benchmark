@@ -1,0 +1,50 @@
+{
+  "started_at": 1794223168.3870795,
+  "seeds": [
+    41,
+    43
+  ],
+  "budget_bytes": 2000000000,
+  "storage_stop_bytes": 1800000000,
+  "planned_peak_bytes": 600000000,
+  "backbone": "original ResUNet32-mid2915808params",
+  "batch_size": 4,
+  "stream_order": [
+    "BIDMC",
+    "HK",
+    "ISBI",
+    "UCL",
+    "ISBI_1.5",
+    "I2CVB"
+  ],
+  "data": "existingHDF5 train/val,256 resolution,integer label truncation; no test",
+  "selection": "first val metadata block earliest-best per epoch; remaining val blocks development evaluation",
+  "source": "same pinned TED/CauAug definitions and all author components as preserved shared-backbone run",
+  "teacher": "parameter frozen but train-mode BN, unchanged",
+  "evaluation": "per-slice batch-statistic BN, validation buffers/RNG restored; CKNet retained forCauAug",
+  "failures": "stop paired seeds on any failure; preserve evidence and original clock",
+  "limitations": [
+    "development validation historically exposed",
+    "metadata sequence blocks not verified patients",
+    "source/shared stream differs original benchmark",
+    "batch4 differs originalbenchmark8",
+    "loss numerical form change is declared, not author-native result"
+  ],
+  "purpose": "fresh complete150epoch validation of sufficient supervised-only numerical repair; no continuation of50 weights",
+  "deadline": 1794233968.3870795,
+  "entry": "ted_stable_runner.py",
+  "epochs_per_domain": {
+    "ted": 150
+  },
+  "variant": "stable_sup",
+  "optimizer": "Adam2e-4 first domain,1e-4 subsequent,gamma.99/epoch unchanged",
+  "lambda_distill": 0.001,
+  "input": "slice minmax+clip[.001,.99]",
+  "repair": "supervised two-class DiceBCE computed as Dice+logitsCE; no BCE probability clamp gradient death",
+  "kd": "original clamped-probability KD",
+  "retained": "imageKD,GaussianSKA,source batch-broadcast AKT/GUGF,teacher trainBN,AdamLR unchanged",
+  "comparison": "completed stable_sup50 mean .6112227924127073; stable_all50 incomplete due timeout and excluded from numeric comparison; no single-seed selection",
+  "analysis_gate": "complete both seeds all6x150; compare full paired aggregate against stable_sup50; retain negatives; no test or retuning",
+  "baseline_new_bytes": 0,
+  "decision": "supervised-only repair passes predeclared no-collapse and mean-improvement gate; all50 timeout cannot establish relative efficacy; select minimum sufficient repair without claiming optimality"
+}

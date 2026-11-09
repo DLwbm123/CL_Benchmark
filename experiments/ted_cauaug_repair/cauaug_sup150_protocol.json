@@ -1,0 +1,48 @@
+{
+  "started_at": 1794223298.0827472,
+  "seeds": [
+    41,
+    43
+  ],
+  "budget_bytes": 2000000000,
+  "storage_stop_bytes": 1800000000,
+  "planned_peak_bytes": 600000000,
+  "backbone": "original ResUNet32-mid2915808params",
+  "batch_size": 4,
+  "stream_order": [
+    "BIDMC",
+    "HK",
+    "ISBI",
+    "UCL",
+    "ISBI_1.5",
+    "I2CVB"
+  ],
+  "data": "existingHDF5 train/val,256 resolution,integer label truncation; no test",
+  "selection": "first val metadata block earliest-best per epoch; remaining val blocks development evaluation",
+  "source": "same pinned TED/CauAug definitions and all author components as preserved shared-backbone run",
+  "teacher": "parameter frozen but train-mode BN, unchanged",
+  "evaluation": "per-slice batch-statistic BN, validation buffers/RNG restored; CKNet retained forCauAug",
+  "failures": "stop paired seeds on any failure; preserve evidence and original clock",
+  "limitations": [
+    "development validation historically exposed",
+    "metadata sequence blocks not verified patients",
+    "source/shared stream differs original benchmark",
+    "batch4 differs originalbenchmark8",
+    "loss numerical form change is declared, not author-native result"
+  ],
+  "purpose": "fresh6x150 supervised-logits numerical repair following collapsed150 fixed-checkpoint evidence",
+  "deadline": 1794234098.0827472,
+  "entry": "cauaug_stable_runner.py",
+  "epochs_per_domain": {
+    "cauaug": 150
+  },
+  "variant": "unchanged",
+  "optimizer": "Adam2e-4 first domain,1e-4 subsequent,gamma.99/epoch unchanged",
+  "lambda_distill": 0.001,
+  "input": "slice minmax[0,1]",
+  "retained": "original DiceBCE/CKNet/FTGen/domain_archive/source width-axis KD andteacherBN unchanged",
+  "comparison": "paired complete original CauAug15015.70%,50epoch59.09%; preserve all negative evidence",
+  "repair": "only supervisedDiceBCE probability path becomes Dice+logitsCE; original probability width-axisKD unchanged",
+  "analysis_gate": "complete both seeds all6x150/finite/archives and mechanism counts; compare paired mean and zero counts, not successful seed; no test",
+  "baseline_new_bytes": 0
+}

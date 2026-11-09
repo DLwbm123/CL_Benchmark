@@ -9,3 +9,5 @@ For TED, run smoke.py first. Use ted_stable_runner.py with the matching protocol
 CauAug150 uses the unchanged sibling medical_shared_backbone/runner.py and cauaug150_protocol.json, ARM_METHOD=cauaug. No numerical-loss change is applied without evidence; only the planned epoch count is extended.
 
 Provision independent hard timeout and per-run/window storage guards before execution. After complete paired seeds, run validate.py with METHOD=ted or cauaug. The private supervisor state.json, logs/results and rolling checkpoints are required. Keep all weights, features, archives and per-domain values private. These are development validation experiments; no final-test claims.
+
+Completed long-run and numeric-diagnostic update: [report](../../results/TED_CAUAUG_LONGRUN_UPDATE_ZH.md). `ted_sup150_protocol.json` freezes the sufficient supervised-only TED repair at 150 epochs; `cauaug_sup150_protocol.json` and `cauaug_stable_runner.py` freeze the evidence-driven CauAug supervised-only repair. `cauaug_smoke.py` exercises the six-stage synthetic pipeline; all source components remain external.

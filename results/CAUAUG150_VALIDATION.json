@@ -1,0 +1,34 @@
+{
+  "status": "VALIDATED",
+  "methods": {
+    "cauaug": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 150,
+      "final_foreground_micro_dice_mean": 0.15696845957437977,
+      "sd_across_seed_domain_means": 0.22198692439490078,
+      "mean_just_learned_domain_dice": 0.4538676544712599,
+      "mean_change_final_minus_just_learned": -0.2968991948968801,
+      "zero_seed_domain_combinations": 6,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "new_steps": 170700,
+        "replay_steps": 0,
+        "gin_steps": 0,
+        "cknet_steps": 170700,
+        "ftgen_steps": 147900,
+        "kd_steps": 147900
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true
+    }
+  },
+  "test_accessed": false,
+  "scope": "completed method pair only; other arms may still run",
+  "duration_minutes": 127.59315592845282,
+  "comparison": {
+    "previous_50epoch_final_mean": 0.590905576,
+    "difference": -0.4339371164256203
+  },
+  "fully_zero_seeds": 1
+}

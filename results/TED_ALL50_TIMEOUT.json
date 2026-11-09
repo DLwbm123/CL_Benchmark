@@ -1,0 +1,19 @@
+{
+  "status": "INCOMPLETE_TIMEOUT",
+  "planned_seeds": 2,
+  "completed_seeds": 1,
+  "planned_epochs_per_domain": 50,
+  "domains": 6,
+  "completed_epoch_records_total": 566,
+  "expected_epoch_records_total": 600,
+  "returncodes": [
+    124,
+    0
+  ],
+  "elapsed_minutes": 119.68695433139801,
+  "final_pair_score": null,
+  "comparison_eligible": false,
+  "test_accessed": false,
+  "reason": "independent two-hour hard budget; one arm reached final domain epoch16; paired aggregate unavailable",
+  "action": "retain partial checkpoint/logs privately; no restart or deadline extension; do not rank by successful seed"
+}
