@@ -1,0 +1,42 @@
+{
+  "purpose": "FOCUS training stability diagnosis on two independently initialized domains; not sequential CL and not a final ablated method",
+  "entry": "train_probe.py",
+  "sites": [
+    1,
+    6
+  ],
+  "site_selection": "stream endpoints chosen before results of this experiment; independent single-domain training",
+  "seeds": [
+    41,
+    43
+  ],
+  "epochs": 50,
+  "batch_size": 4,
+  "data": "same source/shared order and HDF5 integer-truncated labels; first val block selects earliest best, remaining val blocks evaluation; no test",
+  "backbone": "unchanged ResUNet32-mid BN 2915808 parameters",
+  "variants": {
+    "full_sgd": "complete single-domain FOCUS training: CCD .9, GIN .5, SGD .01 momentum .99 Nesterov wd3e-5 poly.9",
+    "no_ccd": "only bypass CCD output; still generate same masks to preserve RNG consumption",
+    "no_gin": "only bypass GIN output; still generate GIN to preserve RNG consumption",
+    "full_adam": "keep CCD/GIN fully, replace optimizer package with Adam2e-4 wd3e-5 same poly.9; LR borrowed from existing ResUNet medical runs, not official FOCUS setting; no LR grid"
+  },
+  "analysis": "all16 complete before cross2domain/2seed comparisons; no_ccd/no_gin are diagnostic only; evaluate train-loss/gradient clipping/selection and heldout val, no seed selection",
+  "limitations": [
+    "no replay or freeze stage in independent first-task diagnosis; cannot establish sequential benefit",
+    "two selected metadata domains not proof of independent patients",
+    "same initial seed/model/draw consumption where intervention permits, GPU differences not bitwise promise"
+  ],
+  "failure": "any failed arm stops running arms and queued successors; preserve evidence; no blind retries",
+  "prospective_sequential_gate": {
+    "fixed_while_probe_running_before_complete_results": true,
+    "candidate": "full_adam retaining CCD/GIN/replay/freeze",
+    "requirements": [
+      "all four paired heldout validation differences positive versus full_sgd",
+      "mean improvement at least .05",
+      "zero collapsed domain-seed combinations",
+      "lower mean gradient clipping fraction over first10epochs"
+    ],
+    "if_passed": "fresh two-seed six-domain50epoch validation changing only optimizer and baseLR; same old stream, backbone, data and inference; compare with preserved shared-backbone control",
+    "if_not_passed": "inspect complete mechanism evidence; do not launch automatic LR search"
+  }
+}

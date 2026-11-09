@@ -1,0 +1,36 @@
+{
+  "status": "VALIDATED",
+  "seeds": 2,
+  "domains": 6,
+  "test_accessed": false,
+  "no_training": true,
+  "original_result_reproduced": true,
+  "state_restored": true,
+  "modes": {
+    "running_b4": {
+      "mean_foreground_micro_dice": 0.12444241688939241,
+      "sd_across_seed_domain_means": 0.01855037953841507,
+      "zero_seed_domain_combinations": 2
+    },
+    "running_b1": {
+      "mean_foreground_micro_dice": 0.12444213439097133,
+      "sd_across_seed_domain_means": 0.018551304777488994,
+      "zero_seed_domain_combinations": 2
+    },
+    "slice_bn": {
+      "mean_foreground_micro_dice": 0.06828037514709887,
+      "sd_across_seed_domain_means": 0.022979432383421136,
+      "zero_seed_domain_combinations": 2
+    }
+  },
+  "train_input_aggregate": {
+    "mean_slice_mean": -0.0001354505886350054,
+    "mean_slice_sd": 0.9462427198886871,
+    "global_min": -1.6885744333267212,
+    "global_max": 60.032283782958984,
+    "mean_zero_fraction": 0.0
+  },
+  "interpretation": "current-slice BN did not rescue fixed old checkpoints; input already approximately centered/scaled globally, though individual tails exist; neither is a proof about a different retraining protocol",
+  "elapsed_seconds_including_entry_fix": 68.29833149909973,
+  "entry_failure_preserved": true
+}
