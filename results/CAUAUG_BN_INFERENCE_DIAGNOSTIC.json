@@ -1,0 +1,30 @@
+{
+  "protocol": "same fixed final checkpoints, same validation blocks and CKNet random stream per seed/domain; factorial BN running vs batch statistics and batch size 4 vs 1; no checkpoint selection",
+  "methods": {
+    "running_b4": {
+      "mean_foreground_micro_dice": 0.03173488903402616,
+      "sd_across_seed_domain_means": 0.044879910472325,
+      "mean_predicted_foreground_fraction": 0.030858777774122763,
+      "zero_combinations": 6
+    },
+    "batch_b4": {
+      "mean_foreground_micro_dice": 0.7493369296797626,
+      "sd_across_seed_domain_means": 0.0006419890581631883,
+      "mean_predicted_foreground_fraction": 0.012415218550630547,
+      "zero_combinations": 0
+    },
+    "running_b1": {
+      "mean_foreground_micro_dice": 0.03319606105383392,
+      "sd_across_seed_domain_means": 0.04694631975969723,
+      "mean_predicted_foreground_fraction": 0.03224913598392388,
+      "zero_combinations": 6
+    },
+    "batch_b1": {
+      "mean_foreground_micro_dice": 0.7550748505588045,
+      "sd_across_seed_domain_means": 8.913123784398105e-05,
+      "mean_predicted_foreground_fraction": 0.012534187576996312,
+      "zero_combinations": 0
+    }
+  },
+  "test_accessed": false
+}

@@ -1,0 +1,59 @@
+{
+  "purpose": "fresh independent FOCUS training-duration qualification and CauAug source-inference correction; development validation only",
+  "budget_bytes": 8000000000,
+  "seeds": [
+    41,
+    43
+  ],
+  "epochs_per_domain": {
+    "focus": 150,
+    "cauaug": 50
+  },
+  "batch_size": 4,
+  "data": "existing 256x256 HDF5; original six-domain order and train/validation splits; no test access",
+  "selection": "earliest maximum foreground micro Dice on first metadata validation sequence block each epoch; final remaining validation blocks",
+  "limitations": [
+    "sequence blocks are not verified independent patients",
+    "existing HDF5 preprocessing and true domain provenance unverified",
+    "validation blocks exposed in earlier experiments",
+    "two seeds are developmental, not selected after results",
+    "manual FOCUS architecture plan and minibatches-per-epoch; no nnU-Net preprocessing or spatial augmentation pipeline",
+    "CauAug source UNet at 256 versus official 192; explicit slice-level minmax [0,1] because case boundaries unavailable, not claimed author case minmax",
+    "FOCUS 150 epochs now matches original benchmark epoch count but not author250 epochs or250 minibatches/epoch; backbones and per-epoch resource costs differ",
+    "CauAug batch-statistic inference must be explicitly disclosed; no post-hoc favorable seed/checkpoint selection",
+    "validation-only correction and protocol development; no independent final-performance claim"
+  ],
+  "focus": {
+    "source_commit": "d57650aff192744e22bfcb0c93793a078c74aad9",
+    "network": "author Generic_UNet_sparse, 32 base features, 6 pooling stages, 480 cap, InstanceNorm, deep supervision",
+    "ccd": 0.9,
+    "gin_probability": 0.5,
+    "retention": 0.05,
+    "minimum_features_per_domain": 30,
+    "replay": "first-level features plus hard distilled targets; uniform domain allocation with foreground sampling; alternate new/replay updates",
+    "optimizer": "SGD lr .01 momentum .99 Nesterov weight decay 3e-5 polynomial .9",
+    "encoder": "frozen after first task; source train-mode handling retained"
+  },
+  "cauaug": {
+    "source_commit": "ff23e03caf610f64d6cc7ad744e4df32eb69c699",
+    "network": "author UNet2D defaults",
+    "CKNet": true,
+    "FTGen": true,
+    "lambda_d": 0.001,
+    "optimizer": "Adam 2e-4 initial,1e-4 continual,gamma .99 per epoch",
+    "KD": "upstream width-axis sum retained literally; probabilities NCHW",
+    "teacher": "weights frozen; source train-mode BN updates retained",
+    "evaluation": "source-style batch-statistic BN, batch size 1, CKNet fixed RNG; BN buffers restored after evaluation to isolate validation; learned parameters unchanged",
+    "input_adaptation": "per-slice minmax [0,1], constant slices to zero; selected before training to satisfy source input range, no test or validation performance used"
+  },
+  "artifacts": "private rolling checkpoint incl optimizer/replay or archive; only cross-seed cross-domain aggregates eligible for publication",
+  "failure": "nonfinite/data error stops affected method seed pair; no automatic rerun; original clock retained",
+  "label_policy": "HDF5 contains fractional labels in [0,1]; cast to integer exactly as existing benchmark loader, not threshold .5. Source preprocessing remains unverified.",
+  "protocol_revision": "v2 frozen before training; original pilot preserved",
+  "rationale": {
+    "cauaug": "author evaluation never calls eval and predictor evaluates one slice; fixed-checkpoint 2x2 BN/batch diagnostic shows running-stat collapse; repair source mismatch without changing loss, augmentation or optimizer",
+    "focus": "20 epoch short pilot vs benchmark150/source250; same two seeds freshly initialized at 150 epochs to assess training sufficiency; not fine hyperparameter search"
+  },
+  "prior_results": "prior fixed-checkpoint diagnostic only informed source mismatch diagnosis, not choice among checkpoints or seeds",
+  "public_usage": "Requires separately obtained author checkouts at pinned commits. Set REFERENCE_ROOT, DATA_ROOT, WORK_ROOT, ARM_METHOD and ARM_SEED; copy this protocol as WORK_ROOT/protocol.json. Launch only under an appropriate local time/storage guard. Third-party code and private data are not distributed."
+}
