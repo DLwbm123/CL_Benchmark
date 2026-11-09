@@ -1,0 +1,14 @@
+{
+  "seeds": [
+    11,
+    13
+  ],
+  "domains": 3,
+  "epochs": 20,
+  "split": "validation",
+  "metric": "foreground micro Dice mean across three domains and two seeds immediately after learning each domain",
+  "late_first": 0.16682319535077708,
+  "original_six_domain_order": 0.11933649001665281,
+  "all_returncodes_zero": true,
+  "limitations": "ordering and upstream initialization differ; independent GPU trajectories; two seeds; not causal; original result from previous experiment"
+}
