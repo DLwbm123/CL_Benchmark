@@ -76,5 +76,6 @@
   "gate": "complete5 seeds; final mean improves>=.02; >=4/5 seed means improve; just-learned mean decrease<=.02; not a significance test",
   "test_accessed": false,
   "claim_scope": "exploratory development optimization; retain original baseline and disclose selection",
-  "interpretation": "Numerical prospective gate passed, but unchanged first-domain reruns differed substantially; LR-specific attribution unresolved pending shared-anchor confirmation"
+  "interpretation": "Numerical full-run gate passed, but shared-anchor confirmation found only +0.13 percentage points and 3/5 improved seeds; confirmation gate failed; reliable LR-specific improvement not established",
+  "confirmation_report": "TED_ANCHOR_CONFIRMATION_VALIDATION.json"
 }
