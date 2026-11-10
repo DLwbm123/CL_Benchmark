@@ -1,0 +1,53 @@
+{
+  "purpose": "matched backbone-only alignment with inert training-gradient and stage-retention audit",
+  "started_at": 1794299764.4788847,
+  "deadline": 1794309664.4788847,
+  "entry": "ted_aligned.py",
+  "backbone": "author",
+  "expected_parameters": 2313906,
+  "epochs_per_domain": {
+    "ted": 50
+  },
+  "seeds": [
+    41,
+    43
+  ],
+  "batch_size": 4,
+  "budget_bytes": 2000000000,
+  "storage_stop_bytes": 1800000000,
+  "planned_peak_bytes": 900000000,
+  "baseline_new_bytes": 0,
+  "gradient_epochs": [
+    1,
+    5,
+    25,
+    50
+  ],
+  "gradient_selection": "first training minibatch at each listed epoch of domains2..6; retain graph, no parameter or RNG changes",
+  "stream_order": [
+    "BIDMC",
+    "HK",
+    "ISBI",
+    "UCL",
+    "ISBI_1.5",
+    "I2CVB"
+  ],
+  "data": "existing train/val HDF5 and integer label truncation; test forbidden",
+  "selection": "first val metadata block earliest best; remaining blocks development evaluation; historical exposure disclosed",
+  "supervision": "stable Dice+logitsCE, flattened Dice smooth1; source probability KD unchanged",
+  "distill_weight": 0.001,
+  "optimizer": "Adam first domain2e-4, subsequent1e-4; gamma.99/epoch",
+  "teacher": "parameter frozen, train-mode BN retained",
+  "evaluation": "per-slice batch-statistic BN, states/RNG restored; CauAug CKNet retained",
+  "stream_seed": "900000+seed reset after model creation to isolate architecture initialization from minibatch/augmentation RNG",
+  "checkpoints": "save six selected stage models plus rolling model/optimizer/teacher/archive; private",
+  "failure": "stop own paired group on error/time/storage, preserve incomplete evidence; no restart clock reset",
+  "input": "slice minmax+clip[.001,.99]",
+  "limitations": [
+    "not author-native protocol; user accepts current benchmark adaptation",
+    "metadata blocks not verified independent patients",
+    "only two seeds",
+    "same seeds do not guarantee bitwise hardware equivalence",
+    "new independent data RNG differs historical seed streams; use matched current controls"
+  ]
+}

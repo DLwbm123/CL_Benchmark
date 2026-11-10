@@ -1,0 +1,12 @@
+{
+  "frozen_at": 1794299764.4788847,
+  "primary": "complete full paired six-domain50 results for each method and backbone; no partial/seed selection",
+  "contrast": "author versus shared with same stable supervised loss, unchanged source KD/modes, independent data RNG reset; method-specific preprocessing maintained",
+  "shared_deficit_gate": "shared final mean at least .05 below paired author mean, no numerical or completeness failures",
+  "gradient_gate": "shared median weightedKD/supervised norm ratio < .05 AND < 0.5 * author ratio; both measured on preregistered steps",
+  "if_both_pass": "candidate lambda=.001 * author_median/shared_median, clipped to [.001,.01]; one fixed value per method from train gradients, not a validation grid; freeze before fresh paired six-domain50 validation",
+  "if_zero_kd": "do not divide by zero or calibrate blindly; inspect stored transition checkpoints for numerical/teacher faults",
+  "otherwise": "inspect stage-matrix forgetting and retained teacher checkpoints for a specific mechanism; do not claim small loss as healthy KD or launch arbitrary grid",
+  "no_test": true,
+  "user_scope_update": "author-identical protocol no longer required; goal reliable current benchmark adaptation; source net is diagnostic only"
+}

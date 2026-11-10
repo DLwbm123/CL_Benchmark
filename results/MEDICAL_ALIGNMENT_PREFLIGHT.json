@@ -1,0 +1,39 @@
+{
+  "moderate_value_gradient_equivalence": true,
+  "kd_reduction_axes_preserved": true,
+  "extreme_wrong_prediction_old_zero_gradient": true,
+  "stable_nonzero_finite_gradient": true,
+  "status": "PASSED",
+  "gradient_measurement_inert": true,
+  "variants": {
+    "ted_author": {
+      "status": "PASSED",
+      "six_stage_pipeline": true,
+      "all_mechanisms_active": true,
+      "finite_checkpoint": true,
+      "complete_stage_matrix": true
+    },
+    "ted_shared": {
+      "status": "PASSED",
+      "six_stage_pipeline": true,
+      "all_mechanisms_active": true,
+      "finite_checkpoint": true,
+      "complete_stage_matrix": true
+    },
+    "cauaug_author": {
+      "status": "PASSED",
+      "six_stage_pipeline": true,
+      "all_mechanisms_active": true,
+      "finite_checkpoint": true,
+      "complete_stage_matrix": true
+    },
+    "cauaug_shared": {
+      "status": "PASSED",
+      "six_stage_pipeline": true,
+      "all_mechanisms_active": true,
+      "finite_checkpoint": true,
+      "complete_stage_matrix": true
+    }
+  },
+  "synthetic_only": true
+}
