@@ -1,0 +1,8 @@
+{
+  "purpose": "TED train-only component balance diagnostic, fixed selected stage checkpoints, no updates",
+  "sampling": "all transitions2..6, fixed16 uniformly spaced current train slices per transition, b4; both backbones and both seeds41/43",
+  "candidate_gate": "For noise or AKT: shared norm/image median >=1 and >=2*author; shared component/image cosine median <-.1; shared component/supervision weighted norm median >=.1; relative norm excess shared>author in each paired seed. Only finite complete four-arm records qualify. If both qualify choose largest shared/author norm excess; ties noise first.",
+  "candidate": "Reduce only qualifying component multiplier to clip(author norm/image median / shared norm/image median,.1,1); retain image KD, noise SKA and AKT-GUGF, overall weight.001, all other frozen controls. No grid or validation choice. Train fresh shared paired full6x50 only if time fits original deadline.",
+  "negative": "If neither qualifies do not infer total KD is weak and do not launch this rescaling. Component gradients are local diagnostic, not causal proof.",
+  "test_accessed": false
+}
