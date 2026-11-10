@@ -1,0 +1,88 @@
+{
+  "status": "VALIDATED_COMPLETE",
+  "methods": {
+    "ted": {
+      "seeds": 5,
+      "domains": 6,
+      "epochs_per_domain": 50,
+      "final_foreground_micro_dice_mean": 0.7051483343462758,
+      "sd_across_seed_domain_means": 0.06151778754945831,
+      "mean_just_learned_domain_dice": 0.8348974921643719,
+      "mean_change_final_minus_just_learned": -0.12974915781809615,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 1,
+      "total_selection_count": 30,
+      "mechanism_counts_total": {
+        "supervised": 142250,
+        "image_kd": 123250,
+        "ska": 123250,
+        "akt_gugf": 123250
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true,
+      "backbone": "author",
+      "parameters": 2313906,
+      "bwt_previous_domains_mean": -0.15569898938171536,
+      "forgetting_from_best_observed_stage_mean": 0.16225190055584202,
+      "previous_domain_seed_combinations": 25,
+      "gradient_audit_samples": 100,
+      "gradient_weighted_ratio_median": 0.46195762264390394,
+      "gradient_cosine_median": -0.3129700395134256,
+      "zero_distillation_gradient_samples": 0,
+      "stage_matrices_checkpoints_validated": true
+    },
+    "cauaug": {
+      "seeds": 5,
+      "domains": 6,
+      "epochs_per_domain": 50,
+      "final_foreground_micro_dice_mean": 0.7623646262628805,
+      "sd_across_seed_domain_means": 0.033795127864587396,
+      "mean_just_learned_domain_dice": 0.8324965580818323,
+      "mean_change_final_minus_just_learned": -0.07013193181895183,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 30,
+      "mechanism_counts_total": {
+        "new_steps": 142250,
+        "replay_steps": 0,
+        "gin_steps": 0,
+        "cknet_steps": 142250,
+        "ftgen_steps": 123250,
+        "kd_steps": 123250
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true,
+      "backbone": "author",
+      "parameters": 2313906,
+      "bwt_previous_domains_mean": -0.08415831818274228,
+      "forgetting_from_best_observed_stage_mean": 0.08415831818274228,
+      "previous_domain_seed_combinations": 25,
+      "gradient_audit_samples": 100,
+      "gradient_weighted_ratio_median": 0.4755072917843063,
+      "gradient_cosine_median": -0.4415517840525273,
+      "zero_distillation_gradient_samples": 0,
+      "stage_matrices_checkpoints_validated": true
+    }
+  },
+  "seeds": [
+    41,
+    43,
+    47,
+    53,
+    59
+  ],
+  "backbone": "author UNet2D",
+  "mean_definition": "foreground micro-Dice computed separately within each domain, equally averaged across six domains and five seeds",
+  "sd_definition": "sample SD (ddof=1) across five per-seed six-domain mean Dice values",
+  "total_completed_seed_runs": 10,
+  "total_verified_epochs": 3000,
+  "reused_completed_seed_runs": 4,
+  "new_completed_seed_runs": 6,
+  "test_accessed": false,
+  "selected_seed_reporting": false,
+  "scope": "both methods complete across all five seeds; no further tuning authorized by this bounded task",
+  "limitations": [
+    "backbone choice informed by development results",
+    "validation historical exposure",
+    "domain and patient identity provenance incompletely verified",
+    "benchmark adaptation, not author-native paper reproduction"
+  ]
+}

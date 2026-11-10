@@ -1,0 +1,3 @@
+method	backbone	parameters	n_seeds	mean_dice_percent	sample_sd_percentage_points
+TED	Author_UNet2D	2313906	5	70.514833	6.151779
+CauAug	Author_UNet2D	2313906	5	76.236463	3.379513
