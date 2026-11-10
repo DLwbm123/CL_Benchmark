@@ -1,0 +1,56 @@
+{
+  "status": "VALIDATED",
+  "test_accessed": false,
+  "no_parameter_updates": true,
+  "backbones": {
+    "author": {
+      "seeds": 2,
+      "samples": 40,
+      "train_slices_total": 160,
+      "components": {
+        "image": {
+          "weighted_to_supervised_median": 0.00478572868267713,
+          "cosine_to_supervised_median": -0.47838684790396735
+        },
+        "noise": {
+          "weighted_to_supervised_median": 0.018254364759999746,
+          "cosine_to_supervised_median": -0.02220380636657996,
+          "norm_to_image_median": 3.9644491232921695,
+          "cosine_to_image_median": 0.058251189795169564
+        },
+        "akt": {
+          "weighted_to_supervised_median": 0.6188573373404269,
+          "cosine_to_supervised_median": -0.5029833903683257,
+          "norm_to_image_median": 124.84155794497684,
+          "cosine_to_image_median": 0.9931662966414754
+        }
+      }
+    },
+    "shared": {
+      "seeds": 2,
+      "samples": 40,
+      "train_slices_total": 160,
+      "components": {
+        "image": {
+          "weighted_to_supervised_median": 0.005206975431571493,
+          "cosine_to_supervised_median": -0.5676793417791539
+        },
+        "noise": {
+          "weighted_to_supervised_median": 0.0005357091647351514,
+          "cosine_to_supervised_median": -0.014500723637310444,
+          "norm_to_image_median": 0.10943322206145077,
+          "cosine_to_image_median": 0.0401358777273407
+        },
+        "akt": {
+          "weighted_to_supervised_median": 0.536348076986628,
+          "cosine_to_supervised_median": -0.5809361051260724,
+          "norm_to_image_median": 89.86310491469447,
+          "cosine_to_image_median": 0.9817531194398306
+        }
+      }
+    }
+  },
+  "original_downscale_gate_passed": false,
+  "exploratory_noise_multiplier": 36.22710771566231,
+  "candidate_status": "must confirm attenuation on disjoint training slices before independent full validation; exploratory rule formulated after diagnostic"
+}

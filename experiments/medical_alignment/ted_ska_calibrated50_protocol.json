@@ -1,0 +1,50 @@
+{
+  "purpose": "Exploratory SKA-only gradient-scale alignment; independent full double-seed validation against frozen same-window shared control",
+  "backbone": "shared",
+  "expected_parameters": 2915808,
+  "epochs_per_domain": {
+    "ted": 50
+  },
+  "seeds": [
+    41,
+    43
+  ],
+  "batch_size": 4,
+  "gradient_epochs": [
+    1,
+    5,
+    25,
+    50
+  ],
+  "gradient_selection": "first training minibatch at each listed epoch of domains2..6; retain graph, no parameter or RNG changes",
+  "stream_order": [
+    "BIDMC",
+    "HK",
+    "ISBI",
+    "UCL",
+    "ISBI_1.5",
+    "I2CVB"
+  ],
+  "data": "existing train/val HDF5 and integer label truncation; test forbidden",
+  "selection": "first val metadata block earliest best; remaining blocks development evaluation; historical exposure disclosed",
+  "supervision": "stable Dice+logitsCE, flattened Dice smooth1; source probability KD unchanged",
+  "distill_weight": 0.001,
+  "optimizer": "Adam first domain2e-4, subsequent1e-4; gamma.99/epoch",
+  "teacher": "parameter frozen, train-mode BN retained",
+  "evaluation": "per-slice batch-statistic BN, states/RNG restored; CauAug CKNet retained",
+  "stream_seed": "900000+seed reset after model creation to isolate architecture initialization from minibatch/augmentation RNG",
+  "checkpoints": "save six selected stage models plus rolling model/optimizer/teacher/archive; private",
+  "failure": "original total window still hard bound; no retries outside it; partial pairs cannot establish gain",
+  "input": "slice minmax+clip[.001,.99]",
+  "limitations": [
+    "not author-native protocol; user accepts current benchmark adaptation",
+    "metadata blocks not verified independent patients",
+    "only two seeds",
+    "same seeds do not guarantee bitwise hardware equivalence",
+    "new independent data RNG differs historical seed streams; use matched current controls"
+  ],
+  "noise_multiplier": 36.22710771566231,
+  "decision_rule": "Complete paired6x50, all checks pass, aggregate Dice improvement>=.05 and each seed six-domain mean nondecreasing versus same-window shared50 control; report every result regardless; no tuning from partial validation.",
+  "hypothesis": "Shared SKA noise gradient relative to image KD is attenuated on both discovery and disjoint train-slice confirmation; increase only SKA by frozen discovery-based36.22710771566231, retaining imageKD/AKT and overall.001. Original aggregate-weight and component-downscale gates failed; this is a new exploratory hypothesis, not retrospectively preregistered.",
+  "control": "ted_shared50 current matching data/augmentation RNG, not historical61.12"
+}

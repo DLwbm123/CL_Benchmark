@@ -1,0 +1,22 @@
+{
+  "status": "PASSED",
+  "synthetic_only": true,
+  "actual_model_backward": true,
+  "same_graph_analytic_component_check": true,
+  "checks": [
+    {
+      "noise_multiplier": 1.0,
+      "loss": 1.242508888244629,
+      "loss_exact_gradient_relative_tolerance_1e4": true,
+      "gradient_relative_difference": 4.5373691077894537e-05
+    },
+    {
+      "noise_multiplier": 36.22710771566231,
+      "loss": 1.2664657831192017,
+      "loss_exact_gradient_relative_tolerance_1e4": true,
+      "gradient_relative_difference": 4.566040503473644e-05
+    }
+  ],
+  "test_accessed": false,
+  "initial_independent_graph_tolerance_failure_retained": true
+}

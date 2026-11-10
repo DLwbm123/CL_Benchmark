@@ -24,7 +24,7 @@ for method,epochs in [(os.environ['METHOD'],json.loads((root/'protocol.json').re
   matrix=json.loads((root/(key+'_stage_matrix.json')).read_text());assert set(matrix)==set(map(str,range(1,7))) and finite(matrix)
   for task in range(1,7):
    assert set(matrix[str(task)])==set(map(str,range(1,task+1))) and abs(matrix[str(task)][str(task)]-r['stage_scores'][str(task)])<1e-8 and abs(matrix['6'][str(task)]-r['results'][str(task)])<1e-6
-   stage_cp=torch.load(root/(key+f'_stage{task}.pt'),map_location='cpu',weights_only=False);assert stage_cp['completed_site']==task and finite(stage_cp['model']);del stage_cp
+   stage_cp=torch.load(root/(key+f'_stage{task}.pt'),map_location='cpu',weights_only=False);assert stage_cp['completed_site']==task and finite(stage_cp['model']) and stage_cp['protocol'].get('noise_multiplier',1.)==protocol.get('noise_multiplier',1.);del stage_cp
    if task<6:
     bwt.append(matrix['6'][str(task)]-matrix[str(task)][str(task)])
     forget.append(max(matrix[str(t)][str(task)] for t in range(task,6))-matrix['6'][str(task)])

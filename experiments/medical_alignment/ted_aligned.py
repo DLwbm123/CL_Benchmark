@@ -50,13 +50,14 @@ def objective(net,teacher,x,y,seg_loss,akt,agent):
         with torch.no_grad():noise_target=teacher(noise).softmax(1)
         noise_kd=stable_kd(noise_logits,noise_target) if variant=='stable_all' else agent.multi_class_cross_entropy_no_softmax(noise_output,noise_target)
         transfer=akt(outputs,old)
-        distill=image_kd+noise_kd+transfer
+        distill=image_kd+float(os.environ.get('NOISE_MULTIPLIER','1'))*noise_kd+transfer
     return supervised+float(os.environ.get('DISTILL_WEIGHT','.001'))*distill,supervised,distill
 
 
 def run():
     root=Path(os.environ['WORK_ROOT']);seed=int(os.environ['ARM_SEED']);key=f'ted_s{seed}'
     protocol=json.loads((root/'protocol.json').read_text());assert seed in protocol['seeds'];epochs=protocol['epochs_per_domain']['ted']
+    noise_multiplier=float(os.environ.get('NOISE_MULTIPLIER','1'));assert math.isfinite(noise_multiplier) and noise_multiplier>0 and noise_multiplier==protocol.get('noise_multiplier',1.)
     torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.20)
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed);torch.cuda.manual_seed_all(seed)
     net,loss_f,akt,agent=make_model();teacher=None;selection={};stage={};counts={'supervised':0,'image_kd':0,'ska':0,'akt_gugf':0};history={}

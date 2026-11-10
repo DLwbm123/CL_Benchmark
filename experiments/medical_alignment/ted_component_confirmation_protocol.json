@@ -1,0 +1,8 @@
+{
+  "purpose": "Independent disjoint-training-slice confirmation of exploratory SKA attenuation hypothesis",
+  "sampling": "16 uniformly sampled indices after excluding original16 at each transition; new fixed noise RNG; same two backbones/seeds",
+  "candidate_gate": "Both paired seeds shared noise/image median <.1*author; aggregate likewise; finite complete four arms and restored states. Noise/image cosine not required positive because preservation need not align current image KD.",
+  "candidate": "If pass, fixed noise-only multiplier36.22710771566231 derived from discovery ratios; no recalibration on confirmation. Retain image and AKT multipliers1, overall weight.001, all mechanisms. Fresh shared double-seed full6x50 versus saved matched control.",
+  "negative": "Failure rejects this candidate; no grid. This is exploratory, formulated after first diagnostic; no claimed preregistration of initial hypothesis.",
+  "test_accessed": false
+}

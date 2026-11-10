@@ -1,0 +1,17 @@
+{
+  "status": "VALIDATED",
+  "seeds": 2,
+  "transitions": 5,
+  "train_slices_per_backbone": 160,
+  "sampled_batches_per_backbone": 40,
+  "disjoint_from_discovery_indices": true,
+  "noise_to_image_norm_medians": {
+    "author": 4.297410490355354,
+    "shared": 0.10374133660098281
+  },
+  "attenuation_gate_passed": true,
+  "both_seeds_passed": true,
+  "fixed_noise_multiplier_from_discovery": 36.22710771566231,
+  "no_parameter_updates": true,
+  "test_accessed": false
+}
