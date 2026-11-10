@@ -1,0 +1,45 @@
+{
+  "status": "PASSED",
+  "synthetic_continuation_inputs": true,
+  "preexisting_private_anchor_used": true,
+  "initial_model_and_selection_identical": true,
+  "arms": {
+    "control": {
+      "status": "PASSED",
+      "actual_trained_domains": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observed_learning_rates": [
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001
+      ],
+      "finite_checkpoint": true
+    },
+    "half": {
+      "status": "PASSED",
+      "actual_trained_domains": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observed_learning_rates": [
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05
+      ],
+      "finite_checkpoint": true
+    }
+  },
+  "test_accessed": false
+}

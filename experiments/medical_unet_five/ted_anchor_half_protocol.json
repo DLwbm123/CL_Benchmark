@@ -1,0 +1,73 @@
+{
+  "purpose": "Matched continuation confirmation after large unchanged first-domain rerun discrepancy",
+  "backbone": "author",
+  "expected_parameters": 2313906,
+  "epochs_per_domain": {
+    "ted": 50
+  },
+  "seeds": [
+    41,
+    43,
+    47,
+    53,
+    59
+  ],
+  "batch_size": 4,
+  "gradient_epochs": [
+    1,
+    5,
+    25,
+    50
+  ],
+  "gradient_selection": "first training minibatch at each listed epoch of domains2..6; retain graph, no parameter or RNG changes",
+  "stream_order": [
+    "BIDMC",
+    "HK",
+    "ISBI",
+    "UCL",
+    "ISBI_1.5",
+    "I2CVB"
+  ],
+  "data": "existing train/val HDF5 and integer label truncation; test forbidden",
+  "selection": "first val metadata block earliest best; remaining blocks development evaluation; historical exposure disclosed",
+  "supervision": "stable Dice+logitsCE, flattened Dice smooth1; source probability KD unchanged",
+  "distill_weight": 0.001,
+  "optimizer": "Adam at each continuation domain 5e-05; gamma.99/epoch",
+  "teacher": "parameter frozen, train-mode BN retained",
+  "evaluation": "per-slice batch-statistic BN, states/RNG restored; CauAug CKNet retained",
+  "stream_seed": "910000+seed reset after loading shared anchor",
+  "checkpoints": "save six selected stage models plus rolling model/optimizer/teacher/archive; private",
+  "failure": "All five form one group; stop group on error, preserve failed/partial evidence. Share existing window deadline and total storage; no reset or expansion.",
+  "input": "slice minmax+clip[.001,.99]",
+  "limitations": [
+    "not author-native protocol; user accepts current benchmark adaptation",
+    "metadata blocks not verified independent patients",
+    "only two seeds",
+    "same seeds do not guarantee bitwise hardware equivalence",
+    "new independent data RNG differs historical seed streams; use matched current controls"
+  ],
+  "reuse_completed_seeds": [],
+  "all_reported_seeds": [
+    41,
+    43,
+    47,
+    53,
+    59
+  ],
+  "report": "all five seed six-domain means equally weighted; sample SD across five means; all negative/incomplete evidence retained; no seed selection",
+  "later_domain_lr": 5e-05,
+  "hypothesis": "Earlier full-run +2.21pp is confounded by large first-domain rerun variation although LR there was unchanged. Shared anchors and continuation RNG remove this starting-state difference. cuDNN deterministic operations reduce but do not by themselves prove whole-run bitwise determinism.",
+  "control": "simultaneous original-LR continuation arm, not the earlier unmatched full-run cohort",
+  "decision_rule": "Both complete five-seed continuation arms and identical first-stage model+selection+score per paired seed; mean final gain>=.02, >=4/5 seed means improve, mean newly learned domains2..6 decline<=.02. Report all outcomes. Same two LR values only; no new search.",
+  "initialization": "same original baseline first-domain checkpoint for each seed, never choose higher-performing rerun anchor",
+  "trained_domains": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "reused_domain": 1,
+  "cudnn_deterministic": true,
+  "cudnn_benchmark": false
+}
