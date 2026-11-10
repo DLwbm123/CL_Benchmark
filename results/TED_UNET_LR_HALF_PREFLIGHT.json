@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "synthetic_only": true,
+  "six_stage_actual_model_backward": true,
+  "observed_learning_rates": [
+    0.0002,
+    5e-05,
+    5e-05,
+    5e-05,
+    5e-05,
+    5e-05
+  ],
+  "all_ted_components_active": true,
+  "finite_checkpoint": true,
+  "test_accessed": false
+}

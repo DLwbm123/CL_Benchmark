@@ -78,7 +78,7 @@
   "new_completed_seed_runs": 6,
   "test_accessed": false,
   "selected_seed_reporting": false,
-  "scope": "both methods complete across all five seeds; no further tuning authorized by this bounded task",
+  "scope": "original five-seed completion task fulfilled; subsequent user-requested TED improvement uses a separate frozen protocol",
   "limitations": [
     "backbone choice informed by development results",
     "validation historical exposure",
