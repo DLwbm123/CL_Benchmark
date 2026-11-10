@@ -1,0 +1,36 @@
+{
+  "status": "VALIDATED",
+  "methods": {
+    "ted": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 50,
+      "final_foreground_micro_dice_mean": 0.44648421142341577,
+      "sd_across_seed_domain_means": 0.03470860560437386,
+      "mean_just_learned_domain_dice": 0.7924952628305916,
+      "mean_change_final_minus_just_learned": -0.3460110514071758,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 1,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "supervised": 56900,
+        "image_kd": 49300,
+        "ska": 49300,
+        "akt_gugf": 49300
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true,
+      "backbone": "shared",
+      "parameters": 2915808,
+      "bwt_previous_domains_mean": -0.41521326168861095,
+      "forgetting_from_best_observed_stage_mean": 0.41521326168861095,
+      "previous_domain_seed_combinations": 10,
+      "gradient_audit_samples": 40,
+      "gradient_weighted_ratio_median": 0.48398517039922795,
+      "gradient_cosine_median": -0.4806453932700789,
+      "zero_distillation_gradient_samples": 0,
+      "stage_matrices_checkpoints_validated": true
+    }
+  },
+  "test_accessed": false,
+  "scope": "completed method pair only; other arms may still run"
+}
