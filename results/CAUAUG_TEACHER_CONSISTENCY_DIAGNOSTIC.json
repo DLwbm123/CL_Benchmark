@@ -1,0 +1,30 @@
+{
+  "status": "VALIDATED",
+  "no_training": true,
+  "test_accessed": false,
+  "backbones": {
+    "author": {
+      "seeds": 2,
+      "transitions": 5,
+      "sampled_train_slices_total": 160,
+      "batch_teacher_mean_dice": 0.3302502160847902,
+      "slice_teacher_mean_dice": 0.34597178610126933,
+      "mean_argmax_disagreement": 0.00253901481628418,
+      "paired_gradient_cosine_improvement_median": 0.016235907322289023,
+      "all_states_restored": true
+    },
+    "shared": {
+      "seeds": 2,
+      "transitions": 5,
+      "sampled_train_slices_total": 160,
+      "batch_teacher_mean_dice": 0.26288284279381957,
+      "slice_teacher_mean_dice": 0.27345735255815995,
+      "mean_argmax_disagreement": 0.0011649608612060549,
+      "paired_gradient_cosine_improvement_median": 0.008333191058718742,
+      "all_states_restored": true
+    }
+  },
+  "gate_passed": false,
+  "shared_dice_improvement": 0.01057450976434042,
+  "shared_seeds_nonnegative": 2
+}

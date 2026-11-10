@@ -1,0 +1,15 @@
+{
+  "purpose": "fixed-stage train-only teacher batch4 versus sliceBN target-consistency probe; no parameter updates",
+  "started_at": 1794305628.5410883,
+  "deadline": 1794306828.5410883,
+  "entry": "teacher_probe.py",
+  "budget_bytes": 500000000,
+  "storage_stop_bytes": 400000000,
+  "planned_peak_bytes": 10000000,
+  "sampling": "16 uniformly spaced current train slices per transition2..6 per backbone/seed, four fixed batches; image and Fourier targets compared",
+  "metrics": "per-transition teacher foreground microDice on current train labels, then mean across5transitions and two branches; paired distillation-vs-supervision cosine difference; no validation used",
+  "candidate_gate": "both shared seeds mean_teacher_slice_dice minus batch_dice nonnegative, paired aggregate improvement>=.03, AND median paired gradient-cosine improvement >=.10; complete all four arms and no finite/state errors",
+  "candidate_if_pass": "one teacher sliceBN adaptation retaining student training b4 and all components; freeze fresh paired full6x50 shared control comparison; do not change lambda",
+  "if_fail": "do not launch teacher-mode change; retain negative evidence and inspect other concrete cause only",
+  "test_accessed": false
+}

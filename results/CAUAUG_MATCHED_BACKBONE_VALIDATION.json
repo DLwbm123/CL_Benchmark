@@ -1,0 +1,76 @@
+{
+  "status": "PAIRED_VALIDATED",
+  "test_accessed": false,
+  "method": "cauaug",
+  "variants": {
+    "author": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 50,
+      "final_foreground_micro_dice_mean": 0.7478387515665363,
+      "sd_across_seed_domain_means": 0.011794225814355337,
+      "mean_just_learned_domain_dice": 0.8267444755817783,
+      "mean_change_final_minus_just_learned": -0.07890572401524198,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "new_steps": 56900,
+        "replay_steps": 0,
+        "gin_steps": 0,
+        "cknet_steps": 56900,
+        "ftgen_steps": 49300,
+        "kd_steps": 49300
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true,
+      "backbone": "author",
+      "parameters": 2313906,
+      "bwt_previous_domains_mean": -0.09468686881829036,
+      "forgetting_from_best_observed_stage_mean": 0.09468686881829036,
+      "previous_domain_seed_combinations": 10,
+      "gradient_audit_samples": 40,
+      "gradient_weighted_ratio_median": 0.46592593106408886,
+      "gradient_cosine_median": -0.45094618761459127,
+      "zero_distillation_gradient_samples": 0,
+      "stage_matrices_checkpoints_validated": true
+    },
+    "shared": {
+      "seeds": 2,
+      "domains": 6,
+      "epochs_per_domain": 50,
+      "final_foreground_micro_dice_mean": 0.6295832919449474,
+      "sd_across_seed_domain_means": 0.05374302141712407,
+      "mean_just_learned_domain_dice": 0.8102595732281548,
+      "mean_change_final_minus_just_learned": -0.18067628128320734,
+      "zero_seed_domain_combinations": 0,
+      "selection_at_last_epoch_count": 0,
+      "total_selection_count": 12,
+      "mechanism_counts_total": {
+        "new_steps": 56900,
+        "replay_steps": 0,
+        "gin_steps": 0,
+        "cknet_steps": 56900,
+        "ftgen_steps": 49300,
+        "kd_steps": 49300
+      },
+      "all_epoch_counts_rc_checkpoints_finite": true,
+      "backbone": "shared",
+      "parameters": 2915808,
+      "bwt_previous_domains_mean": -0.21681153753984883,
+      "forgetting_from_best_observed_stage_mean": 0.21804753537784363,
+      "previous_domain_seed_combinations": 10,
+      "gradient_audit_samples": 40,
+      "gradient_weighted_ratio_median": 0.5167223540991763,
+      "gradient_cosine_median": -0.6003258470352861,
+      "zero_distillation_gradient_samples": 0,
+      "stage_matrices_checkpoints_validated": true
+    }
+  },
+  "decision": {
+    "shared_minus_author": -0.1182554596215889,
+    "performance_deficit_gate_passed": true,
+    "weak_distillation_gradient_gate_passed": false,
+    "calibrated_weight_experiment_authorized_by_gate": false,
+    "reason": "shared weighted gradient ratio .5167 is neither below .05 nor below half author .4659; no blind coefficient increase"
+  }
+}
