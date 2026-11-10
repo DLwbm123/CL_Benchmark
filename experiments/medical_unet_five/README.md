@@ -1,0 +1,7 @@
+# Five-seed author U-Net benchmark runs
+
+TED and CauAug each report seeds 41, 43, 47, 53, 59. The existing matched author-U-Net runs for 41/43 are reused; the new runs add 47/53/59 without hyperparameter changes or seed selection. The runners are the original matched-study versions, with no SKA rescaling. Dependencies are reused from `experiments/medical_shared_backbone`, `experiments/medical_alignment` and `experiments/ted_cauaug_repair`; put these and this directory on the Python module path. Third-party source checkouts remain external and are not redistributed.
+
+`validate.py` validates the newly completed group using its protocol seed list. `validate_five.py` reads `aggregation_protocol.json` under `WORK_ROOT`, maps all five seeds to their completed result directories, verifies method-specific protocol consistency, return codes, epochs, mechanisms, stage checkpoints/matrices and finite states, then writes `validated_five_<method>.json`. Set `METHOD` to ted or cauaug. The example mapping contains placeholders, not actual server paths.
+
+Final mean equally weights the five six-domain seed means. SD is the sample SD across those five means. Report all seeds and negative/incomplete evidence. Validation is development data with historical exposure; no test is used. Backbone choice was informed by development results and is explicitly author U-Net, not a uniform-ResUNet comparison or a claim of author-native paper reproduction.

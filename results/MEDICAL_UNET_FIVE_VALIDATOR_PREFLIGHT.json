@@ -1,0 +1,12 @@
+{
+  "ted": {
+    "status": "PASSED",
+    "known_two_seed_summary_reproduced": true,
+    "source_protocol_consistency_checked": true
+  },
+  "cauaug": {
+    "status": "PASSED",
+    "known_two_seed_summary_reproduced": true,
+    "source_protocol_consistency_checked": true
+  }
+}

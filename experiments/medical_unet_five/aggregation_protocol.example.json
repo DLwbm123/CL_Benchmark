@@ -1,0 +1,26 @@
+{
+  "seeds": [
+    41,
+    43,
+    47,
+    53,
+    59
+  ],
+  "methods": {
+    "ted": {
+      "41": "prior_results/ted_author50",
+      "43": "prior_results/ted_author50",
+      "47": "new_results/ted_author_add3",
+      "53": "new_results/ted_author_add3",
+      "59": "new_results/ted_author_add3"
+    },
+    "cauaug": {
+      "41": "prior_results/cauaug_author50",
+      "43": "prior_results/cauaug_author50",
+      "47": "new_results/cauaug_author_add3",
+      "53": "new_results/cauaug_author_add3",
+      "59": "new_results/cauaug_author_add3"
+    }
+  },
+  "test_accessed": false
+}
